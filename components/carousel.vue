@@ -1,6 +1,6 @@
 <template>
-  <h1>Hey its Belay</h1>
 
+<h3>I'm gonna be a footer</h3>
 
 
 

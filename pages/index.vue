@@ -1,12 +1,22 @@
 <template>
-  <Tutorial/>
+  <div class="outer">
+
+
+    <Header/>
+    <Carousel/>
+    <Footer/>
+  </div>
 </template>
 
 <script>
-import Tutorial from '~/components/Tutorial'
+import Header from '~/components/header'
+import Carousel from '~/components/carousel'
+import Footer from '~/components/footer'
 export default {
   components: {
-    Tutorial
+    Header,
+    Carousel,
+    Footer
   }
 
 }
