@@ -1,0 +1,260 @@
+@font-face {
+  font-family: 'cardinalGrotesqueBold';
+  src: url('/fonts/cardinal-grotesque-bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cardinalGrotesqueWideBold';
+  src: url('/fonts/cardinal-grotesque-wide-bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cardinalGrotesqueSemiBold';
+  src: url('/fonts/cardinal-grotesque-semi-bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'schoolBookBold';
+  // src: url('/fonts/school-book-bold.woff2') format('woff2'),
+  //      url('/fonts/radomir_tinkov_-_gilroy-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'eamesCenturyModernStencil';
+  src: url('/fonts/eames-century-modern-stencil.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $cardinal-grotesque-bold;
+  letter-spacing: 0.025em;
+  line-height: 0.95em;
+}
+
+h1 {
+  font-size: calc(50px + (156 - 50) * ((100vw - 340px) / (1440 - 340)));
+}
+
+h2 {
+  font-size: calc(45px + (135 - 45) * ((100vw - 340px) / (1440 - 340)));
+}
+
+h3 {
+  font-size: calc(35px + (112 - 35) * ((100vw - 340px) / (1440 - 340)));
+}
+
+h4 {
+  font-size: calc(25px + (55 - 25) * ((100vw - 340px) / (1440 - 340)));
+}
+
+h5 {
+  font-size: calc(20px + (40 - 20) * ((100vw - 340px) / (1440 - 340)));
+}
+
+h6 {
+  font-size: calc(14px + (22 - 14) * ((100vw - 340px) / (1440 - 340)));
+}
+
+
+.t1,
+.t2,
+.t3 {
+  font-family: $cardinal-grotesque-wide-bold;
+  letter-spacing: 0.1em;
+  line-height: 1em;
+}
+
+.t1 {
+  font-size: calc(158px + (312 - 158) * ((100vw - 340px) / (1440 - 340)));
+}
+
+.t2 {
+  font-size: calc(52px + (130 - 52) * ((100vw - 340px) / (1440 - 340)));
+}
+
+.t3 {
+  font-size: calc(32px + (80 - 32) * ((100vw - 340px) / (1440 - 340)));
+}
+
+p, .v-select, a, .text-link, li {
+  font-family: $arial;
+  font-size: 14px;
+  line-height: 20px;
+  // letter-spacing: 0.07em;
+
+  &.small {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &.large {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  b,
+  strong {
+    font-weight: bold;
+  }
+
+  a {
+    font-size: inherit;
+    line-height: inherit;
+    color: $red;
+    text-decoration: none;
+
+    &:hover {
+      // NOTE:: don't move this :hover into the @include can-hover because
+      // we'll have to override this on every component like underline-btn etc.
+      text-decoration: underline;
+    }
+  }
+}
+
+.p-semibold {
+  font-family: $arial;
+  font-weight: 600;
+}
+
+label {
+  font-family: $cardinal-grotesque-wide-bold;
+  font-size: 14px;
+  line-height: 1.1em;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+
+  &.small {
+    font-size: 12px;
+  }
+}
+
+.stencil {
+  font-family: $eames-stencil;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+}
+
+.schoolbook {
+  font-family: $school-book;
+  font-size: 14px;
+  font-weight: 700;
+
+  &.small {
+    font-size: 12px;
+  }
+
+  &.large {
+    font-size: 16px;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+.semibold {
+  font-family: $cardinal-grotesque-semi-bold;
+}
+
+.bold {
+  font-family: $cardinal-grotesque-wide-bold;
+}
+
+/*************************************************
+HEADERS
+*************************************************/
+
+@include respond-to($average-desktop) {
+  h1 {
+    font-size: 156px;
+    line-height: 126px;
+  }
+
+  h2 {
+    font-size: 135px;
+    line-height: 110px;
+  }
+
+  h3 {
+    font-size: 112px;
+    line-height: 94px;
+  }
+
+  h4 {
+    font-size: 55px;
+    line-height: 48px;
+  }
+
+  .t1 {
+    font-size: 312px;
+  }
+  
+  .t2 {
+    font-size: 130px;
+  }
+  
+  .t3 {
+    font-size: 80px;
+  }
+
+  p, textarea, a, .text-link, li {
+    font-size: 18px;
+    line-height: 28px;
+
+    &.small {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    &.large {
+      font-size: 20px;
+      line-height: 34px;
+    }
+  }
+
+  li {
+    line-height: 24px;
+  }
+
+  label {
+    font-size: 18px;
+    line-height: 20px;
+
+    &.small {
+      font-size: 16px;
+    }
+  }
+
+  .stencil {
+    font-size: 24px;
+  }
+
+  .schoolbook {
+    font-size: 16px;
+
+    &.small {
+      font-size: 14px;
+    }
+
+    &.large {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+// Colors
+$white: #fff;
+$red: #BC2F2B;
+$orange: #D74229;
+$pale-greg: #FFF9E7;
+$young-greg: #DFD3A8;
+$old-greg: #857550;
+$yeller: #EDBD1D;
+$dark-blue: #1B2533;
+$black: #000;
+$grey: #979797;
+
+// Typography
+$cardinal-grotesque-bold: "cardinalGrotesqueBold", "Helvetica Neue", Helvetica, sans-serif;
+$cardinal-grotesque-wide-bold: 'cardinalGrotesqueWideBold', "Helvetica Neue", Helvetica, sans-serif;
+$cardinal-grotesque-semi-bold: 'cardinalGrotesqueSemiBold', "Helvetica Neue", Helvetica, sans-serif;
+$school-book: 'schoolBookBold', "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;;
+$eames-stencil: 'eamesCenturyModernStencil', "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;;
+$arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+// Shadows
+$shadow-normal: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);
+$border-light: 2px dotted rgba(0, 0, 0, 0.1);
+
+// Header
+$header-height-mobile: 80px;
+$header-height: 90px;
+
+// Margins
+$margin-extra-large: 48px;
+$margin-large: 32px;
+$margin-normal: 24px;
+$margin-small: 12px;
+
+// Speeds
+$speed-demon: 333ms;
+$speed-metal: 666ms;
+
+// Eases
+$evil-ease: cubic-bezier(0.666, 0.000, 0.333, 1.000);
+$ease-out:  cubic-bezier(0.000, 0.000, 0.666, 1.000);
+$ease-in:   cubic-bezier(0.666, 0.000, 1.000, 0.333);
+$bouncy:    cubic-bezier(0.000, 0.888, 0.333, 1.800);
+
+/* Media Queries */
+$tablet:           '(min-width: 768px)';
+$tablet-landscape: '(min-width: 768px) and (orientation: landscape)';
+$large-tablet:     '(min-width: 960px)';
+$desktop:          '(min-width: 1280px)';
+$average-desktop:  '(min-width: 1440px)';
+$macbook:          '(min-width: 1680px)';
+$retina-macbook:   '(min-width: 1920px)';
+$largest-screens:  '(min-width: 2000px)';
+
+/* Color function for SVG mixins */
+@function svgColorMaker($color) {
+  @return '%23' + str-slice('#{$color}', 2, -1);
+}
