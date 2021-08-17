@@ -1,7 +1,6 @@
-export default {
-  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+const meta_description = "";
 
+export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -112,7 +111,7 @@ export default {
    */
    // TODO
   buildModules: [
-  //   "@nuxtjs/style-resources",
+    "@nuxtjs/style-resources"
   //   [
   //     "@nuxtjs/google-analytics",
   //     {
@@ -162,10 +161,9 @@ export default {
   styleResources: {
     // your settings here
     scss: [
-      // "~/assets/styles/_vars.scss",
-      // "~/assets/styles/torched-earth/_vars.scss",
-      // "~/assets/styles/_mixins.scss",
-      // "~/assets/styles/_grid.scss",
+      "~/assets/styles/_vars.scss",
+      "~/assets/styles/_mixins.scss",
+      "~/assets/styles/_grid.scss",
     ],
   },
 

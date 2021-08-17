@@ -1,8 +1,12 @@
 <template>
   <div class="outer">
-
-
-    <Header/>
+    <Header
+    :img1="{
+            src: 'header/belay-dev-logo-WHITE.png',
+            alt: 'The Belay logo',
+            width: '501',
+            height: '216'
+          }"/>
     <Carousel/>
     <Footer/>
   </div>
@@ -12,6 +16,7 @@
 import Header from '~/components/header'
 import Carousel from '~/components/carousel'
 import Footer from '~/components/footer'
+
 export default {
   components: {
     Header,
