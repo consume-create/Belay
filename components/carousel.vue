@@ -1,6 +1,6 @@
 <template>
 
-<h3>I'm gonna be a footer</h3>
+<h3>I'm gonna be a carousel</h3>
 
 
 

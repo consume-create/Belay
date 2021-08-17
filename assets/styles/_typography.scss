@@ -1,35 +1,35 @@
 @font-face {
-  font-family: 'cardinalGrotesqueBold';
-  src: url('/fonts/cardinal-grotesque-bold.otf');
+  font-family: 'GothamBook';
+  src: url('/fonts/Gotham-book.otf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'cardinalGrotesqueWideBold';
-  src: url('/fonts/cardinal-grotesque-wide-bold.otf');
+  font-family: 'GothamMedium';
+  src: url('/fonts/Gotham-medium.otf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'cardinalGrotesqueSemiBold';
-  src: url('/fonts/cardinal-grotesque-semi-bold.otf');
+  font-family: 'GothamBold';
+  src: url('/fonts/GothamBold.ttf');
   font-weight: normal;
   font-style: normal;
 }
 
+// @font-face {
+//   font-family: 'schoolBookBold';
+//   // src: url('/fonts/school-book-bold.woff2') format('woff2'),
+//   //      url('/fonts/radomir_tinkov_-_gilroy-medium-webfont.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+//
 @font-face {
-  font-family: 'schoolBookBold';
-  // src: url('/fonts/school-book-bold.woff2') format('woff2'),
-  //      url('/fonts/radomir_tinkov_-_gilroy-medium-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'eamesCenturyModernStencil';
-  src: url('/fonts/eames-century-modern-stencil.otf');
+  font-family: 'LemondeLivreBold';
+  src: url('https://use.typekit.net/wes8pxx.css');
   font-weight: normal;
   font-style: normal;
 }
@@ -41,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $cardinal-grotesque-bold;
+  font-family: $gotham-medium;
   letter-spacing: 0.025em;
   line-height: 0.95em;
 }
@@ -74,7 +74,7 @@ h6 {
 .t1,
 .t2,
 .t3 {
-  font-family: $cardinal-grotesque-wide-bold;
+  font-family: $gotham-bold;
   letter-spacing: 0.1em;
   line-height: 1em;
 }
@@ -133,7 +133,7 @@ p, .v-select, a, .text-link, li {
 }
 
 label {
-  font-family: $cardinal-grotesque-wide-bold;
+  font-family: $gotham-bold;
   font-size: 14px;
   line-height: 1.1em;
   font-weight: 800;
@@ -152,7 +152,7 @@ label {
 }
 
 .schoolbook {
-  font-family: $school-book;
+  font-family: $lemonde-livre-bold;
   font-size: 14px;
   font-weight: 700;
 
@@ -170,11 +170,11 @@ strong {
 }
 
 .semibold {
-  font-family: $cardinal-grotesque-semi-bold;
+  font-family: $gotham-book;
 }
 
 .bold {
-  font-family: $cardinal-grotesque-wide-bold;
+  font-family: $gotham-bold;
 }
 
 /*************************************************
