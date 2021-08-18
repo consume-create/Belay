@@ -23,7 +23,6 @@ export default {
     Carousel,
     Footer
   }
-
 }
 </script>
 

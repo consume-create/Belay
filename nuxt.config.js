@@ -98,7 +98,7 @@ export default {
 
   // TODO
   plugins: [
-  //   "~/plugins/lazysizes.client.js",
+    "~/plugins/lazysizes.client.js",
   //   "~/plugins/vue-event-horizon.client.js",
   //   {src: "~/plugins/vue-scrollto.client.js", ssr: false},
   //   {src: "~/plugins/vue-select.client.js", ssr: false},
@@ -169,7 +169,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-
     /*
      ** You can extend webpack config here
      */

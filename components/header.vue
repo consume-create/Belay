@@ -1,12 +1,12 @@
 <template>
-  <div class="header-wrapper">
-    <div class="image__container" v-event-horizon:trigger>
+  <section class="header-wrapper">
+    <div class="image__container">
       <div class="header-image">
-        <div class="image__inner-header" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}" :test="1" />
+        <div class="image__inner-header" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
       <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
     </div>
   </div>
-</div>
+</section>
 
 
 </template>
@@ -15,6 +15,9 @@
 <script>
 import ResponsiveImage from "~/components/responsive-image";
   export default{
+    components: {
+      ResponsiveImage
+    },
     props: {
       title: String,
       text: String,
@@ -23,14 +26,14 @@ import ResponsiveImage from "~/components/responsive-image";
         type: Object,
         default: () => {
           return {
-            src: ",",
+            src: "",
             alt: "",
             height: "",
             width: ""
           }
         }
       },
-    }
+    },
   }
 
 </script>
