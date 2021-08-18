@@ -14,4 +14,16 @@
 
 <style lang="scss">
 
+
+
+
+@include respond-to($tablet) {
+
+
+}
+
+@include respond-to($desktop) {
+
+}
+
 </style>

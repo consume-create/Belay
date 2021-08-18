@@ -6,9 +6,7 @@
       <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
     </div>
   </div>
-</section>
-
-
+ </section>
 </template>
 
 
@@ -42,15 +40,15 @@ import ResponsiveImage from "~/components/responsive-image";
 
 .header-wrapper{
   width: 100%;
-  padding: span(2,28) span(2,28);
-  background-color: $dark-blue;
+  padding: span(1,28) span(1,28);
+  background-color: $deep-blue;
 
   .image__container{
 
     .header-image {
       position: relative;
-      width: span(11,24);
-      margin-right: span(2,24);
+      width: span(4,24);
+      // margin-right: span(2,24);
 
       img {
         position: absolute;
@@ -58,6 +56,22 @@ import ResponsiveImage from "~/components/responsive-image";
         height: 100%;
         top: 0px;
         left: 0px;
+      }
+    }
+  }
+
+  @include respond-to($tablet) {
+    .image__container{
+      .header-image {
+      margin: 0 auto;
+      }
+    }
+  }
+
+  @include respond-to($desktop) {
+    .image__container{
+      .header-image {
+      margin: 0 auto;
       }
     }
   }
