@@ -40,14 +40,14 @@ import ResponsiveImage from "~/components/responsive-image";
 
 .header-wrapper{
   width: 100%;
-  padding: span(1,28) span(1,28);
+  padding: span(1);
   background-color: $deep-blue;
 
   .image__container{
 
     .header-image {
       position: relative;
-      width: span(4,24);
+      width: span(4);
       // margin-right: span(2,24);
 
       img {

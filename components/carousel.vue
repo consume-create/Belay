@@ -15,7 +15,7 @@
 <style lang="scss">
 
 .carousel{
-  padding: span(8,28) span(4,28);
+  padding: span(8) span(4);
   background-color: $dark-blue;
 }
 

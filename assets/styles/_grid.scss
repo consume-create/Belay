@@ -1,36 +1,53 @@
-/* 28 Cols */
-$small-grid-col: 3.571%;
+// /* 28 Cols */
+// $small-grid-col: 3.571%;
+//
+// /* 28 Cols */
+// $large-grid-col: 3.571%;
+//
+// /* Grid */
+// @mixin grid {
+//   display: grid;
+//   grid-template-columns: $small-grid-col;
+//   grid-template-rows: auto;
+//   grid-auto-columns: $small-grid-col;
+//
+//   @include respond-to($tablet-landscape) {
+//     grid-template-columns: $large-grid-col;
+//     grid-auto-columns: $large-grid-col;
+//   }
+// }
+//
+// /* Subgrid */
+// @mixin subgrid($cols) {
+//   display: grid;
+//   grid-template-columns: ((28 / $cols) * $small-grid-col);
+//   grid-template-rows: auto;
+//   grid-auto-columns: ((28 / $cols) * $small-grid-col);
+//
+//   @include respond-to($tablet-landscape) {
+//     grid-template-columns: ((28 / $cols) * $large-grid-col);
+//     grid-auto-columns: ((28 / $cols) * $large-grid-col);
+//   }
+// }
+//
+// /* Span */
+// @function span($cols, $of) {
+//   @return percentage($cols / $of);
+// }
 
-/* 28 Cols */
-$large-grid-col: 3.571%;
+
+// /* 28 Cols */
+$cols: 28;
+$perc: (1 / $cols * 100%);
 
 /* Grid */
 @mixin grid {
   display: grid;
-  grid-template-columns: $small-grid-col;
+  grid-template-columns: $perc;
   grid-template-rows: auto;
-  grid-auto-columns: $small-grid-col;
-
-  @include respond-to($tablet-landscape) {
-    grid-template-columns: $large-grid-col;
-    grid-auto-columns: $large-grid-col;
-  }
+  grid-auto-columns: $perc;
 }
 
-/* Subgrid */
-@mixin subgrid($cols) {
-  display: grid;
-  grid-template-columns: ((28 / $cols) * $small-grid-col);
-  grid-template-rows: auto;
-  grid-auto-columns: ((28 / $cols) * $small-grid-col);
-
-  @include respond-to($tablet-landscape) {
-    grid-template-columns: ((28 / $cols) * $large-grid-col);
-    grid-auto-columns: ((28 / $cols) * $large-grid-col);
-  }
-}
-
-/* Span */
-@function span($cols, $of) {
-  @return percentage($cols / $of);
+@function span($n) {
+  @return ($n / $cols * 100vw);
 }
