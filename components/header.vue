@@ -39,6 +39,7 @@ import ResponsiveImage from "~/components/responsive-image";
   .header-image {
     position: relative;
     width: span(4);
+    margin: 0 auto;
 
     img {
       position: absolute;
@@ -51,13 +52,11 @@ import ResponsiveImage from "~/components/responsive-image";
 
   @include respond-to($tablet) {
     .header-image {
-      margin: 0 auto;
     }
   }
 
   @include respond-to($desktop) {
     .header-image {
-      margin: 0 auto;
     }
   }
 }

@@ -48,7 +48,8 @@ export default{
 
 .footer{
   padding: span(2);
-  background-color: $light-greg;
+  background-color: $deep-blue;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;

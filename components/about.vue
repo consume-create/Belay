@@ -19,6 +19,7 @@
 <style lang="scss">
   .about{
     padding: span(6);
+    text-align: left;
     // float: left;
   }
 

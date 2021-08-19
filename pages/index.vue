@@ -1,12 +1,5 @@
 <template>
   <div class="outer">
-    <!-- <Header
-    :img1="{
-            src: 'header/belay-dev-logo-WHITE.png',
-            alt: 'The Belay logo',
-            width: '501',
-            height: '216'
-          }"/> -->
     <Carousel
       :img1="{
           src: 'carousel/building1.png',
@@ -15,22 +8,32 @@
           height: '1348'
         }"/>
     <About/>
+    <PropertyTypes
+    :img1="{
+        src: 'property-types/IconSet.png',
+        alt: 'A picture of a commercial building',
+        width: '1920',
+        height: '1080'
+      }"/>
+      <Tagline/>
     <Footer/>
   </div>
 </template>
 
 <script>
-// import Header from '~/components/header'
 import Carousel from '~/components/carousel'
 import About from '~/components/about'
+import PropertyTypes from '~/components/property-types'
+import Tagline from '~/components/Tagline'
 import Footer from '~/components/footer'
 
 export default {
   components: {
-    // Header,
     Carousel,
     About,
-    Footer
+    PropertyTypes,
+    Tagline,
+    Footer,
   }
 }
 </script>

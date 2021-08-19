@@ -41,13 +41,13 @@ ul.socials {
         margin: -11px 0 0 -11px;
       }
       &.twitter:after {
-        @include icon("instagram", $deep-blue, true);
+        @include icon("instagram", $white, true);
       }
       &.linkedin:after {
-        @include icon("linkedin", $deep-blue, true);
+        @include icon("linkedin", $white, true);
       }
       &.discord:after {
-        @include icon("twitter",$deep-blue, true);
+        @include icon("twitter",$white, true);
         // margin-top: -10px;
       }
     }
@@ -59,13 +59,13 @@ ul.socials {
           transition: background-image $speed-demon $ease-out;
         }
         &.twitter:hover:after {
-          @include icon("instagram",$white, false);
+          @include icon("instagram",$dark-blue, false);
         }
         &.linkedin:hover:after {
-          @include icon("linkedin", $white, false);
+          @include icon("linkedin", $dark-blue, false);
         }
         &.discord:hover:after {
-          @include icon("twitter",$white, false);
+          @include icon("twitter",$dark-blue, false);
         }
       }
     }
