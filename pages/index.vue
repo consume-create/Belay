@@ -8,6 +8,7 @@
             height: '216'
           }"/>
     <Carousel/>
+    <About/>
     <Footer/>
   </div>
 </template>
@@ -15,12 +16,14 @@
 <script>
 import Header from '~/components/header'
 import Carousel from '~/components/carousel'
+import About from '~/components/about'
 import Footer from '~/components/footer'
 
 export default {
   components: {
     Header,
     Carousel,
+    About,
     Footer
   }
 }

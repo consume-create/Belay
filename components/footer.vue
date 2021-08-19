@@ -7,8 +7,8 @@
 
     <div class="channels">
       <div class="channel-inner">
-        <h5 class="small-title"> Our Channels</h5>
-        <p class="email">info@belaydev.com</p>
+        <p class="small-title"> Our Channels</p>
+        <p class="email">INFO@BELAYDEV.COM</p>
         <p class="phone-number"> 303 / 607 /6133</p>
       </div>
       <div class="socials">
@@ -47,7 +47,7 @@ export default{
 <style lang="scss">
 
 .footer{
-  padding: span(4);
+  padding: span(2);
   background-color: $light-greg;
   display: flex;
   align-items: center;
@@ -59,14 +59,7 @@ export default{
 
   .channels{
     width: span(14);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-     // flex-direction: column;
-
     .channel-inner{
-      width: span(6);
-
       .small-title{
         margin-bottom: $margin-extra-large;
       }
@@ -74,24 +67,15 @@ export default{
       .email{
         margin-bottom: $margin-small;
       }
+      .phone-number{
+        margin-bottom: $margin-small;
+      }
     }
 
     .socials{
-      width: span(2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
     }
-
   }
-
-
-
 }
-
-
-
 
 
 @include respond-to($tablet) {
@@ -100,6 +84,35 @@ export default{
 }
 
 @include respond-to($desktop) {
+
+
+  .channels{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // flex-direction: column;
+
+    .channel-inner{
+      width: span(6);
+      // margin-right: span(4);
+
+      .small-title{
+        margin-bottom: $margin-extra-large;
+      }
+
+      .email{
+        margin-bottom: $margin-small;
+
+      }
+    }
+    .socials{
+      width: span(2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
 
 }
 
