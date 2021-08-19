@@ -7,7 +7,25 @@
           width: '1572',
           height: '1348'
         }"/>
-    <About/>
+    <About
+    :img1="{
+        src: 'about/small-block.png',
+        alt: 'A small cube ',
+        width: '159',
+        height: '175',
+      }"
+      :img2="{
+          src: 'about/medium-block.png',
+          alt: 'A medium cube',
+          width: '665',
+          height: '474',
+        }"
+        :img3="{
+            src: 'about/large-block.png',
+            alt: 'a large cube',
+            width: '1440',
+            height: '1096',
+          }"/>
     <PropertyTypes
     :img1="{
         src: 'property-types/IconSet.png',
@@ -37,8 +55,6 @@ export default {
   }
 }
 </script>
-
-
 
 <style lang="scss">
 @import "~/assets/styles/reset.scss";

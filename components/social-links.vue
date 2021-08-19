@@ -48,7 +48,6 @@ ul.socials {
       }
       &.discord:after {
         @include icon("twitter",$white, true);
-        // margin-top: -10px;
       }
     }
   }

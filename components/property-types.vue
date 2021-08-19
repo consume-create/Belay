@@ -1,7 +1,7 @@
 <template>
-  <section class="about-wrapper">
+  <section class="property-wrapper">
 
-    <h5 class= "title">Property Types</h5>
+    <h5 class="title">Property Types</h5>
 
     <div class="property-image">
       <div class="image__inner-property" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
@@ -36,7 +36,7 @@ export default{
 </script>
 
 <style lang="scss">
-  .about-wrapper{
+  .property-wrapper{
     // padding: span(6);
 
     // float: left;
@@ -44,7 +44,8 @@ export default{
     .title{
         text-align: center;
         margin: 0 auto;
-        margin-bottom: span(2);
+        margin-bottom: $margin-extra-large;
+        margin-top: $margin-extra-large;
     }
     .property-image {
       position: relative;
@@ -60,7 +61,6 @@ export default{
       }
     }
   }
-
 
 
   @include respond-to($tablet) {
