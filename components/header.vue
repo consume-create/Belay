@@ -14,8 +14,6 @@ import ResponsiveImage from "~/components/responsive-image";
       ResponsiveImage
     },
     props: {
-      title: String,
-      text: String,
       img1:
       {
         type: Object,
@@ -35,8 +33,8 @@ import ResponsiveImage from "~/components/responsive-image";
 
 <style lang="scss">
 .header-wrapper{
-  padding: span(1);
-  background-color: $deep-blue;
+  // padding: span(1);
+  // background-color: $deep-blue;
 
   .header-image {
     position: relative;
@@ -53,13 +51,13 @@ import ResponsiveImage from "~/components/responsive-image";
 
   @include respond-to($tablet) {
     .header-image {
-    margin: 0 auto;
+      margin: 0 auto;
     }
   }
 
   @include respond-to($desktop) {
     .header-image {
-    margin: 0 auto;
+      margin: 0 auto;
     }
   }
 }

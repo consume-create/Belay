@@ -1,10 +1,10 @@
 <template>
   <section class="about">
 
-  <h3>Our angle </h3>
-  <h5>About Us</h5>
+    <h3>Our angle </h3>
+    <h5>About Us</h5>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt quis urna non facilisis. Donec sit amet faucibus dui, mattis fringilla odio. Ut sem metus, placerat vitae tortor in, pharetra pulvinar mauris. Aliquam erat volutpat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt quis urna non facilisis. Donec sit amet faucibus dui, mattis fringilla odio. Ut sem metus, placerat vitae tortor in, pharetra pulvinar mauris. Aliquam erat volutpat.</p>
 
 
   </section>

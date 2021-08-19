@@ -1,27 +1,33 @@
 <template>
   <div class="outer">
-    <Header
+    <!-- <Header
     :img1="{
             src: 'header/belay-dev-logo-WHITE.png',
             alt: 'The Belay logo',
             width: '501',
             height: '216'
-          }"/>
-    <Carousel/>
+          }"/> -->
+    <Carousel
+      :img1="{
+          src: 'carousel/building1.png',
+          alt: 'A picture of a commercial building',
+          width: '1572',
+          height: '1348'
+        }"/>
     <About/>
     <Footer/>
   </div>
 </template>
 
 <script>
-import Header from '~/components/header'
+// import Header from '~/components/header'
 import Carousel from '~/components/carousel'
 import About from '~/components/about'
 import Footer from '~/components/footer'
 
 export default {
   components: {
-    Header,
+    // Header,
     Carousel,
     About,
     Footer
