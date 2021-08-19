@@ -1,14 +1,14 @@
 <template>
   <section class="about">
+    <div class="small-block">
+      <div class="image__inner-small" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
+      <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
+    </div>
+
     <div class="text-box">
       <h3 class="title-upper">Our Angle </h3>
       <h5 class="subtitle">About Us</h5>
       <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt quis urna non facilisis. Donec sit amet faucibus dui, mattis fringilla odio. Ut sem metus, placerat vitae tortor in, pharetra pulvinar mauris. Aliquam erat volutpat.</p>
-    </div>
-
-    <div class="small-block">
-      <div class="image__inner-small" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
-      <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
     </div>
 
     <div class="medium-block">
@@ -73,10 +73,13 @@ import ResponsiveImage from "~/components/responsive-image";
 
 <style lang="scss">
   .about{
-    // padding: span(3) span(10);
-
+    padding: 0;
+    position: relative;
     .text-box {
       text-align: left;
+      // right: 60%;
+      padding-right: span(12);
+      z-index: 1;
 
       .title-upper{
         margin-bottom: $margin-small;
@@ -91,7 +94,9 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block {
       position: relative;
       width: span(4);
+      left: 30%;
       margin: 0 auto;
+      z-index: 2;
 
       img {
         position: absolute;
@@ -104,8 +109,10 @@ import ResponsiveImage from "~/components/responsive-image";
 
     .medium-block {
       position: relative;
-      width: span(4);
+      width: span(6);
       margin: 0 auto;
+      z-index: 3;
+      margin-top: -span(10);
 
       img {
         position: absolute;
@@ -118,8 +125,10 @@ import ResponsiveImage from "~/components/responsive-image";
 
     .large-block {
       position: relative;
-      width: span(4);
+      width: span(28);
       margin: 0 auto;
+      margin-top: -span(20);
+      z-index: 4;
 
       img {
         position: absolute;

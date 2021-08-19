@@ -1,6 +1,7 @@
 <template>
   <section class="footer">
     <div class="form-cta">
+      <h5>Stay in Touch</h5>
       <p>placeholder</p>
 
     </div>
@@ -51,7 +52,7 @@ export default{
   background-color: $deep-blue;
   color: white;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
   .form-cta{
@@ -80,13 +81,9 @@ export default{
 
 
 @include respond-to($tablet) {
-
-
 }
 
 @include respond-to($desktop) {
-
-
   .channels{
     display: flex;
     align-items: center;
@@ -114,7 +111,6 @@ export default{
       flex-direction: column;
     }
   }
-
 }
 
 </style>

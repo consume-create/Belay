@@ -7,6 +7,7 @@
           width: '1572',
           height: '1348'
         }"/>
+
     <About
     :img1="{
         src: 'about/small-block.png',
@@ -26,6 +27,7 @@
             width: '1440',
             height: '1096',
           }"/>
+
     <PropertyTypes
     :img1="{
         src: 'property-types/IconSet.png',
