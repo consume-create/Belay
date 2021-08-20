@@ -1,4 +1,4 @@
-const meta_description = "";
+const meta_description = "Belay Development is a boutique real estate development firm based in Denver, Colorado. Our unique perspective, grounded in decades of experience, empowers us to bring exceptional developments to life. With Belay, you can look at possible differently.";
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -13,14 +13,14 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      { hid: "description", name: "description", content: meta_description },
 
       { property: "og:site_name", content: "Belay" },
       {
         property: "og:title",
         content: "Belay",
       },
-      { property: "og:description", content: "Belay"  },
+      { property: "og:description", content: meta_description  },
       // TODO
       { property: "og:url", content: "" },
       { property: "og:image", content: "Social-Static@2x.jpg" },

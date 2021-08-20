@@ -1,8 +1,10 @@
 <template>
   <section class="about">
-    <div class="small-block">
-      <div class="image__inner-small" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
-      <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
+    <div class="small-block-wrapper">
+      <div class="small-block">
+        <div class="image__inner-small" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
+        <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
+      </div>
     </div>
 
     <div class="text-box">
@@ -11,15 +13,19 @@
       <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt quis urna non facilisis. Donec sit amet faucibus dui, mattis fringilla odio. Ut sem metus, placerat vitae tortor in, pharetra pulvinar mauris. Aliquam erat volutpat.</p>
     </div>
 
-    <div class="medium-block">
-      <div class="image__inner-medium" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
-      <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
+    <div class="medium-block-wrapper">
+      <div class="medium-block">
+        <div class="image__inner-medium" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
+        <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
+      </div>
     </div>
 
-    <div class="large-block">
-      <div class="image__inner-large" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
-      <ResponsiveImage :src="`${img3.src}`" :alt="`${img3.alt}`" lazy />
-    </div>
+    <div class="large-block-wrapper">
+      <div class="large-block">
+        <div class="image__inner-large" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
+        <ResponsiveImage :src="`${img3.src}`" :alt="`${img3.alt}`" lazy />
+      </div>
+   </div>
 
   </section>
 </template>
@@ -73,13 +79,20 @@ import ResponsiveImage from "~/components/responsive-image";
 
 <style lang="scss">
   .about{
-    padding: 0;
+    // padding: 0;
+    background-color: $deep-blue;
+    color: $white;
     position: relative;
+    width: span(28);
+    height: span(28);
     .text-box {
       text-align: left;
-      // right: 60%;
       padding-right: span(12);
-      z-index: 1;
+      // margin-top: span(15);
+      top: 300px;
+      left: 10%;
+      z-index: 4;
+      position: absolute;
 
       .title-upper{
         margin-bottom: $margin-small;
@@ -91,28 +104,38 @@ import ResponsiveImage from "~/components/responsive-image";
       }
     }
 
-    .small-block {
-      position: relative;
-      width: span(4);
-      left: 30%;
-      margin: 0 auto;
-      z-index: 2;
 
-      img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0px;
-        left: 0px;
+    .small-block-wrapper{
+      position: absolute;
+        left: 80%;
+      .small-block {
+        position: relative;
+        width: span(4);
+
+        // margin: 0 auto;
+        z-index: 3;
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+        }
+
       }
+
     }
 
+  .medium-block-wrapper{
+    position: absolute;
+    left: 20%;
     .medium-block {
       position: relative;
-      width: span(6);
-      margin: 0 auto;
-      z-index: 3;
-      margin-top: -span(10);
+      width: span(10);
+      // margin: 0 auto;
+      z-index: 2;
+      // margin-top: -span(10);
 
       img {
         position: absolute;
@@ -122,13 +145,15 @@ import ResponsiveImage from "~/components/responsive-image";
         left: 0px;
       }
     }
+  }
 
+  .large-block-wrapper{
+    position: absolute;
+    top: 30%;
     .large-block {
       position: relative;
       width: span(28);
-      margin: 0 auto;
-      margin-top: -span(20);
-      z-index: 4;
+      z-index: 1;
 
       img {
         position: absolute;
@@ -138,6 +163,7 @@ import ResponsiveImage from "~/components/responsive-image";
         left: 0px;
       }
     }
+  }
   }
 
 

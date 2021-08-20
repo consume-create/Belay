@@ -37,9 +37,7 @@ export default{
 
 <style lang="scss">
   .property-wrapper{
-    // padding: span(6);
-
-    // float: left;
+    margin-top: span(12);
 
     .title{
         text-align: center;
@@ -47,10 +45,10 @@ export default{
         margin-bottom: $margin-extra-large;
         margin-top: $margin-extra-large;
     }
+
     .property-image {
       position: relative;
       width: span(28);
-      // margin: 0 auto;
 
       img {
         position: absolute;

@@ -16,7 +16,7 @@
         <SocialLinks :links="
         [
           {
-            'type': 'twitter',
+            'type': 'instagram',
             'url': 'https://twitter.com/facewaretech'
           },
           {
@@ -24,9 +24,9 @@
             'url': 'https://www.linkedin.com/company/faceware-technologies-inc-'
           },
           {
-            'type': 'discord',
+            'type': 'twitter',
             'url': 'https://discord.gg/ZurczeCeRY'
-          }
+          },
         ]" />
       </div>
     </div>

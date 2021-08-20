@@ -40,13 +40,13 @@ ul.socials {
         height: $iconSize;
         margin: -11px 0 0 -11px;
       }
-      &.twitter:after {
+      &.instagram:after {
         @include icon("instagram", $white, true);
       }
       &.linkedin:after {
         @include icon("linkedin", $white, true);
       }
-      &.discord:after {
+      &.twitter:after {
         @include icon("twitter",$white, true);
       }
     }
@@ -57,13 +57,13 @@ ul.socials {
         &:after {
           transition: background-image $speed-demon $ease-out;
         }
-        &.twitter:hover:after {
+        &.instagram:hover:after {
           @include icon("instagram",$dark-blue, false);
         }
         &.linkedin:hover:after {
           @include icon("linkedin", $dark-blue, false);
         }
-        &.discord:hover:after {
+        &.twitter:hover:after {
           @include icon("twitter",$dark-blue, false);
         }
       }

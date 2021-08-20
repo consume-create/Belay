@@ -1,5 +1,5 @@
 <template>
-  <section class="about">
+  <section class="tagline">
 
     <h5>Look at Possible Differently.</h5>
 
@@ -13,7 +13,7 @@
 </script>
 
 <style lang="scss">
-  .about{
+  .tagline{
     padding: span(6);
     text-align: center;
     background-color: $deep-blue;
