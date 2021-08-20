@@ -78,93 +78,89 @@ import ResponsiveImage from "~/components/responsive-image";
 </script>
 
 <style lang="scss">
-  .about{
-    // padding: 0;
-    background-color: $deep-blue;
-    color: $white;
+.about{
+  background-color: $deep-blue;
+  color: $white;
+  position: relative;
+  height: span(28);
+  .text-box {
+    text-align: left;
+    padding-right: span(12);
+    top: 30%;
+    left: 10%;
+    z-index: 4;
+    position: absolute;
+
+    .title-upper{
+      margin-bottom: $margin-small;
+    }
+    .subtitle{
+      margin-bottom: $margin-extra-large;
+    }
+    .text{
+    }
+  }
+
+
+  .small-block-wrapper{
+    position: absolute;
+    left: 70%;
+    top: -5%;
+    .small-block {
+      position: relative;
+      width: span(4);
+
+      // margin: 0 auto;
+      z-index: 3;
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+      }
+
+    }
+
+  }
+
+.medium-block-wrapper{
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  .medium-block {
+    position: relative;
+    width: span(12);
+    z-index: 2;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+    }
+  }
+}
+
+.large-block-wrapper{
+  position: absolute;
+  top: 30%;
+  .large-block {
     position: relative;
     width: span(28);
-    height: span(28);
-    .text-box {
-      text-align: left;
-      padding-right: span(12);
-      // margin-top: span(15);
-      top: 300px;
-      left: 10%;
-      z-index: 4;
+    z-index: 1;
+    img {
       position: absolute;
-
-      .title-upper{
-        margin-bottom: $margin-small;
-      }
-      .subtitle{
-        margin-bottom: $margin-extra-large;
-      }
-      .text{
-      }
-    }
-
-
-    .small-block-wrapper{
-      position: absolute;
-        left: 80%;
-      .small-block {
-        position: relative;
-        width: span(4);
-
-        // margin: 0 auto;
-        z-index: 3;
-
-        img {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0px;
-          left: 0px;
-        }
-
-      }
-
-    }
-
-  .medium-block-wrapper{
-    position: absolute;
-    left: 20%;
-    .medium-block {
-      position: relative;
-      width: span(10);
-      // margin: 0 auto;
-      z-index: 2;
-      // margin-top: -span(10);
-
-      img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0px;
-        left: 0px;
-      }
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
     }
   }
-
-  .large-block-wrapper{
-    position: absolute;
-    top: 30%;
-    .large-block {
-      position: relative;
-      width: span(28);
-      z-index: 1;
-
-      img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0px;
-        left: 0px;
-      }
-    }
-  }
-  }
+}
+}
 
 
   @include respond-to($tablet) {

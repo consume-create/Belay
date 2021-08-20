@@ -50,14 +50,16 @@ import ResponsiveImage from "~/components/responsive-image";
   // padding: span(8) span(4);
   // background-color: $dark-blue;
   position: relative;
+  z-index: 4;
   .logo{
     // margin-bottom: span(1);
     position: absolute;
-    z-index: 2;
+    z-index: 5;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
+    top: 5%;
     // left: 45%;
   }
 
