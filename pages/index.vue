@@ -27,10 +27,9 @@
         width: '1440',
         height: '1096',
       }"/>
-
     <PropertyTypes
     :img1="{
-        src: 'property-types/IconSet.png',
+        src: 'property-types/Belay-Property-IconSet.png',
         alt: 'A picture of a commercial building',
         width: '1920',
         height: '1080'

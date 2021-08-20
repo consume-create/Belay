@@ -7,6 +7,8 @@
       <div class="image__inner-property" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
     </div>
+
+    <canvas id="cnv"></canvas>
   </section>
 </template>
 
@@ -29,6 +31,49 @@ export default{
           width: ""
         }
       }
+    },
+  },
+  //Read by the template
+  data() {
+    return{
+      ctx: null,
+      width: 0,
+      height: 0,
+      // cnv = document.getElementById('cnv'),
+      //   ctx = cnv.getContext('2d'),
+      //   width = 1000,
+      //   height = 600,
+      //   points = [],
+      //   rows = 3,
+      //   cols = 5,
+      //   old_row, old_col;
+    };
+  },
+  mounted() {
+    var _cnv = document.getElementById("cnv");
+    var _ctx = cnv.getContext("2d");
+    this._cnv = _ctx;
+    this.width= 1000;
+    this.height=600;
+    this.rows = 3;
+    this.cols = 5;
+    // init();
+
+  },
+  methods: {
+    init() {
+      for(let i = 0; i <= this.rows; i++) {
+        for(let j = 0; j <= this.cols; j++) {
+          let x = (50 + (j * (this.width / this.cols))),
+              y = (50 + (i * (this.height / this.rows)));
+
+          points.push({x, y, clean_x: x, clean_y: y});
+        }
+      }
+      console.log(1);
+
+      this._ctx.lineWidth = 4;
+      this._ctx.strokeStyle = '#999';
     },
   },
 }
