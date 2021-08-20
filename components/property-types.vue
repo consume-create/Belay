@@ -37,7 +37,7 @@ export default{
 
 <style lang="scss">
   .property-wrapper{
-    margin-top: span(12);
+    margin-top: span(4);
 
     .title{
         text-align: center;

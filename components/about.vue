@@ -15,14 +15,14 @@
 
     <div class="medium-block-wrapper">
       <div class="medium-block">
-        <div class="image__inner-medium" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
+        <div class="image__inner-medium" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
       </div>
     </div>
 
     <div class="large-block-wrapper">
       <div class="large-block">
-        <div class="image__inner-large" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
+        <div class="image__inner-large" :style="{paddingBottom: img3.height / img3.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img3.src}`" :alt="`${img3.alt}`" lazy />
       </div>
    </div>
