@@ -8,13 +8,18 @@
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
     </div>
 
-    <canvas id="cnv"></canvas>
+      <div class="canvas-outer">
+         <canvas @mousemove="breakDance" id="cnv" width="1000" height="600"></canvas>
+          <!-- <canvas id="cnv"></canvas> -->
+      </div>
   </section>
 </template>
 
 
 <script>
 import ResponsiveImage from "~/components/responsive-image";
+import gsap from "gsap";
+import EasePack from "~/plugins/EasePack";
 export default{
   components: {
     ResponsiveImage
@@ -33,12 +38,12 @@ export default{
       }
     },
   },
-  //Read by the template
+
   data() {
     return{
-      ctx: null,
-      width: 0,
-      height: 0,
+      // ctx: null,
+      // width: 0,
+      // height: 0,
       // cnv = document.getElementById('cnv'),
       //   ctx = cnv.getContext('2d'),
       //   width = 1000,
@@ -51,29 +56,93 @@ export default{
   },
   mounted() {
     var _cnv = document.getElementById("cnv");
-    var _ctx = cnv.getContext("2d");
+    var _ctx = _cnv.getContext("2d");
+    this._ctx = _ctx;
     this._cnv = _ctx;
-    this.width= 1000;
-    this.height=600;
-    this.rows = 3;
-    this.cols = 5;
-    // init();
+    this._width= 1000;
+    this._height= 600;
+    this._rows = 3;
+    this._cols = 5;
+    this._points = [];
+    this._old_row = null;
+    this._old_col = null;
+    this.init();
+    this.loop();
+    // this.renderLines();
+    // window.requestAnimationFrame(this.loop);
 
   },
   methods: {
     init() {
-      for(let i = 0; i <= this.rows; i++) {
-        for(let j = 0; j <= this.cols; j++) {
-          let x = (50 + (j * (this.width / this.cols))),
-              y = (50 + (i * (this.height / this.rows)));
+      for(let i = 0; i <= this._rows; i++) {
+        for(let j = 0; j <= this._cols; j++) {
+          let x = (50 + (j * (this._width / this._cols))),
+              y = (50 + (i * (this._height / this._rows)));
 
-          points.push({x, y, clean_x: x, clean_y: y});
+          this._points.push({x, y, clean_x: x, clean_y: y});
         }
       }
-      console.log(1);
-
-      this._ctx.lineWidth = 4;
+      this._ctx.lineWidth = 2;
       this._ctx.strokeStyle = '#999';
+    },
+
+    renderLines() {
+      this._ctx.clearRect(0, 0, this._width, this._height);
+      this._ctx.beginPath();
+      this._ctx.moveTo(this._points[0].x, this._points[0].y);
+
+      for(let i = 0; i < this._points.length; i++) {
+        if(i % (this._cols + 1) === 0) this._ctx.moveTo(this._points[i].x, this._points[i].y);
+        else this._ctx.lineTo(this._points[i].x, this._points[i].y);
+
+        if(this._points[i + (this._cols + 1)]) this._ctx.lineTo(this._points[i + (this._cols + 1)].x, this._points[i + (this._cols + 1)].y);
+        this._ctx.moveTo(this._points[i].x, this._points[i].y);
+      }
+
+      this._ctx.stroke();
+    },
+
+    translate(current) {
+      gsap.to(this._points, 0.4, {
+        x: (i, t) => current.includes(i) ? t.clean_x + Math.round((Math.random() * 50) - 25) : t.clean_x,
+        y: (i, t) => current.includes(i) ? t.clean_y + Math.round((Math.random() * 50) - 25) : t.clean_y,
+        ease: EasePack.easeOut,
+        overwrite: true
+      });
+    },
+
+    breakDance (event) {
+      let mx = ((event.offsetX * 2) - 50);
+      let my = ((event.offsetY * 2) - 50);
+
+      if(mx > 0 && my > 0 && mx < this._width && my < this._height) {
+
+        let row = Math.floor(my / (this._height / this._rows));
+        let col = Math.floor(mx / (this._width / this._cols));
+        console.log(col, row);
+        if(row !== this._old_row || col !== this._old_col) {
+          this.translate([
+            (col + (row * (this._cols + 1))), // upper left
+            ((col + 1) + (row * (this._cols + 1))), // upper right
+            (col + ((row + 1) * (this._cols + 1))), // lower left
+            ((col + 1) + ((row + 1) * (this._cols + 1))) // lower right
+          ]);
+
+        }
+        this._old_row = row;
+        this._old_col = col;
+        console.log(this._old_row, this._old_col);
+     }
+      else {
+        this.translate([]);
+        this._old_row = this._old_col = -1;
+      }
+    },
+
+    loop() {
+      this.renderLines();
+      window.requestAnimationFrame(this.loop);
+      // console.log("here");
     },
   },
 }
@@ -103,6 +172,19 @@ export default{
         left: 0px;
       }
     }
+
+    // .canvas-outer{
+    //   position: relative;
+    //   // width: span(28);
+    //
+    //   #cnv{
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     top: 0px;
+    //     left: 0px;
+    //   }
+    // }
   }
 
 

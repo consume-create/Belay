@@ -3,8 +3,8 @@
     <source
       type="image/webp"
       v-bind="source_attrs"
-      v-if="srcset_webp !== 'false'"
     >
+      <!-- v-if="srcset_webp !== 'false'"  -->
     <img
       class="image"
       :class="{'lazyload': lazy}"

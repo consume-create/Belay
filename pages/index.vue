@@ -33,8 +33,8 @@
         alt: 'A picture of a commercial building',
         width: '1920',
         height: '1080'
-      }"/>
-
+      }"
+      />
       <Tagline/>
     <Footer/>
   </div>
