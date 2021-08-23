@@ -1,0 +1,15 @@
+// /* 28 Cols */
+$cols: 28;
+$perc: (1 / $cols * 100%);
+
+/* Grid */
+@mixin grid {
+  display: grid;
+  grid-template-columns: $perc;
+  grid-template-rows: auto;
+  grid-auto-columns: $perc;
+}
+
+@function span($n) {
+  @return ($n / $cols * 100vw);
+}

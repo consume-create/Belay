@@ -1,0 +1,40 @@
+{
+  "name": "Belay",
+  "version": "1.0.0",
+  "description": "Belay",
+  "author": "Consume &amp; Create",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "core-js": "^3.15.1",
+    "lazysizes": "^5.3.2",
+    "nuxt": "^2.15.7"
+  },
+  "devDependencies": {
+    "@aceforth/nuxt-optimized-images": "^1.4.0",
+    "@nuxtjs/style-resources": "^1.2.1",
+    "eslint": "^7.32.0",
+    "eslint-loader": "^4.0.2",
+    "gsap": "^3.7.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^9.0.0",
+    "node-sass": "^6.0.1",
+    "prettier": "^2.3.2",
+    "sass": "^1.38.0",
+    "sass-loader": "^10.2.0",
+    "webp-loader": "^0.6.0"
+  },
+  "browserslist": [
+    "defaults",
+    "> 1%",
+    "not IE 11",
+    "iOS >= 8"
+  ]
+}
