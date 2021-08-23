@@ -57,7 +57,7 @@
 import Carousel from '~/components/carousel';
 import About from '~/components/about';
 import PropertyTypes from '~/components/property-types';
-import Tagline from '~/components/Tagline';
+import Tagline from '~/components/tagline';
 import Footer from '~/components/footer';
 
 export default {
