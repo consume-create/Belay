@@ -71,6 +71,8 @@ export default{
 
     this._cnv = _cnv;
     this._ctx = _ctx;
+    // this._width= _cnv.getBoundingClientRect().width;
+    // this._height= _cnv.getBoundingClientRect().height;
     this._width= _cnv.getBoundingClientRect().width;
     this._height= _cnv.getBoundingClientRect().height;
     this._rows = 3;
@@ -88,12 +90,12 @@ export default{
         for(let j = 0; j <= this._cols; j++) {
           let x = ((j * (this._width / this._cols))),
               y = ((i * (this._height / this._rows)));
-          // let x = ((j * (this._width / this._cols))),
-          //     y = ((i * (this._height / this._rows)));
+          // let x = (50 + (j * (this._width / this._cols))),
+          //     y = (50 + (i * (this._height / this._rows)));
           this._points.push({x, y, clean_x: x, clean_y: y});
         }
       }
-      this._ctx.lineWidth = 2;
+      this._ctx.lineWidth = 3;
       this._ctx.strokeStyle = '#999';
     },
 
@@ -122,8 +124,8 @@ export default{
     },
 
     breakDance (event) {
-      let mx = ((event.offsetX ) - 50);
-      let my = ((event.offsetY ) - 50);
+      let mx = ((event.offsetX) - 50);
+      let my = ((event.offsetY) - 50);
 
       if(mx > 0 && my > 0 && mx < this._width && my < this._height) {
 
