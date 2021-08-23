@@ -36,7 +36,20 @@
       }"
       />
       <Tagline/>
-    <Footer/>
+    <Footer
+    :img1="{
+        src: 'footer/footer-big-block.png',
+        alt: 'A medium cube',
+        width: '633',
+        height: '384',
+      }"
+    :img2="{
+        src: 'footer/footer-small-block.png',
+        alt: 'A small cube',
+        width: '168',
+        height: '118',
+      }"
+      />
   </div>
 </template>
 

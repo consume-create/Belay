@@ -1,9 +1,23 @@
 <template>
   <section class="footer">
     <div class="form-cta">
-      <h5>Stay in Touch</h5>
-      <p>placeholder</p>
+      <div class="form-text">
+        <h5>Stay in Touch</h5>
+        <p>placeholder</p>
+      </div>
+      <div class="large-wrapper">
+        <div class="large-block">
+          <div class="image__inner-large" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
+          <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
+        </div>
+      </div>
 
+      <div class="medium-wrapper">
+        <div class="medium-block">
+          <div class="image__inner-medium" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
+          <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
+        </div>
+      </div>
     </div>
 
     <div class="channels">
@@ -36,9 +50,37 @@
 
 <script>
 import SocialLinks from "~/components/social-links.vue";
+import ResponsiveImage from "~/components/responsive-image";
 export default{
   components: {
-    SocialLinks
+    SocialLinks,
+    ResponsiveImage,
+  },
+  props: {
+    img1:
+    {
+      type: Object,
+      default: () => {
+        return {
+          src: "",
+          alt: "",
+          height: "",
+          width: ""
+        }
+      }
+    },
+    img2:
+    {
+      type: Object,
+      default: () => {
+        return {
+          src: "",
+          alt: "",
+          height: "",
+          width: ""
+        }
+      }
+    },
   }
 
 }
@@ -57,6 +99,51 @@ export default{
 
   .form-cta{
     width: span(14);
+    position: relative;
+
+    .form-text{
+      position: relative;
+      z-index: 2;
+    }
+
+    .large-wrapper{
+      position: absolute;
+      top: -120%;
+      left: -10%;
+
+      .large-block {
+        position: relative;
+        width: span(10);
+        z-index: 0;
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+        }
+      }
+    }
+    .medium-wrapper{
+      position: absolute;
+      top: -250%;
+      left: 60%;
+
+      .medium-block {
+        position: relative;
+        width: span(4);
+        z-index: 0;
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+        }
+      }
+    }
   }
 
   .channels{

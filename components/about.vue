@@ -83,6 +83,7 @@ import ResponsiveImage from "~/components/responsive-image";
   color: $white;
   position: relative;
   height: span(28);
+
   .text-box {
     text-align: left;
     padding-right: span(12);
@@ -109,8 +110,6 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block {
       position: relative;
       width: span(4);
-
-      // margin: 0 auto;
       z-index: 3;
 
       img {
@@ -120,9 +119,7 @@ import ResponsiveImage from "~/components/responsive-image";
         top: 0px;
         left: 0px;
       }
-
     }
-
   }
 
 .medium-block-wrapper{
@@ -159,7 +156,7 @@ import ResponsiveImage from "~/components/responsive-image";
       left: 0px;
     }
   }
-}
+ }
 }
 
 

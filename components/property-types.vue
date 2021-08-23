@@ -69,9 +69,6 @@ export default{
     this._old_col = null;
     this.init();
     window.requestAnimationFrame(this.loop);
-    // this.renderLines();
-    // window.requestAnimationFrame(this.loop);
-
   },
   methods: {
     init() {
@@ -79,8 +76,6 @@ export default{
         for(let j = 0; j <= this._cols; j++) {
           let x = (50+ (j * (this._width / this._cols))),
               y = (50+ (i * (this._height / this._rows)));
-              console.log(x);
-
           this._points.push({x, y, clean_x: x, clean_y: y});
         }
       }
@@ -100,7 +95,6 @@ export default{
         if(this._points[i + (this._cols + 1)]) this._ctx.lineTo(this._points[i + (this._cols + 1)].x, this._points[i + (this._cols + 1)].y);
         this._ctx.moveTo(this._points[i].x, this._points[i].y);
       }
-
       this._ctx.stroke();
     },
 
@@ -116,7 +110,6 @@ export default{
     breakDance (event) {
       let mx = ((event.offsetX ) - 50);
       let my = ((event.offsetY ) - 50);
-      console.log(mx,my);
 
       if(mx > 0 && my > 0 && mx < this._width && my < this._height) {
 
@@ -134,12 +127,10 @@ export default{
         }
         this._old_row = row;
         this._old_col = col;
-        console.log(this._old_row, this._old_col);
      }
       else {
         this.translate([]);
         this._old_row = this._old_col = -1;
-        console.log("here");
       }
     },
 
