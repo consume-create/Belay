@@ -174,7 +174,6 @@ export default{
     }
   }
 
-
   @include respond-to($tablet) {
 
 
