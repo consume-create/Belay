@@ -86,8 +86,8 @@ export default{
     init() {
       for(let i = 0; i <= this._rows; i++) {
         for(let j = 0; j <= this._cols; j++) {
-          let x = (50 + (j * (this._width / this._cols))),
-              y = (50 + (i * (this._height / this._rows)));
+          let x = ((j * (this._width / this._cols))),
+              y = ((i * (this._height / this._rows)));
           // let x = ((j * (this._width / this._cols))),
           //     y = ((i * (this._height / this._rows)));
           this._points.push({x, y, clean_x: x, clean_y: y});
@@ -98,7 +98,7 @@ export default{
     },
 
     renderLines() {
-      this._ctx.clearRect(0, 0, this._width+100, this._height+100);
+      this._ctx.clearRect(0, 0, this._width, this._height);
       this._ctx.beginPath();
       this._ctx.moveTo(this._points[0].x, this._points[0].y);
 
