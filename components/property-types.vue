@@ -6,13 +6,8 @@
     <div class="property-image">
       <div class="image__inner-property" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
-    </div>
-
-    <div class="canvas-wrapper">
-      <div class="canvas-outer">
-         <canvas @mousemove="breakDance" id="cnv" width="1900" height="1400"></canvas>
+        <canvas @mousemove="breakDance" id="cnv" ></canvas>
       </div>
-    </div>
   </section>
 </template>
 
@@ -56,12 +51,28 @@ export default{
     };
   },
   mounted() {
+
+    // Get the device pixel ratio, falling back to 1.
+    var dpr = window.devicePixelRatio || 1;
+
+    // Get the size of the canvas in CSS pixels.
     var _cnv = document.getElementById("cnv");
+    var rect = _cnv.getBoundingClientRect();
+
+    // Give the canvas pixel dimensions of their CSS
+    // size * the device pixel ratio.
+    _cnv.width = rect.width * dpr;
+    _cnv.height = rect.height * dpr;
     var _ctx = _cnv.getContext("2d");
+
+    // Scale all drawing operations by the dpr, so you
+    // don't have to worry about the difference.
+    _ctx.scale(dpr, dpr);
+
     this._cnv = _cnv;
     this._ctx = _ctx;
-    this._width= 1700;
-    this._height= 1000;
+    this._width= _cnv.getBoundingClientRect().width;
+    this._height= _cnv.getBoundingClientRect().height;
     this._rows = 3;
     this._cols = 5;
     this._points = [];
@@ -70,12 +81,15 @@ export default{
     this.init();
     window.requestAnimationFrame(this.loop);
   },
+
   methods: {
     init() {
       for(let i = 0; i <= this._rows; i++) {
         for(let j = 0; j <= this._cols; j++) {
-          let x = (50+ (j * (this._width / this._cols))),
-              y = (50+ (i * (this._height / this._rows)));
+          let x = (50 + (j * (this._width / this._cols))),
+              y = (50 + (i * (this._height / this._rows)));
+          // let x = ((j * (this._width / this._cols))),
+          //     y = ((i * (this._height / this._rows)));
           this._points.push({x, y, clean_x: x, clean_y: y});
         }
       }
@@ -129,6 +143,7 @@ export default{
         this._old_col = col;
      }
       else {
+        console.log("here")
         this.translate([]);
         this._old_row = this._old_col = -1;
       }
@@ -149,47 +164,47 @@ export default{
     position: relative;
 
     .title{
-        text-align: center;
-        margin: 0 auto;
-        margin-bottom: $margin-extra-large;
-        margin-top: $margin-extra-large;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: $margin-extra-large;
+      margin-top: $margin-extra-large;
     }
 
     .property-image {
       position: relative;
-      width: span(24);
-      margin: 0 auto;
+      width: span(26);
+      margin: $margin-extra-large auto;
 
       img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0px;
-        left: 0px;
+        @include abs-fill;
       }
+
+     #cnv{
+        @include abs-fill;
+      }
+
     }
 
-  .canvas-wrapper{
-    position: absolute;
-    top: 1%;
-    left: 0%;
-
-    .canvas-outer{
-      position: relative;
-      width: span(24);
-      z-index: 12;
-      margin: 0 auto;
-
-      #cnv {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        // width: 100%;
-        // height: 100%;
-        // transform: translate(-50%, -50%);
-      }
-    }
-  }
+    // position: absolute;
+    // top: 4%;
+    // left: 0%;
+    // margin: 0 auto;
+    //
+    // .canvas-outer{
+    //   position: relative;
+    //   width: span(24);
+    //   z-index: 12;
+    //   margin: 0 auto;
+    //
+    //   #cnv {
+    //     position: absolute;
+    //     top: 0%;
+    //     left: 0%;
+    //     // width: 100%;
+    //     // height: 100%;
+    //   }
+    // }
+  // }
   }
 
 
