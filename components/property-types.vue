@@ -37,17 +37,6 @@ export default{
 
   data() {
     return{
-      // ctx: null,
-      // width: 0,
-      // height: 0,
-      // cnv = document.getElementById('cnv'),
-      //   ctx = cnv.getContext('2d'),
-      //   width = 1000,
-      //   height = 600,
-      //   points = [],
-      //   rows = 3,
-      //   cols = 5,
-      //   old_row, old_col;
     };
   },
   mounted() {
@@ -71,8 +60,6 @@ export default{
 
     this._cnv = _cnv;
     this._ctx = _ctx;
-    // this._width= _cnv.getBoundingClientRect().width;
-    // this._height= _cnv.getBoundingClientRect().height;
     this._width= _cnv.getBoundingClientRect().width;
     this._height= _cnv.getBoundingClientRect().height;
     this._rows = 3;
@@ -184,29 +171,7 @@ export default{
      #cnv{
         @include abs-fill;
       }
-
     }
-
-    // position: absolute;
-    // top: 4%;
-    // left: 0%;
-    // margin: 0 auto;
-    //
-    // .canvas-outer{
-    //   position: relative;
-    //   width: span(24);
-    //   z-index: 12;
-    //   margin: 0 auto;
-    //
-    //   #cnv {
-    //     position: absolute;
-    //     top: 0%;
-    //     left: 0%;
-    //     // width: 100%;
-    //     // height: 100%;
-    //   }
-    // }
-  // }
   }
 
 
