@@ -29,7 +29,7 @@
       }"/>
     <PropertyTypes
     :img1="{
-        src: 'property-types/Icon-set.png',
+        src: 'property-types/icon-set.png',
         alt: 'A picture of a commercial building',
         width: '2880',
         height: '1670'

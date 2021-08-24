@@ -126,36 +126,12 @@ $iconSize: 22px;
           width: span(7);
           height: span(0.1);
         }
-
-
-       //  .right-arrow{
-       //    width: span(1);
-       //    background-color: $white;
-       //    // margin: -9px 0 $margin-normal -9px;
-       //
-       //    button{
-       //      position: relative;
-       //      width: 40px;
-       //      height: 40px;
-       //      background-color: $white;
-       //    }
-       //    &:after {
-       //      content: "";
-       //      position: absolute;
-       //      top: 80%;
-       //      left: 66%;
-       //      width: $iconSize;
-       //      height: $iconSize;
-       //      // margin: -11px 0 0 -11px;
-       //      @include icon("right-arrow", $black, true);
-       //    }
-       // }
-    }
-  }
+      }
+   }
 
     .large-wrapper{
       position: absolute;
-      top: -60%;
+      top: -10%;
       left: -10%;
 
       .large-block {
@@ -212,7 +188,6 @@ $iconSize: 22px;
 
     .socials{
     }
-
   }
 }
 
@@ -221,42 +196,45 @@ $iconSize: 22px;
 }
 
 @include respond-to($desktop) {
-  .channels{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .channel-inner{
-      width: span(6);
-
-      .small-title{
-        margin-bottom: $margin-extra-large;
-      }
-
-      .email{
-        margin-bottom: $margin-small;
-      }
-    }
-    .socials{
-      width: span(2);
+.footer{
+    .channels{
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
-    }
-  }
 
-  .form-cta{
-    width: span(14);
+      .channel-inner{
+        width: span(6);
 
-    .large-wrapper{
-      top: -60%;
-      left: -10%;
+        .small-title{
+          margin-bottom: $margin-extra-large;
+        }
+
+        .email{
+          margin-bottom: $margin-small;
+        }
+      }
+      .socials{
+        width: span(2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
     }
-    .medium-wrapper{
-      position: absolute;
-      top: -120%;
-      left: 55%;
+
+    .form-cta{
+      width: span(14);
+
+      .large-wrapper{
+        position: absolute;
+        top: -70%;
+        left: -10%;
+        // display: none;
+      }
+      .medium-wrapper{
+        top: -120%;
+        left: 55%;
+      }
     }
   }
 }

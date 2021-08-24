@@ -13,18 +13,23 @@
           <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
       </div>
     </div>
+
     <div class="arrow-right">
       right
     </div>
+
     <div class="arrow-left">
       left
     </div>
+
     <div class="hotel-title">
       <p class="spreader">The Coloradan</p>
     </div>
+
     <div class="hotel-date">
       <p class="spreader">2021</p>
     </div>
+
   </section>
 </template>
 
@@ -109,13 +114,13 @@ $iconSize: 22px;
     top: 105%;
     left: 5%;
     color: $white;
-    
+
   }
 
   .hotel-date{
     position: absolute;
     top: 105%;
-    left: 95%;
+    left: 90%;
     color: $white;
   }
 

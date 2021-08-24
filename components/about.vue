@@ -175,42 +175,44 @@ import ResponsiveImage from "~/components/responsive-image";
   }
 
   @include respond-to($desktop) {
+  .about{
+    .text-box {
+      text-align: left;
+      padding-right: span(14);
+      top: 35%;
+      left: 10%;
+      z-index: 4;
+      position: absolute;
 
-  .text-box {
-    text-align: left;
-    padding-right: span(24);
-    top: 35%;
-    left: 10%;
-    z-index: 4;
-    position: absolute;
-
-    .title-upper{
-      margin-bottom: $margin-small;
+      .title-upper{
+        margin-bottom: $margin-small;
+      }
+      .subtitle{
+        margin-bottom: $margin-extra-large;
+        margin-top: $margin-extra-large;
+        border-bottom: 2px solid $light-blue;
+        padding-bottom: $margin-large;
+      }
+      .text{
+        padding-right: span(1);
+      }
     }
-    .subtitle{
-      margin-bottom: $margin-extra-large;
-      margin-top: $margin-extra-large;
+    .small-block-wrapper{
+      left: 70%;
+      top: -8%;
     }
-    .text{
-      padding-right: span(11);
+
+    .medium-block-wrapper{
+      position: absolute;
+      left: 10%;
+      top: 2%;
+    }
+
+    .large-block-wrapper{
+      position: absolute;
+      top: 25%;
     }
   }
-  .small-block-wrapper{
-    left: 70%;
-    top: -8%;
-  }
-
-  .medium-block-wrapper{
-    position: absolute;
-    left: 10%;
-    top: 2%;
-  }
-
-  .large-block-wrapper{
-    position: absolute;
-    top: 25%;
-  }
-
 }
 
 </style>
