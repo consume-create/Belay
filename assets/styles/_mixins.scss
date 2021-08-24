@@ -167,135 +167,99 @@ Generic Icons Mixin
 
   @if $name == arrow {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 32 32" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M16.02,32c-3.91,0-7.82-1.49-10.79-4.46l-0.76-0.76c-5.95-5.95-5.95-15.64,0-21.59l0.72-0.72c5.95-5.95,15.64-5.95,21.59,0l0.76,0.76c5.95,5.95,5.95,15.64,0,21.59l-0.72,0.72C23.84,30.51,19.93,32,16.02,32z M15.98,2c-3.4,0-6.79,1.29-9.38,3.88L5.88,6.6c-5.17,5.17-5.17,13.59,0,18.76l0.76,0.76c5.17,5.17,13.59,5.17,18.76,0l0.72-0.72c5.17-5.17,5.17-13.59,0-18.76l-0.76-0.76C22.77,3.29,19.38,2,15.98,2z"/><path d="M24.18,15.3L16.7,7.82c0,0,0,0,0,0c-0.09-0.09-0.2-0.16-0.32-0.22c-0.12-0.05-0.25-0.08-0.38-0.08h0c-0.01,0-0.01,0-0.02,0c-0.12,0-0.24,0.03-0.36,0.07c-0.12,0.05-0.23,0.12-0.33,0.22l-7.46,7.46c-0.39,0.39-0.39,1.02,0,1.41s1.02,0.39,1.41,0l5.76-5.76l0.01,12.53c0,0.55,0.45,1,1,1h0c0.55,0,1-0.45,1-1L17,10.95l5.77,5.77c0.2,0.2,0.45,0.29,0.71,0.29s0.51-0.1,0.71-0.29C24.57,16.32,24.57,15.69,24.18,15.3z"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == right-arrow {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 20 20" xml:space="preserve" fill="#{svgColorMaker($fill)}"><polygon points="17.79,10 11.41,3.63 10.7,4.33 15.87,9.5 0,9.5 0,10.5 15.87,10.5 10.71,15.66 11.41,16.37"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == play-btn {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 36 36" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M1.54,36c-0.28,0-0.56-0.08-0.81-0.23C0.28,35.49,0,34.99,0,34.46V1.54c0-0.53,0.28-1.03,0.73-1.31s1.02-0.31,1.5-0.07l32.91,16.46C35.67,16.88,36,17.42,36,18s-0.33,1.12-0.85,1.38L2.23,35.84C2.01,35.95,1.78,36,1.54,36z M3.09,4.04v27.92L31.01,18L3.09,4.04z"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == facebook {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 10 20" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M7.57,3.46h2.16C9.88,3.46,10,3.35,10,3.21V0.25C10,0.11,9.88,0,9.73,0H6.08C3.94,0,2.2,1.61,2.2,3.6v2.85H0.27C0.12,6.46,0,6.57,0,6.71v2.96c0,0.14,0.12,0.25,0.27,0.25H2.2v0.16v9.67C2.2,19.89,2.32,20,2.47,20h3.86c0.15,0,0.27-0.11,0.27-0.25V9.92h2.8c0.14,0,0.26-0.1,0.27-0.23l0.27-2.96c0.01-0.15-0.11-0.27-0.27-0.27H6.61v-2.1C6.61,3.86,7.04,3.46,7.57,3.46z"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == instagram {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 20 20" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M15,10c0-2.76-2.24-5-5-5c-2.76,0-5,2.24-5,5c0,2.76,2.24,5,5,5C12.76,15,15,12.76,15,10z M6.8,10c0-1.77,1.44-3.2,3.2-3.2c1.77,0,3.2,1.44,3.2,3.2s-1.44,3.2-3.2,3.2C8.23,13.2,6.8,11.77,6.8,10z"/><path d="M6.02,20h7.95C17.3,20,20,17.31,20,13.98V6.02C20,2.69,17.3,0,13.98,0H6.02C2.7,0,0,2.7,0,6.02v7.95C0,17.3,2.7,20,6.02,20z M1.89,6.02c0-2.28,1.85-4.14,4.14-4.14h7.95c2.29,0,4.14,1.85,4.14,4.14v7.95c0,2.28-1.85,4.14-4.14,4.14H6.02c-2.28,0-4.14-1.85-4.14-4.14V6.02z"/><path d="M16.25,4.8c0-0.69-0.56-1.25-1.25-1.25c-0.69,0-1.25,0.56-1.25,1.25c0,0.69,0.56,1.25,1.25,1.25C15.69,6.05,16.25,5.49,16.25,4.8z"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == youtube {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 176 124" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M176 62s0 29-4 43a22 22 0 0 1-15 15c-14 4-69 4-69 4s-55 0-69-4a22 22 0 0 1-15-15C0 91 0 62 0 62s0-29 4-43A22 22 0 0 1 19 4c14-4 69-4 69-4s55 0 69 4a22 22 0 0 1 15 15c4 14 4 43 4 43zM70 88l46-26-46-26z"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == linkedin {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 5 1036 990" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M0 120c0-33 12-61 35-82C58 16 89 5 126 5s66 11 89 32c23 22 35 51 35 86 0 32-11 59-34 80-23 22-54 33-92 33h-1c-37 0-66-11-89-33S0 153 0 120zm13 875V327h222v668H13zm345 0h222V622c0-23 3-41 8-54 9-23 24-42 43-57 19-16 42-24 71-24 75 0 112 50 112 151v357h222V612c0-99-23-173-70-224s-108-77-185-77c-86 0-153 37-201 111v2h-1l1-2v-95H358a75646 75646 0 0 1 0 668z"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == twitter {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 22 20" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M4.06,16.41c-1.19,0.41-2.48,0.6-3.74,0.48c-0.2-0.03-0.24-0.03-0.3,0c-0.06,0.03-0.01,0.08,0.06,0.13c0.26,0.17,0.51,0.32,0.78,0.46c0.8,0.42,1.63,0.75,2.5,0.99c4.49,1.23,9.56,0.33,12.93-3c2.65-2.62,3.58-6.22,3.58-9.83c0-0.14,0.17-0.22,0.27-0.29c0.69-0.51,1.24-1.13,1.75-1.82C22.01,3.37,22,3.23,22,3.18V3.16c0-0.06,0.01-0.04-0.08,0c-0.7,0.31-1.47,0.5-2.22,0.63c0.36-0.06,0.89-0.7,1.1-0.96c0.32-0.4,0.59-0.85,0.74-1.34c0.02-0.04,0.03-0.09,0-0.11c-0.05-0.02-0.08-0.01-0.12,0.01c-0.84,0.45-1.71,0.77-2.64,1c-0.08,0.02-0.13,0-0.18-0.05c-0.08-0.09-0.15-0.17-0.23-0.23c-0.39-0.33-0.81-0.59-1.28-0.78c-0.62-0.25-1.29-0.36-1.96-0.31c-0.65,0.04-1.28,0.22-1.86,0.52c-0.58,0.3-1.09,0.72-1.5,1.22c-0.42,0.52-0.74,1.13-0.9,1.78c-0.15,0.63-0.14,1.25-0.05,1.88c0.01,0.11,0,0.12-0.09,0.11C7.09,5.98,4.09,4.7,1.65,1.93C1.54,1.81,1.49,1.81,1.4,1.94c-1.07,1.59-0.55,4.14,0.78,5.4c0.18,0.17,0.36,0.33,0.56,0.49C2.67,7.84,1.78,7.75,0.99,7.34C0.89,7.28,0.83,7.31,0.82,7.43C0.81,7.6,0.83,7.76,0.85,7.95c0.2,1.61,1.33,3.1,2.87,3.68c0.18,0.08,0.38,0.14,0.58,0.18c-0.35,0.08-0.71,0.13-1.72,0.05c-0.13-0.02-0.17,0.04-0.13,0.16c0.76,2.05,2.39,2.65,3.61,3c0.16,0.03,0.33,0.03,0.49,0.07c-0.01,0.01-0.02,0.01-0.03,0.03C6.12,15.73,4.72,16.19,4.06,16.41z"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == x {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}"><polygon points="19.66,18.24 15.41,14 19.66,9.76 18.24,8.34 14,12.59 9.76,8.34 8.34,9.76 12.59,14 8.34,18.24 9.76,19.66 14,15.41 18.24,19.66"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == clear {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}"><polygon points="19.7,18.2 15.4,14 19.7,9.8 18.2,8.3 14,12.6 9.8,8.3 8.3,9.8 12.6,14 8.3,18.2 9.8,19.7 14,15.4 18.2,19.7"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == out {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M14,27C6.83,27,1,21.17,1,14C1,6.83,6.83,1,14,1c7.17,0,13,5.83,13,13C27,21.17,21.17,27,14,27z M6.93,18.24l2.83,2.83L17,13.83V19h4V7H9v4h5.17L6.93,18.24z"/><path d="M14,2c6.62,0,12,5.38,12,12s-5.38,12-12,12S2,20.62,2,14S7.38,2,14,2 M8,12h2h1.76l-4.83,4.83l-1.41,1.41l1.41,1.41l1.41,1.41l1.41,1.41l1.41-1.41L16,16.24V18v2h2h2h2v-2v-8V8V6h-2h-2h-8H8v2v2V12 M14,0C6.27,0,0,6.27,0,14s6.27,14,14,14s14-6.27,14-14S21.73,0,14,0L14,0z M10,10V8h8h2v2v8h-2v-6.59l-8.24,8.24l-1.41-1.41L16.59,10H10L10,10z"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == clear-circ {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path class="cls-1" d="M18.3 7.58l-4.3 4.3-4.29-4.3-2.13 2.13 4.3 4.29-4.3 4.3 2.13 2.12 4.29-4.3 4.3 4.3 2.12-2.12-4.3-4.3 4.3-4.29-2.12-2.13z"/><path class="cls-1" d="M14 .14A13.86 13.86 0 1 0 27.86 14 13.88 13.88 0 0 0 14 .14zm0 24.72A10.86 10.86 0 1 1 24.86 14 10.87 10.87 0 0 1 14 24.86z"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == hamburger {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M0 3.39h28V6.1H0zM0 21.9h28v2.71H0zM0 12.87h28v2.71H0z"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == down-arrow {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}"><polygon points="19.7,11.9 18.2,10.5 14,14.7 9.8,10.5 8.3,11.9 14,17.5"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == chevron-right {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M9.09 25.76l-2.74-2.92L15.79 14 6.35 5.16l2.74-2.92L21.65 14 9.09 25.76z"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == long-arrow-right {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M19.36 6.16L17.1 8.13l4.05 4.62-19.37.06.01 3 18.91-.06-3.6 4.12 2.26 1.97L26.22 14l-6.86-7.84z"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == mail {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 20 14" xml:space="preserve" fill="#{svgColorMaker($fill)}" stroke="#{svgColorMaker($fill)}" stroke-width="0.2"><path d="M2.25581395 1C1.56735581 1 1 1.55132881 1 2.22033898v9.35594032c0 .6690102.56735581 1.220339 1.25581395 1.220339H17.744186c.6884582 0 1.255814-.5513288 1.255814-1.220339V2.22033898C19 1.55132881 18.4326442 1 17.744186 1H2.25581395zm.22238372.81355932H17.5218023l-7.16205346 6.38768949c-.17106279.15252204-.54843489.15252204-.71949768 0L2.47819767 1.81355932zm-.64098837.53389831l5.06905117 4.5190861L1.8372093 11.4364488V2.34745763zm16.3255814 0v9.08899117l-5.0690512-4.56990507 5.0690512-4.5190861zM7.52106512 7.41947932l1.55015581 1.37924746c.52216744.46555932 1.3353907.46555932 1.85755814 0l1.55015583-1.37924746 5.0559488 4.56357968H2.46511628l5.05594884-4.56357968z" /></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == squiggle-arrow {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 117.8" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M27.8 14.8a5.5 5.5 0 0 0-2.5-1.7h-.2A1.4 1.4 0 0 0 24 13a.9.9 0 0 1-.8 0l-.4-.3a4.2 4.2 0 0 1-1.2-.7 1.1 1.1 0 0 1 0-.2 2.4 2.4 0 0 0-1-2.1l-.3-.4c-.2-.5-.5-.7-1.3-1a4.4 4.4 0 0 1-1.4-.9 4 4 0 0 0-1.5-1l-.6-.1a3.8 3.8 0 0 0-1-.2h-.3l-1.3-.8a1.9 1.9 0 0 0-.5-2l.2-.7-1.5-.4V2a2 2 0 1 0-1 1.8 4.7 4.7 0 0 1 .6.5l.5.4a2 2 0 0 1-.1.8l-.3.7 2.8 1.6h.7a1.9 1.9 0 0 1 .6.2 6.5 6.5 0 0 0 .7.2 4.5 4.5 0 0 1 .9.6 5.3 5.3 0 0 0 2.1 1.3h.2a2.6 2.6 0 0 0 .8 1c.3.2.3.4.3.8a2.3 2.3 0 0 0 .1.7c.3.9 1 1.2 2 1.7l.4.2a2.5 2.5 0 0 0 2 .2h.2a10.7 10.7 0 0 1 1.3.7 3.7 3.7 0 0 0-.9.3 15.3 15.3 0 0 0-1.3 1 10.1 10.1 0 0 1-1 .8 8.8 8.8 0 0 1-2.7 1l-.6.2a4 4 0 0 0-1 0 4.8 4.8 0 0 1-1.7 0 3.1 3.1 0 0 0-1.3 0 5.4 5.4 0 0 0-2 .9l-3 2-3.7 3.3a5 5 0 0 1-1 .6 18.6 18.6 0 0 1-3-.2l-.5-.1-.2.3A4 4 0 0 0 1 28a6.9 6.9 0 0 0 .4 1.8 11.2 11.2 0 0 1 .5 1.5 12 12 0 0 1 .2 1.5 4.7 4.7 0 0 0 .4 1.8l.6 1.4 1.1 2.7.3.5-.2.3a5.2 5.2 0 0 0-.7 1.1A7.7 7.7 0 0 0 3 43v.5a4.9 4.9 0 0 0 0 1 9.7 9.7 0 0 1 0 1.2 1.3 1.3 0 0 0-.4.3 8.7 8.7 0 0 1-.6.7A12.2 12.2 0 0 0 .8 48a4.6 4.6 0 0 0-.8 2.3v.2l.3.6.2.2a4.9 4.9 0 0 1 .8 1.8v.3a3.1 3.1 0 0 0 0 .7 9.2 9.2 0 0 0 .2 2 8.2 8.2 0 0 0 .5 1.6A13.4 13.4 0 0 0 3.5 61a4 4 0 0 0 1 .7 7.7 7.7 0 0 1 1.8 1.4 3.3 3.3 0 0 1 1.1 1.6 3.4 3.4 0 0 0 .2.5c.3.8 2.2 4.2 2.6 4.9a17.5 17.5 0 0 1 .7 3.7c.1 1.4.3 2.2 1 2.5.3.6.7 2.2.8 2.8l.3 1 .9-.5 2-1c.3-.2.4-.2.8 0h.5a4 4 0 0 0 2 0h.4A10.5 10.5 0 0 1 22 78h.1v.3a3.4 3.4 0 0 0 .4.7 10.8 10.8 0 0 1 1.1 2.3.5.5 0 0 0 0 .1 3.7 3.7 0 0 0-.8 1.1l-.2.4a5.8 5.8 0 0 1-.8.9 4 4 0 0 0-.7 1l-2.6 4-3.6 3.4a3.2 3.2 0 0 0-.8 2.1 7.7 7.7 0 0 1-.4 1.5 1.3 1.3 0 0 1-.7.4h-.2l-.2.3c-.7.9-1.6 2-1.8 2a4.5 4.5 0 0 0-1.2 1.7 2.7 2.7 0 0 0-.6 1.9 1.6 1.6 0 0 1 0 .4l-2-.1-1 .2-1-1.3-2 .2-.6 1.9-.8 1.7 6.4 3.5v2.5H5.6l3.3 6.6 3.3-6.6H9.7v-3.5l-5.9-3.2.2-.4.3-.9 1.1 1.4 1.8-.4 3 .1.1-.6a4.4 4.4 0 0 0 .3-1.8 2.6 2.6 0 0 1 .4-.7 6 6 0 0 1 .7-1 10.7 10.7 0 0 0 2-2.4 2.6 2.6 0 0 0 1.5-1.3 10 10 0 0 0 .5-1.9v-.1a1.5 1.5 0 0 1 .4-1l3.5-3.4.1-.2 2.9-4.3a5.2 5.2 0 0 1 .4-.5 6.6 6.6 0 0 0 1-1.3l.2-.4.2-.3a1 1 0 0 0 .6-.1c.6-.3.5-.8.4-1.4a10.9 10.9 0 0 0-1.4-3.3 1.2 1.2 0 0 1-.2-.4 1.7 1.7 0 0 0-1.7-1.4 11.8 11.8 0 0 0-2.9.4l-.2.1h-.1a2.4 2.4 0 0 1-1.2 0h-.4a2.3 2.3 0 0 0-2.2.2l-1 .5c-.2-.7-.4-1.7-.6-2a1.2 1.2 0 0 0-.7-.8 5.6 5.6 0 0 1-.2-1.2 17.1 17.1 0 0 0-.9-4.2v-.1l-2.5-4.8-.2-.4A4.7 4.7 0 0 0 7.5 62a9.3 9.3 0 0 0-2.2-1.7 3.3 3.3 0 0 1-.6-.4 15.7 15.7 0 0 1-1.2-2.8 8 8 0 0 1-.4-1.3 8.2 8.2 0 0 1-.1-1.7 1.5 1.5 0 0 1 0-.3 2.5 2.5 0 0 0 0-.9 6.3 6.3 0 0 0-1-2.5l-.2-.2a3 3 0 0 1 .4-1.2 12.8 12.8 0 0 1 1-1.1l.3-.4a1 1 0 0 0 .2 0c.7 0 .7-.6.8-1.5a11 11 0 0 0 0-1.6 2.6 2.6 0 0 1 0-.6v-.5a6.5 6.5 0 0 1 .5-2 4.3 4.3 0 0 1 .6-.8 2.7 2.7 0 0 0 .5-.8l.3-.1-.5-1.6h-.1v-.1l-1.1-2.6a13.7 13.7 0 0 0-.7-1.7 6.5 6.5 0 0 1-.2-1.1 16.9 16.9 0 0 0-.2-1.7 13.8 13.8 0 0 0-.6-1.6 5.6 5.6 0 0 1-.4-1.4 1.9 1.9 0 0 1 .4-1 11.6 11.6 0 0 0 3.2.2 5.6 5.6 0 0 0 1.6-1l3.4-3.2 3-2a3.8 3.8 0 0 1 1.5-.6 1.8 1.8 0 0 1 .6 0 6 6 0 0 0 2.2 0h.4l1.5-.2a10.3 10.3 0 0 0 3.2-1.3 11.5 11.5 0 0 0 1.1-.8 13.3 13.3 0 0 1 1.2-1 3.3 3.3 0 0 1 .6-.2c.6-.1 1.2-.3 1.4-.9a1.2 1.2 0 0 0-.1-1z" /></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == search {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M28 25.28l-6.13-6.42a11.71 11.71 0 0 0 1.88-6.38 11.88 11.88 0 1 0-3.82 8.69l5.9 6.18zm-16.08-4a8.84 8.84 0 1 1 8.83-8.84 8.85 8.85 0 0 1-8.87 8.88z"/></svg>');
-    background-size: contain;
-    background-repeat: no-repeat;
   }
 
   @if $name == check {
     // background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M13.29 17.54l7.07-7.08-1.41-1.41-7.07 7.07-2.83-2.83-1.41 1.42 2.82 2.83 1.42 1.41z"/></svg>');
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M95.28,126.33A28.65,28.65,0,0,1,85,124.65a173.68,173.68,0,0,1-21.11-8c-7.54-3.52-14.19-8.41-20.5-13.77C26.94,88.77,12,71.76,5.37,50.75c-1.54-4.53-3.35-9-4.2-13.68C-1,25.82,3.39,14.77,10.81,6.38,14.67,2.21,20.64,1.62,26,.7c2.69-.37,4.47.79,5.72,3.08,4.33,7.5,8.11,15.36,13,22.49,2.65,4.06,2.37,6.15-.95,9.64-3.13,3.29-7.05,5.64-10.23,8.86-1.57,1.63-3.76,3.39-2.76,5.92,1.06,3.26,3.07,6,4.77,8.91C43.68,74,56.14,85.52,70.63,93.39c2.84,1.41,6.34,4.66,9.45,2.19C85,91.71,87.73,85.9,92.61,82c1.87-1.53,3.81-2,6-.81,3.83,2.09,7.33,4.72,11.2,6.75,4.09,2.13,8.12,4.4,12.14,6.67,2.24,1.25,4.6,2.48,4.38,5.64a61.39,61.39,0,0,1-1.22,7.36c-1,5.23-4,9-8.44,11.79-6.41,4.1-13.15,7.1-21.42,6.92"/></svg>');
-
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == phone {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}"><path d="M95.28,126.33A28.65,28.65,0,0,1,85,124.65a173.68,173.68,0,0,1-21.11-8c-7.54-3.52-14.19-8.41-20.5-13.77C26.94,88.77,12,71.76,5.37,50.75c-1.54-4.53-3.35-9-4.2-13.68C-1,25.82,3.39,14.77,10.81,6.38,14.67,2.21,20.64,1.62,26,.7c2.69-.37,4.47.79,5.72,3.08,4.33,7.5,8.11,15.36,13,22.49,2.65,4.06,2.37,6.15-.95,9.64-3.13,3.29-7.05,5.64-10.23,8.86-1.57,1.63-3.76,3.39-2.76,5.92,1.06,3.26,3.07,6,4.77,8.91C43.68,74,56.14,85.52,70.63,93.39c2.84,1.41,6.34,4.66,9.45,2.19C85,91.71,87.73,85.9,92.61,82c1.87-1.53,3.81-2,6-.81,3.83,2.09,7.33,4.72,11.2,6.75,4.09,2.13,8.12,4.4,12.14,6.67,2.24,1.25,4.6,2.48,4.38,5.64a61.39,61.39,0,0,1-1.22,7.36c-1,5.23-4,9-8.44,11.79-6.41,4.1-13.15,7.1-21.42,6.92"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @if $name == right-arrow-minimal {
-    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 23 42" xml:space="preserve" fill="#{svgColorMaker($fill)}"><polyline points="1.04 1.34 20.7 21 1.04 40.66"/></svg>');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}"><polygon points="7.29 27.9 6.8 27.41 20.21 14 6.8 0.59 7.29 0.1 21.2 14 7.29 27.9"/></svg>');
   }
+
+  @if $name == right-arrow-mail {
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}"><polygon points="15.19 1.58 13.63 3.15 23.38 12.9 0.39 12.9 0.39 15.11 23.38 15.11 13.63 24.85 15.19 26.42 27.61 14 15.19 1.58"/></svg>');
+  }
+
+  @if $name == mail {
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width}" height="#{$height}" viewBox="0 0 28 28" xml:space="preserve" fill="#{svgColorMaker($fill)}">  <polygon points="20.07 13.24 27.79 22.08 27.79 6.59 20.07 13.24"/> <polygon points="0.21 6.59 0.21 22.08 8.03 13.29 0.21 6.59"/> <polygon points="13.93 18.35 9.42 14.49 1.47 23.56 26.58 23.56 18.58 14.49 13.93 18.35"/><path d="M27.15,4.79a1,1,0,0,0-.57-.34c-.31,0-24.86,0-24.86,0a1.14,1.14,0,0,0-.56.13,1.15,1.15,0,0,0-.25.21L14,16Z"/></svg>');
+  }
+
 }

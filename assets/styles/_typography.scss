@@ -89,26 +89,6 @@ h6 {
   text-transform: uppercase;
 }
 
-.t1,
-.t2,
-.t3 {
-  font-family: $gotham-bold;
-  letter-spacing: 0.1em;
-  line-height: 1em;
-}
-
-.t1 {
-  font-size: calc(158px + (312 - 158) * ((100vw - 340px) / (1440 - 340)));
-}
-
-.t2 {
-  font-size: calc(52px + (130 - 52) * ((100vw - 340px) / (1440 - 340)));
-}
-
-.t3 {
-  font-size: calc(32px + (80 - 32) * ((100vw - 340px) / (1440 - 340)));
-}
-
 .spread{
   font-family: $gotham-bold;
   font-size: 14px;
@@ -134,6 +114,10 @@ p, .v-select, a, .text-link, li {
   font-size: 14px;
   line-height: 20px;
   // letter-spacing: 0.07em;
+
+  &.spread {
+
+  }
 
   &.small {
     font-size: 12px;
