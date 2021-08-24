@@ -33,9 +33,7 @@ import ResponsiveImage from "~/components/responsive-image";
 
 <style lang="scss">
 .header-wrapper{
-  // padding: span(1);
-  // background-color: $deep-blue;
-  // position: relative;
+  
   .header-image {
     position: relative;
     width: span(4);

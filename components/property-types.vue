@@ -6,7 +6,7 @@
     <div class="property-image">
       <div class="image__inner-property" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
-        <canvas @mousemove="breakDance" id="cnv" ></canvas>
+        <canvas @mousemove="breakDance" @mouseleave="reset" id="cnv" ></canvas>
       </div>
   </section>
 </template>
@@ -61,7 +61,7 @@ export default{
     this._cnv = _cnv;
     this._ctx = _ctx;
     this._width= _cnv.getBoundingClientRect().width;
-    this._height= _cnv.getBoundingClientRect().height;
+    this._height= _cnv.getBoundingClientRect().height + 50;
     this._rows = 3;
     this._cols = 5;
     this._points = [];
@@ -76,13 +76,13 @@ export default{
       for(let i = 0; i <= this._rows; i++) {
         for(let j = 0; j <= this._cols; j++) {
           let x = ((j * (this._width / this._cols))),
-              y = ((i * (this._height / this._rows)));
+              y = (50 + (i * (this._height / this._rows)));
           // let x = (50 + (j * (this._width / this._cols))),
           //     y = (50 + (i * (this._height / this._rows)));
           this._points.push({x, y, clean_x: x, clean_y: y});
         }
       }
-      this._ctx.lineWidth = 3;
+      this._ctx.lineWidth = 1;
       this._ctx.strokeStyle = '#999';
     },
 
@@ -111,8 +111,8 @@ export default{
     },
 
     breakDance (event) {
-      let mx = ((event.offsetX) - 50);
-      let my = ((event.offsetY) - 50);
+      let mx = event.offsetX;
+      let my = event.offsetY - 50;
 
       if(mx > 0 && my > 0 && mx < this._width && my < this._height) {
 
@@ -132,10 +132,13 @@ export default{
         this._old_col = col;
      }
       else {
-        console.log("here")
-        this.translate([]);
-        this._old_row = this._old_col = -1;
+        this.reset();
       }
+    },
+
+    reset(){
+      this.translate([]);
+      this._old_row = this._old_col = -1;
     },
 
     loop() {
@@ -161,15 +164,23 @@ export default{
 
     .property-image {
       position: relative;
-      width: span(26);
-      margin: $margin-extra-large auto;
+      width: span(28);
 
       img {
         @include abs-fill;
+        // top: 25px;
       }
 
      #cnv{
         @include abs-fill;
+        // top: -50px;
+
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // width: 550px;
+        // height: 550px;
+        // transform: translate(-50%, -50%);
       }
     }
   }

@@ -39,11 +39,23 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
-  font-family: $gotham-medium;
+ {
+  font-family: $lemonde-livre-bold;
   letter-spacing: 0.025em;
   line-height: 0.95em;
+}
+
+h5{
+  font-family: $gotham-bold;
+  letter-spacing: 0.025em;
+  line-height: 0.95em;
+}
+
+h6{
+  font-family: $gotham-bold;
+  letter-spacing: 0.45em;
+  line-height: 0.95em;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -91,8 +103,28 @@ h6 {
   font-size: calc(32px + (80 - 32) * ((100vw - 340px) / (1440 - 340)));
 }
 
+.spread{
+  font-family: $gotham-bold;
+  font-size: 14px;
+  letter-spacing: 0.8em;
+  line-height: 20px;
+  text-transform: uppercase;
+  // letter-spacing: 0.07em;
+
+  &.small {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &.large {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
 p, .v-select, a, .text-link, li {
-  font-family: $arial;
+  font-family: $gotham-book;
   font-size: 14px;
   line-height: 20px;
   // letter-spacing: 0.07em;

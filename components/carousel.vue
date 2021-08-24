@@ -13,6 +13,8 @@
           <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
       </div>
     </div>
+    <div class="arrow-right"/>
+    <div class="arrow-left"/>
   </section>
 </template>
 
@@ -46,26 +48,48 @@ import ResponsiveImage from "~/components/responsive-image";
 
 <style lang="scss">
 
+$iconSize: 22px;
+
 .carousel{
-  // padding: span(8) span(4);
-  // background-color: $dark-blue;
   position: relative;
   z-index: 4;
   .logo{
-    // margin-bottom: span(1);
     position: absolute;
     z-index: 5;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 5%;
-    // left: 45%;
+    top: 3%;
+  }
+
+  .right-arrow{
+    width: 100%;
+    margin: -9px 0 $margin-normal -9px;
+
+    a{
+      position: relative;
+      width: 40px;
+      height: 40px;
+    }
+    a:after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $iconSize;
+      height: $iconSize;
+      margin: -11px 0 0 -11px;
+    }
+    &:after{
+      @include icon("instagram", $white, true);
+    }
   }
 
   .carousel-wrapper{
     .carousel-image{
       width: span(28);
+      height: span(18);
       position: relative;
       margin: 0 auto;
 

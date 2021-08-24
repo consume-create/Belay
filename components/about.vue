@@ -9,7 +9,7 @@
 
     <div class="text-box">
       <h3 class="title-upper">Our Angle </h3>
-      <h5 class="subtitle">About Us</h5>
+      <h6 class="subtitle">About Us</h6>
       <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt quis urna non facilisis. Donec sit amet faucibus dui, mattis fringilla odio. Ut sem metus, placerat vitae tortor in, pharetra pulvinar mauris. Aliquam erat volutpat.</p>
     </div>
 
@@ -82,7 +82,7 @@ import ResponsiveImage from "~/components/responsive-image";
   background-color: $deep-blue;
   color: $white;
   position: relative;
-  height: span(28);
+  height: span(20);
 
   .text-box {
     text-align: left;
@@ -97,6 +97,7 @@ import ResponsiveImage from "~/components/responsive-image";
     }
     .subtitle{
       margin-bottom: $margin-extra-large;
+      margin-top: $margin-extra-large;
     }
     .text{
     }
@@ -106,7 +107,7 @@ import ResponsiveImage from "~/components/responsive-image";
   .small-block-wrapper{
     position: absolute;
     left: 70%;
-    top: -5%;
+    top: -8%;
     .small-block {
       position: relative;
       width: span(4);
@@ -125,7 +126,7 @@ import ResponsiveImage from "~/components/responsive-image";
 .medium-block-wrapper{
   position: absolute;
   left: 10%;
-  top: 5%;
+  top: 2%;
   .medium-block {
     position: relative;
     width: span(12);
@@ -143,10 +144,11 @@ import ResponsiveImage from "~/components/responsive-image";
 
 .large-block-wrapper{
   position: absolute;
-  top: 30%;
+  top: 25%;
   .large-block {
     position: relative;
     width: span(28);
+    height: span(18);
     z-index: 1;
     img {
       position: absolute;

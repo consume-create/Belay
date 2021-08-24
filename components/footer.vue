@@ -2,8 +2,9 @@
   <section class="footer">
     <div class="form-cta">
       <div class="form-text">
-        <h5>Stay in Touch</h5>
-        <p>placeholder</p>
+        <h5 class="title-cta">Stay in Touch</h5>
+        <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt quis urna non facilisis.</p>
+        <input type="email" class="email" size="30" placeholder="hello@belaydev.com" required>
       </div>
       <div class="large-wrapper">
         <div class="large-block">
@@ -22,7 +23,7 @@
 
     <div class="channels">
       <div class="channel-inner">
-        <p class="small-title"> Our Channels</p>
+        <p class="small-title spread"> Our Channels</p>
         <p class="email">INFO@BELAYDEV.COM</p>
         <p class="phone-number"> 303 / 607 /6133</p>
       </div>
@@ -90,7 +91,7 @@ export default{
 <style lang="scss">
 
 .footer{
-  padding: span(2);
+  padding: span(3);
   background-color: $deep-blue;
   color: white;
   display: flex;
@@ -104,11 +105,25 @@ export default{
     .form-text{
       position: relative;
       z-index: 2;
+
+      .title-cta{
+
+      }
+
+      .subtext{
+          margin-bottom: $margin-normal;
+      }
+
+      .email{
+        padding: span(0.3);
+        width: span(7);
+        height: span(0.1);
+      }
     }
 
     .large-wrapper{
       position: absolute;
-      top: -120%;
+      top: -50%;
       left: -10%;
 
       .large-block {
@@ -127,8 +142,8 @@ export default{
     }
     .medium-wrapper{
       position: absolute;
-      top: -250%;
-      left: 60%;
+      top: -120%;
+      left: 55%;
 
       .medium-block {
         position: relative;
@@ -163,6 +178,7 @@ export default{
 
     .socials{
     }
+
   }
 }
 
