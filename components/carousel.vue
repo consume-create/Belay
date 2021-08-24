@@ -13,8 +13,18 @@
           <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
       </div>
     </div>
-    <div class="arrow-right"/>
-    <div class="arrow-left"/>
+    <div class="arrow-right">
+      right
+    </div>
+    <div class="arrow-left">
+      left
+    </div>
+    <div class="hotel-title">
+      <p class="spreader">The Coloradan</p>
+    </div>
+    <div class="hotel-date">
+      <p class="spreader">2021</p>
+    </div>
   </section>
 </template>
 
@@ -63,27 +73,50 @@ $iconSize: 22px;
     top: 3%;
   }
 
-  .right-arrow{
-    width: 100%;
-    margin: -9px 0 $margin-normal -9px;
+  .arrow-right{
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    // width: 100%;
+    // margin: -9px 0 $margin-normal -9px;
 
-    a{
-      position: relative;
-      width: 40px;
-      height: 40px;
-    }
-    a:after{
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: $iconSize;
-      height: $iconSize;
-      margin: -11px 0 0 -11px;
-    }
-    &:after{
-      @include icon("instagram", $white, true);
-    }
+    // a{
+    //   position: relative;
+    //   width: 40px;
+    //   height: 40px;
+    // }
+    // a:after{
+    //   content: "";
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   width: $iconSize;
+    //   height: $iconSize;
+    //   margin: -11px 0 0 -11px;
+    // }
+    // &:after{
+    //   @include icon("instagram", $white, true);
+    // }
+  }
+  .arrow-left{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+  }
+
+  .hotel-title{
+    position: absolute;
+    top: 105%;
+    left: 5%;
+    color: $white;
+    
+  }
+
+  .hotel-date{
+    position: absolute;
+    top: 105%;
+    left: 95%;
+    color: $white;
   }
 
   .carousel-wrapper{
@@ -113,6 +146,16 @@ $iconSize: 22px;
 }
 
 @include respond-to($desktop) {
+
+  .hotel-date{
+    top: 105%;
+    left: 95%;
+  }
+
+  .hotel-title{
+    top: 105%;
+    left: 5%;
+  }
 
 }
 

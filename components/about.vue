@@ -1,6 +1,6 @@
 <template>
   <section class="about">
-    <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 400}}">
+      <div class="small-block-wrapper" >
       <div class="small-block" >
         <div class="image__inner-small" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
@@ -13,7 +13,7 @@
       <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt quis urna non facilisis. Donec sit amet faucibus dui, mattis fringilla odio. Ut sem metus, placerat vitae tortor in, pharetra pulvinar mauris. Aliquam erat volutpat.</p>
     </div>
 
-    <div class="medium-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 300}}">
+    <div class="medium-block-wrapper">
       <div class="medium-block">
         <div class="image__inner-medium" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
@@ -31,6 +31,11 @@
 </template>
 
 <script>
+
+// <div class="medium-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 300}}">
+// <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 500}}">
+
+
 import ResponsiveImage from "~/components/responsive-image";
   export default{
     components: {
@@ -86,8 +91,8 @@ import ResponsiveImage from "~/components/responsive-image";
 
   .text-box {
     text-align: left;
-    padding-right: span(12);
-    top: 30%;
+    padding-right: span(4);
+    top: 25%;
     left: 10%;
     z-index: 4;
     position: absolute;
@@ -96,8 +101,8 @@ import ResponsiveImage from "~/components/responsive-image";
       margin-bottom: $margin-small;
     }
     .subtitle{
-      margin-bottom: $margin-extra-large;
-      margin-top: $margin-extra-large;
+      margin-bottom: $margin-normal;
+      margin-top: $margin-normal;
     }
     .text{
     }
@@ -113,7 +118,24 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block {
       position: relative;
       width: span(4);
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+      }
+    }
+  }
 
+  .medium-block-wrapper{
+    position: absolute;
+    left: 10%;
+    top: 2%;
+    z-index: 1;
+    .medium-block {
+      position: relative;
+      width: span(12);
 
       img {
         position: absolute;
@@ -125,42 +147,25 @@ import ResponsiveImage from "~/components/responsive-image";
     }
   }
 
-.medium-block-wrapper{
-  position: absolute;
-  left: 10%;
-  top: 2%;
-  .medium-block {
-    position: relative;
-    width: span(12);
+  .large-block-wrapper{
+    position: absolute;
+    top: 25%;
     z-index: 2;
 
-    img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0px;
-      left: 0px;
-    }
-  }
-}
+    .large-block {
+      position: relative;
+      width: span(28);
+      height: span(24);
 
-.large-block-wrapper{
-  position: absolute;
-  top: 25%;
-  .large-block {
-    position: relative;
-    width: span(28);
-    height: span(24);
-    z-index: 1;
-    img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0px;
-      left: 0px;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+      }
     }
   }
- }
 }
 
 
@@ -171,6 +176,41 @@ import ResponsiveImage from "~/components/responsive-image";
 
   @include respond-to($desktop) {
 
+  .text-box {
+    text-align: left;
+    padding-right: span(24);
+    top: 35%;
+    left: 10%;
+    z-index: 4;
+    position: absolute;
+
+    .title-upper{
+      margin-bottom: $margin-small;
+    }
+    .subtitle{
+      margin-bottom: $margin-extra-large;
+      margin-top: $margin-extra-large;
+    }
+    .text{
+      padding-right: span(11);
+    }
   }
+  .small-block-wrapper{
+    left: 70%;
+    top: -8%;
+  }
+
+  .medium-block-wrapper{
+    position: absolute;
+    left: 10%;
+    top: 2%;
+  }
+
+  .large-block-wrapper{
+    position: absolute;
+    top: 25%;
+  }
+
+}
 
 </style>

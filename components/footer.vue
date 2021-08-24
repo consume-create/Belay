@@ -3,7 +3,7 @@
     <div class="form-cta">
       <div class="form-text">
         <h5 class="title-cta">Stay in Touch</h5>
-        <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt quis urna non facilisis.</p>
+        <p class="subtext">Lorem ipsum dolor sit amet,</p>
         <div class="email-wrapper">
           <input type="email" class="email" size="30" placeholder="hello@belaydev.com" required>
           <button class="right-arrow" name="email-button"></button>
@@ -96,12 +96,12 @@ $iconSize: 22px;
 
 
 .footer{
-  padding: span(3);
+  padding: span(2);
   background-color: $deep-blue;
   color: white;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-around;
 
   .form-cta{
     width: span(14);
@@ -128,40 +128,34 @@ $iconSize: 22px;
         }
 
 
-        .right-arrow{
-
-          width: span(1);
-          background-color: $white;
-          // margin: -9px 0 $margin-normal -9px;
-
-          button{
-            position: relative;
-            width: 40px;
-            height: 40px;
-            background-color: $white;
-          }
-          &:after {
-            content: "";
-            position: absolute;
-            top: 80%;
-            left: 66%;
-            width: $iconSize;
-            height: $iconSize;
-            // margin: -11px 0 0 -11px;
-            @include icon("right-arrow", $black, true);
-          }
-
-          // :after {
-          //   @include icon("instagram", $white, true);
-          // }
-
-      }
+       //  .right-arrow{
+       //    width: span(1);
+       //    background-color: $white;
+       //    // margin: -9px 0 $margin-normal -9px;
+       //
+       //    button{
+       //      position: relative;
+       //      width: 40px;
+       //      height: 40px;
+       //      background-color: $white;
+       //    }
+       //    &:after {
+       //      content: "";
+       //      position: absolute;
+       //      top: 80%;
+       //      left: 66%;
+       //      width: $iconSize;
+       //      height: $iconSize;
+       //      // margin: -11px 0 0 -11px;
+       //      @include icon("right-arrow", $black, true);
+       //    }
+       // }
     }
   }
 
     .large-wrapper{
       position: absolute;
-      top: -50%;
+      top: -60%;
       left: -10%;
 
       .large-block {
@@ -180,7 +174,7 @@ $iconSize: 22px;
     }
     .medium-wrapper{
       position: absolute;
-      top: -120%;
+      top: -20%;
       left: 55%;
 
       .medium-block {
@@ -200,8 +194,10 @@ $iconSize: 22px;
   }
 
   .channels{
-    width: span(14);
+    // width: span(20);
+    // flex: 1;
     .channel-inner{
+
       .small-title{
         margin-bottom: $margin-extra-large;
       }
@@ -229,11 +225,9 @@ $iconSize: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
-    // flex-direction: column;
 
     .channel-inner{
       width: span(6);
-      // margin-right: span(4);
 
       .small-title{
         margin-bottom: $margin-extra-large;
@@ -241,7 +235,6 @@ $iconSize: 22px;
 
       .email{
         margin-bottom: $margin-small;
-
       }
     }
     .socials{
@@ -250,6 +243,20 @@ $iconSize: 22px;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+    }
+  }
+
+  .form-cta{
+    width: span(14);
+
+    .large-wrapper{
+      top: -60%;
+      left: -10%;
+    }
+    .medium-wrapper{
+      position: absolute;
+      top: -120%;
+      left: 55%;
     }
   }
 }

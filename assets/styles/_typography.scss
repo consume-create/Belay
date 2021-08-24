@@ -82,6 +82,12 @@ h6 {
   font-size: calc(14px + (22 - 14) * ((100vw - 340px) / (1440 - 340)));
 }
 
+.spreader{
+  font-family: $gotham-bold;
+  letter-spacing: 0.45em;
+  line-height: 0.95em;
+  text-transform: uppercase;
+}
 
 .t1,
 .t2,
