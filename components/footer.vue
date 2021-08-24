@@ -4,7 +4,10 @@
       <div class="form-text">
         <h5 class="title-cta">Stay in Touch</h5>
         <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt quis urna non facilisis.</p>
-        <input type="email" class="email" size="30" placeholder="hello@belaydev.com" required>
+        <div class="email-wrapper">
+          <input type="email" class="email" size="30" placeholder="hello@belaydev.com" required>
+          <button class="right-arrow" name="email-button"></button>
+        </div>
       </div>
       <div class="large-wrapper">
         <div class="large-block">
@@ -25,7 +28,7 @@
       <div class="channel-inner">
         <p class="small-title spread"> Our Channels</p>
         <p class="email">INFO@BELAYDEV.COM</p>
-        <p class="phone-number"> 303 / 607 /6133</p>
+        <p class="phone-number"> 303 / 607 / 6133</p>
       </div>
       <div class="socials">
         <SocialLinks :links="
@@ -89,6 +92,8 @@ export default{
 
 
 <style lang="scss">
+$iconSize: 22px;
+
 
 .footer{
   padding: span(3);
@@ -107,19 +112,52 @@ export default{
       z-index: 2;
 
       .title-cta{
-
       }
 
       .subtext{
           margin-bottom: $margin-normal;
       }
 
-      .email{
-        padding: span(0.3);
-        width: span(7);
-        height: span(0.1);
+      .email-wrapper{
+        display: flex;
+
+        .email{
+          padding: span(0.3);
+          width: span(7);
+          height: span(0.1);
+        }
+
+
+        .right-arrow{
+
+          width: span(1);
+          background-color: $white;
+          // margin: -9px 0 $margin-normal -9px;
+
+          button{
+            position: relative;
+            width: 40px;
+            height: 40px;
+            background-color: $white;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            top: 80%;
+            left: 66%;
+            width: $iconSize;
+            height: $iconSize;
+            // margin: -11px 0 0 -11px;
+            @include icon("right-arrow", $black, true);
+          }
+
+          // :after {
+          //   @include icon("instagram", $white, true);
+          // }
+
       }
     }
+  }
 
     .large-wrapper{
       position: absolute;

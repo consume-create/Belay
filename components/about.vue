@@ -1,7 +1,7 @@
 <template>
   <section class="about">
-    <div class="small-block-wrapper">
-      <div class="small-block">
+    <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 400}}">
+      <div class="small-block" >
         <div class="image__inner-small" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
       </div>
@@ -13,7 +13,7 @@
       <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt quis urna non facilisis. Donec sit amet faucibus dui, mattis fringilla odio. Ut sem metus, placerat vitae tortor in, pharetra pulvinar mauris. Aliquam erat volutpat.</p>
     </div>
 
-    <div class="medium-block-wrapper">
+    <div class="medium-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 300}}">
       <div class="medium-block">
         <div class="image__inner-medium" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
@@ -108,10 +108,12 @@ import ResponsiveImage from "~/components/responsive-image";
     position: absolute;
     left: 70%;
     top: -8%;
+    z-index: 3;
+    // @include lift-and-fade-25;
     .small-block {
       position: relative;
       width: span(4);
-      z-index: 3;
+
 
       img {
         position: absolute;
@@ -148,7 +150,7 @@ import ResponsiveImage from "~/components/responsive-image";
   .large-block {
     position: relative;
     width: span(28);
-    height: span(18);
+    height: span(24);
     z-index: 1;
     img {
       position: absolute;

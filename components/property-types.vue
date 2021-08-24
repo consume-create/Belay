@@ -73,9 +73,10 @@ export default{
     this.init();
     window.requestAnimationFrame(this.loop);
     window.addEventListener('resize', this.onResize)
-  //   window.addEventListener('resize', _.debounce(this.onResize() => {
-  //   console.log('resized!')
-  // }, 100);
+    //Debounce attempt
+    //window.addEventListener('resize', _.debounce(this.onResize() => {
+    //console.log('resized!')
+    // }, 100);
   },
 
   methods: {
@@ -168,7 +169,7 @@ export default{
 
 <style lang="scss">
   .property-wrapper{
-    margin-top: span(4);
+    margin-top: span(10);
     position: relative;
 
     .title{

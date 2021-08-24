@@ -18,7 +18,6 @@
     text-align: center;
     background-color: $deep-blue;
     color: white;
-    // float: left;
   }
 
 
