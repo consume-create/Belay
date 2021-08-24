@@ -29,10 +29,10 @@
       }"/>
     <PropertyTypes
     :img1="{
-        src: 'property-types/Belay-Property-IconSet.png',
+        src: 'property-types/Icon-set.png',
         alt: 'A picture of a commercial building',
-        width: '1920',
-        height: '1080'
+        width: '2880',
+        height: '1670'
       }"
       />
       <Tagline/>
