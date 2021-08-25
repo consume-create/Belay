@@ -115,8 +115,24 @@ p, .v-select, a, .text-link, li {
   line-height: 20px;
   // letter-spacing: 0.07em;
 
-  &.spread {
+  &.spread{
+    font-family: $gotham-bold;
+    font-size: 16px;
+    letter-spacing: 0.8em;
+    line-height: 16px;
+    text-transform: uppercase;
+    // letter-spacing: 0.07em;
 
+    &.small {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    &.large {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   &.small {
@@ -165,13 +181,6 @@ label {
     font-size: 12px;
   }
 }
-
-// .stencil {
-//   font-family: $eames-stencil;
-//   text-transform: uppercase;
-//   font-size: 18px;
-//   letter-spacing: 0.06em;
-// }
 
 .schoolbook {
   font-family: $lemonde-livre-bold;
@@ -224,17 +233,6 @@ HEADERS
     line-height: 48px;
   }
 
-  .t1 {
-    font-size: 312px;
-  }
-
-  .t2 {
-    font-size: 130px;
-  }
-
-  .t3 {
-    font-size: 80px;
-  }
 
   p, textarea, a, .text-link, li {
     font-size: 18px;
@@ -264,19 +262,22 @@ HEADERS
     }
   }
 
-  .stencil {
-    font-size: 24px;
-  }
-
-  .schoolbook {
+  .spread{
+    font-family: $gotham-bold;
     font-size: 16px;
+    letter-spacing: 0.8em;
+    line-height: 16px;
+    text-transform: uppercase;
 
     &.small {
-      font-size: 14px;
+      font-size: 12px;
+      line-height: 15px;
     }
 
     &.large {
-      font-size: 20px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
     }
   }
 }

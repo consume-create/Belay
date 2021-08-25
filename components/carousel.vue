@@ -23,11 +23,11 @@
     </div>
 
     <div class="hotel-title">
-      <p class="spreader">The Coloradan</p>
+      <p class="spread">The Coloradan</p>
     </div>
 
     <div class="hotel-date">
-      <p class="spreader">2021</p>
+      <p class="spread">2021</p>
     </div>
 
   </section>
