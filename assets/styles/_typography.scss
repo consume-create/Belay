@@ -19,14 +19,6 @@
   font-style: normal;
 }
 
-// @font-face {
-//   font-family: 'schoolBookBold';
-//   // src: url('/fonts/school-book-bold.woff2') format('woff2'),
-//   //      url('/fonts/radomir_tinkov_-_gilroy-medium-webfont.woff') format('woff');
-//   font-weight: normal;
-//   font-style: normal;
-// }
-//
 @font-face {
   font-family: 'LemondeLivreBold';
   src: url('https://use.typekit.net/wes8pxx.css');
@@ -82,32 +74,32 @@ h6 {
   font-size: calc(14px + (22 - 14) * ((100vw - 340px) / (1440 - 340)));
 }
 
-.spreader{
-  font-family: $gotham-bold;
-  letter-spacing: 0.45em;
-  line-height: 0.95em;
-  text-transform: uppercase;
-}
-
-.spread{
-  font-family: $gotham-bold;
-  font-size: 14px;
-  letter-spacing: 0.8em;
-  line-height: 20px;
-  text-transform: uppercase;
-  // letter-spacing: 0.07em;
-
-  &.small {
-    font-size: 12px;
-    line-height: 15px;
-  }
-
-  &.large {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-  }
-}
+// .spreader{
+//   font-family: $gotham-bold;
+//   letter-spacing: 0.45em;
+//   line-height: 0.95em;
+//   text-transform: uppercase;
+// }
+//
+// .spread{
+//   font-family: $gotham-bold;
+//   font-size: 14px;
+//   letter-spacing: 0.8em;
+//   line-height: 20px;
+//   text-transform: uppercase;
+//   // letter-spacing: 0.07em;
+//
+//   &.small {
+//     font-size: 12px;
+//     line-height: 15px;
+//   }
+//
+//   &.large {
+//     font-weight: 400;
+//     font-size: 18px;
+//     line-height: 24px;
+//   }
+// }
 
 p, .v-select, a, .text-link, li {
   font-family: $gotham-book;
@@ -117,20 +109,20 @@ p, .v-select, a, .text-link, li {
 
   &.spread{
     font-family: $gotham-bold;
-    font-size: 16px;
+    // font-size: 16px;
     letter-spacing: 0.8em;
     line-height: 16px;
     text-transform: uppercase;
     // letter-spacing: 0.07em;
 
     &.small {
-      font-size: 12px;
+      // font-size: 12px;
       line-height: 15px;
     }
 
     &.large {
       font-weight: 400;
-      font-size: 18px;
+      // font-size: 18px;
       line-height: 24px;
     }
   }

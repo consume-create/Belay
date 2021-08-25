@@ -155,79 +155,79 @@ Close Text Button
 /**********************************************
 Arrow Buttons
 **********************************************/
-// .arrow-button {
-//   border-radius: 50%;
-//   background: $red;
-//   position: relative;
-//   border: none;
-//   outline: none;
-//
-//   $size: 30px;
-//   width: $size;
-//   height: $size;
-//   transition: background-color $speed-demon ease;
-//
-//   &:disabled {
-//     background-color: #F8E9E9;
-//     pointer-events: none;
-//
-//     &::after {
-//     }
-//   }
-//
-//   &:focus {
-//     border: $dark-blue;
-//     transform: scale(1.08);
-//
-//     &.left {
-//       transform: scale(1.08) rotate(180deg);
-//     }
-//   }
-//
-//   &.special {
-//     &:after {
-//       margin: 20%;
-//       left: 0;
-//       @include icon("long-arrow-right", $white, true);
-//     }
-//   }
-//
-//   &:after {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 5%;
-//     right: 0;
-//     bottom: 0;
-//     margin: 30%;
-//     @include icon("chevron-right", $white, true);
-//     transition: transform $speed-demon ease;
-//   }
-//
-//   &.left {
-//     transform: rotate(180deg);
-//   }
-//
-//   &:active {
-//     transform: scale(1) !important;
-//     &.left {
-//       transform: scale(1) rotate(180deg) !important;
-//     }
-//   }
-//
-//   &.animated {
-//     &:before {
-//       content: '';
-//       @include circle($size);
-//       position: absolute;
-//       background: $red;
-//       animation: grow $speed-metal * 2.5 $ease-out 0ms infinite;
-//       transform-origin: 50% 50%;
-//       top: 0;
-//       left: 0;
-//     }
-//   }
-// }
+.arrow-button {
+  // border-radius: 50%;
+  // background: $deep-blue;
+  // position: relative;
+  // border: none;
+  // outline: none;
+  //
+  // $size: 50px;
+  // width: $size;
+  // height: $size;
+  // transition: background-color $speed-demon ease;
+  //
+  // &:disabled {
+  //   background-color: #F8E9E9;
+  //   pointer-events: none;
+  //
+  //   &::after {
+  //   }
+  // }
+  //
+  // &:focus {
+  //   border: $dark-blue;
+  //   transform: scale(1.08);
+  //
+  //   &.left {
+  //     transform: scale(1.08) rotate(180deg);
+  //   }
+  // }
+  //
+  // &.special {
+  //   &:after {
+  //     margin: 20%;
+  //     left: 0;
+  //     @include icon("long-arrow-right", $white, true);
+  //   }
+  // }
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0;
+    height: 35px;
+    width: 35px;
+    @include icon("right-arrow-minimal", $white, true);
+    transition: transform $speed-demon ease;
+  }
+
+  &.left {
+    transform: rotate(180deg);
+  }
+
+  &:active {
+    transform: scale(1) !important;
+    &.left {
+      transform: scale(1) rotate(180deg) !important;
+    }
+  }
+
+  // &.animated {
+  //   &:before {
+  //     content: '';
+  //     @include circle($size);
+  //     position: absolute;
+  //     background: $white;
+  //     animation: grow $speed-metal * 2.5 $ease-out 0ms infinite;
+  //     transform-origin: 50% 50%;
+  //     top: 0;
+  //     left: 0;
+  //   }
+  // }
+}
 
 @keyframes grow {
   0% {

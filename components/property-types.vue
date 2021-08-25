@@ -169,7 +169,7 @@ export default{
 
 <style lang="scss">
   .property-wrapper{
-    margin-top: span(10);
+    margin-top: span(13);
     position: relative;
 
     .title{
