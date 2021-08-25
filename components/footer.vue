@@ -98,14 +98,12 @@ export default{
       }
     },
   }
-
 }
 </script>
 
 
 <style lang="scss">
 $iconSize: 22px;
-
 
 .footer{
   padding: span(2);

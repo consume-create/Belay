@@ -8,6 +8,11 @@
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
         <canvas @mousemove="breakDance" @mouseleave="reset" :width="img1.width" :height="img1.height" id="cnv" ></canvas>
     </div>
+
+    <div class="property-image-vertical">
+      <div class="image__inner-property-vertical" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
+        <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
+    </div>
   </section>
 </template>
 
@@ -22,6 +27,18 @@ export default{
   },
   props: {
     img1:
+    {
+      type: Object,
+      default: () => {
+        return {
+          src: "",
+          alt: "",
+          height: "",
+          width: ""
+        }
+      }
+    },
+    img2:
     {
       type: Object,
       default: () => {
@@ -179,16 +196,21 @@ export default{
       margin-top: $margin-extra-large;
     }
 
-    .property-image {
+    .property-image-vertical {
       position: relative;
       width: span(28);
 
-    img {
-      @include abs-fill;
+      img {
+        @include abs-fill;
+      }
     }
+  }
+
+  .property-image{
+    display: none;
+
     #cnv{
-       @include abs-fill;
-     }
+      display: none;
     }
   }
 
@@ -198,6 +220,35 @@ export default{
   }
 
   @include respond-to($desktop) {
+    .property-wrapper{
+      margin-top: span(13);
+      position: relative;
+
+      .title{
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: $margin-extra-large;
+        margin-top: $margin-extra-large;
+      }
+
+      .property-image {
+        position: relative;
+        width: span(28);
+        display: block;
+
+      img {
+        @include abs-fill;
+      }
+      #cnv{
+         display: block;
+         @include abs-fill;
+       }
+      }
+
+      .property-image-vertical {
+          display: none;
+        }
+    }
 
   }
 

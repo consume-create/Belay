@@ -1,11 +1,18 @@
 <template>
   <section class="about">
-      <div class="small-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 600}}">
-      <div class="small-block" >
+      <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 600}}">
+      <div class="small-block">
         <div class="image__inner-small" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
       </div>
     </div>
+
+    <div class="small-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 200}}">
+    <div class="small-block-mobile">
+      <div class="image__inner-small" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
+      <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
+    </div>
+  </div>
 
     <div class="text-box">
       <h3 class="title-upper">Our Angle </h3>
@@ -107,17 +114,38 @@ import ResponsiveImage from "~/components/responsive-image";
     }
   }
 
+    .small-block-wrapper{
+      // position: absolute;
+      // left: 70%;
+      // top: -8%;
+      z-index: 3;
+      display: none;
+
+      .small-block {
+        // position: relative;
+        // width: span(4);
+        display: none;
+        img {
+          // position: absolute;
+          // width: 100%;
+          // height: 100%;
+          // top: 0px;
+          // left: 0px;
+        }
+      }
+    }
+
     .small-block-wrapper-mobile{
       position: absolute;
       left: 70%;
-      top: -8%;
+      top: -20%;
       z-index: 3;
+      display: block;
 
-
-      // @include lift-and-fade-25;
-      .small-block {
+      .small-block-mobile {
         position: relative;
         width: span(4);
+        display: block;
         img {
           position: absolute;
           width: 100%;
@@ -150,7 +178,7 @@ import ResponsiveImage from "~/components/responsive-image";
   .large-block-wrapper{
     position: absolute;
     // top: 25%;
-    bottom: 0;
+    bottom: -58%;
     z-index: 2;
 
     .large-block {
@@ -171,7 +199,45 @@ import ResponsiveImage from "~/components/responsive-image";
 
 
   @include respond-to($tablet) {
+    .about{
+      .text-box {
+        text-align: left;
+        padding-right: span(14);
+        top: 45%;
+        left: 10%;
+        z-index: 4;
+        position: absolute;
 
+        .title-upper{
+          margin-bottom: $margin-small;
+        }
+        .subtitle{
+          margin-bottom: $margin-extra-large;
+          margin-top: $margin-extra-large;
+          border-bottom: 2px solid $light-blue;
+          padding-bottom: $margin-large;
+        }
+        .text{
+          padding-right: span(1);
+        }
+      }
+      .small-block-wrapper{
+        left: 70%;
+        top: -8%;
+      }
+
+      .medium-block-wrapper{
+        position: absolute;
+        left: 10%;
+        top: 2%;
+      }
+
+      .large-block-wrapper{
+        position: absolute;
+        // top: 10%;
+        bottom: -58%;
+      }
+    }
 
   }
 
@@ -201,6 +267,39 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block-wrapper{
       left: 70%;
       top: -8%;
+      display: block;
+
+      .small-block {
+        position: relative;
+        width: span(4);
+        display: block;
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+        }
+      }
+    }
+
+    .small-block-wrapper-mobile{
+      // left: 70%;
+      // top: -8%;
+      display: none;
+
+      .small-block-mobile {
+        // position: relative;
+        // width: span(4);
+        display: none;
+        img {
+          // position: absolute;
+          // width: 100%;
+          // height: 100%;
+          // top: 0px;
+          // left: 0px;
+        }
+      }
     }
 
     .medium-block-wrapper{
