@@ -74,32 +74,6 @@ h6 {
   font-size: calc(14px + (22 - 14) * ((100vw - 340px) / (1440 - 340)));
 }
 
-// .spreader{
-//   font-family: $gotham-bold;
-//   letter-spacing: 0.45em;
-//   line-height: 0.95em;
-//   text-transform: uppercase;
-// }
-//
-// .spread{
-//   font-family: $gotham-bold;
-//   font-size: 14px;
-//   letter-spacing: 0.8em;
-//   line-height: 20px;
-//   text-transform: uppercase;
-//   // letter-spacing: 0.07em;
-//
-//   &.small {
-//     font-size: 12px;
-//     line-height: 15px;
-//   }
-//
-//   &.large {
-//     font-weight: 400;
-//     font-size: 18px;
-//     line-height: 24px;
-//   }
-// }
 
 p, .v-select, a, .text-link, li {
   font-family: $gotham-book;
@@ -121,7 +95,6 @@ p, .v-select, a, .text-link, li {
     }
 
     &.large {
-      font-weight: 400;
       // font-size: 18px;
       line-height: 24px;
     }
@@ -239,6 +212,25 @@ HEADERS
       font-size: 20px;
       line-height: 34px;
     }
+
+    &.spread{
+      // font-family: $gotham-bold;
+      font-size: 16px;
+      letter-spacing: 0.8em;
+      // line-height: 16px;
+      // text-transform: uppercase;
+
+      &.small {
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      &.large {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
   }
 
   li {
@@ -251,25 +243,6 @@ HEADERS
 
     &.small {
       font-size: 16px;
-    }
-  }
-
-  .spread{
-    font-family: $gotham-bold;
-    font-size: 16px;
-    letter-spacing: 0.8em;
-    line-height: 16px;
-    text-transform: uppercase;
-
-    &.small {
-      font-size: 12px;
-      line-height: 15px;
-    }
-
-    &.large {
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 24px;
     }
   }
 }

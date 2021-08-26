@@ -17,13 +17,13 @@
       <div class="arrow-button left"></div>
       <div class="arrow-button"></div>
 
-    <div class="hotel-title">
-      <p class="spread">The Coloradan</p>
-    </div>
+    <!-- <div class="hotel-title"> -->
+      <p class=" hotel-title spread">The Coloradan</p>
+    <!-- </div> -->
 
-    <div class="hotel-date">
-      <p class="spread">2021</p>
-    </div>
+    <!-- <div class="hotel-date"> -->
+      <p class="hotel-date spread">2021</p>
+    <!-- </div> -->
 
   </section>
 </template>
@@ -162,7 +162,7 @@ $iconSize: 22px;
 
   .hotel-date{
     top: 105%;
-    left: 95%;
+    left: 90%;
   }
 
   .hotel-title{
