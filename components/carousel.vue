@@ -73,103 +73,21 @@ $iconSize: 22px;
     top: 3%;
   }
 
-  // .arrow-right{
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 95%;
-    // width: 100%;
-    // margin: -9px 0 $margin-normal -9px;
-
-    // a{
-    //   position: relative;
-    //   width: 40px;
-    //   height: 40px;
-    // }
-    // a:after{
-    //   content: "";
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 50%;
-    //   width: $iconSize;
-    //   height: $iconSize;
-    //   margin: -11px 0 0 -11px;
-    // }
-    // &:after{
-    //   @include icon("instagram", $white, true);
-    // }
-  // }
-  // .arrow-left{
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 5%;
-  // }
-
   .arrow-button{
     position: absolute;
-    top: 50%;
-    left: 95%;
+    top: 3%;
+    left: 74%;
 
     &.left{
       position: absolute;
-      top: 50%;
-      left: 5%;
+      top: 12%;
+      left: 25%;
     }
   }
 
-  // .slider-arrow__wrapper {
-  //     position: absolute;
-  //     top: 0px;
-  //     right: 0px;
-  //     width: span(4);
-  //     height: 100%;
-  //     z-index: 1;
-  //     pointer-events: none;
-  //
-  //     &.prev {
-  //       right: auto;
-  //       left: 0px;
-  //
-  //       .slider-arrow__btn {
-  //         &:after {
-  //           margin-left: 2px;
-  //           transform: rotate(-135deg) translateX(-50%) translateY(-50%);
-  //         }
-  //       }
-  //     }
-  //
-  //     .slider-arrow__btn {
-  //       position: absolute;
-  //       top: 50%;
-  //       left: 0px;
-  //       width: 100%;
-  //       height: 0px;
-  //       padding-bottom: 100%;
-  //       pointer-events: auto;
-  //       // cursor: pointer;
-  //       transform: translateY(-50%);
-  //
-  //       &:after {
-  //         content: '';
-  //         position: absolute;
-  //         top: 50%;
-  //         left: 50%;
-  //         width: 28px;
-  //         height: 28px;
-  //         margin-top: 1px;
-  //         margin-left: -2px;
-  //         border: 4px solid;
-  //         border-left-width: 0px;
-  //         border-bottom-width: 0px;
-  //         border-image: linear-gradient(45deg, $white, $white) 1;
-  //         transform-origin: 0 0;
-  //         transform: rotate(45deg) translateX(-50%) translateY(-50%);
-  //         display: block;
-  //       }
-  //     }
-  //   }
-
   .hotel-title{
     position: absolute;
+    z-index: 4;
     top: 105%;
     left: 5%;
     color: $white;
@@ -178,15 +96,16 @@ $iconSize: 22px;
 
   .hotel-date{
     position: absolute;
+    z-index: 4;
     top: 105%;
-    left: 90%;
+    left: 85%;
     color: $white;
   }
 
   .carousel-wrapper{
     .carousel-image{
       width: span(28);
-      height: span(18);
+      height: span(28);
       position: relative;
       margin: 0 auto;
 
@@ -206,10 +125,40 @@ $iconSize: 22px;
 
 @include respond-to($tablet) {
 
+.carousel{
+  .hotel-date{
+    position: absolute;
+    top: 105%;
+    left: 88%;
+  }
+
+  .hotel-title{
+    top: 105%;
+    left: 5%;
+  }
+  .arrow-button{
+    top: 50%;
+    left: 90%;
+
+    &.left{
+      top: 50%;
+      left: 5%;
+    }
+  }
+
+ }
 
 }
 
 @include respond-to($desktop) {
+.carousel{
+
+  .carousel-wrapper{
+    .carousel-image{
+      width: span(28);
+      height: span(16);
+    }
+  }
 
   .hotel-date{
     top: 105%;
@@ -220,7 +169,16 @@ $iconSize: 22px;
     top: 105%;
     left: 5%;
   }
+  .arrow-button{
+    top: 50%;
+    left: 90%;
 
+    &.left{
+      top: 50%;
+      left: 5%;
+    }
+  }
+ }
 }
 
 </style>

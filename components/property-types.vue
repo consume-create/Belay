@@ -199,6 +199,7 @@ export default{
     .property-image-vertical {
       position: relative;
       width: span(28);
+      // height: span(24);
 
       img {
         @include abs-fill;
