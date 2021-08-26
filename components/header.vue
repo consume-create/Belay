@@ -33,10 +33,10 @@ import ResponsiveImage from "~/components/responsive-image";
 
 <style lang="scss">
 .header-wrapper{
-  
+
   .header-image {
     position: relative;
-    width: span(4);
+    width: span(6);
     margin: 0 auto;
 
     img {
@@ -55,6 +55,7 @@ import ResponsiveImage from "~/components/responsive-image";
 
   @include respond-to($desktop) {
     .header-image {
+        width: span(4);
     }
   }
 }

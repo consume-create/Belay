@@ -290,7 +290,7 @@ import ResponsiveImage from "~/components/responsive-image";
   .about{
     .text-box {
       text-align: left;
-      padding-right: span(14);
+      padding-right: span(10);
       top: 45%;
       left: 10%;
       z-index: 4;

@@ -10,21 +10,19 @@
               <button class="right-arrow" name="email-button"></button>
             </div>
           </div>
-
-          <div class="large-wrapper">
             <div class="large-block">
               <div class="image__inner-large" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
               <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
             </div>
-          </div>
+      </div>
 
-        <div class="medium-wrapper"  v-event-horizon:parallax="{y: {from: 0, to: 200}}">
+        <div class="medium-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 200}}">
           <div class="medium-block">
             <div class="image__inner-medium" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
             <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
           </div>
         </div>
-      </div>
+
 
       <div class="channels">
         <div class="channel-inner">
@@ -64,7 +62,12 @@
   </section>
 </template>
 
-
+<!-- <div class="large-wrapper">
+  <div class="large-block">
+    <div class="image__inner-large" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
+    <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
+  </div>
+</div> -->
 <script>
 import SocialLinks from "~/components/social-links.vue";
 import ResponsiveImage from "~/components/responsive-image";
@@ -113,22 +116,20 @@ $iconSize: 22px;
 
   .footer-wrapper{
     .form-cta{
-      width: span(24);
+      // width: span(24);
+      // height: span(10);
       position: relative;
 
       .form-text{
-        position: relative;
-        padding-right: span(4);
+        position: absolute;
+        margin: 0 auto;
+        // top: 10%;
+        // @include abs-fill;
+        padding-right: span(6);
         padding-top: span(2);
-        // top: 0;
-        // left:10%;
-        // width: span(24);
-        // height: auto;
-        // margin: auto;
         z-index: 2;
 
         .title-cta{
-
         }
 
         .subtext{
@@ -137,9 +138,6 @@ $iconSize: 22px;
 
         .email-wrapper{
           display: flex;
-          // padding: span(.6);
-          // width: span(24);
-          // height: span(0.3);
 
           .email{
             padding: span(.6);
@@ -150,58 +148,34 @@ $iconSize: 22px;
         }
      }
 
-      .large-wrapper{
-        position: absolute;
-        height: 100%;
-        // width: span(28);
-        // overflow: hidden;
-        // bottom: -10%;
-        // left: -10%;
-        top: -30%;
-        left: -20%;
-
-
         .large-block {
           position: relative;
-          // width: span(33);
-          // height: span(22);
+          width: span(28);
           z-index: 0;
 
-
           img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0px;
-            left: 0px;
+            @include abs-fill;
           }
         }
-      }
+    }
 
-      .medium-wrapper{
-        position: absolute;
-        top: -40%;
-        left: 65%;
+    .medium-wrapper{
+      // position: absolute;
+      // top: -40%;
+      // left: 65%;
 
-        .medium-block {
-          position: relative;
-          width: span(4);
-          z-index: 0;
+      .medium-block {
+        position: relative;
+        width: span(4);
+        z-index: 0;
 
-          img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0px;
-            left: 0px;
-          }
+        img {
+          @include abs-fill;
         }
       }
     }
 
     .channels{
-      // width: span(20);
-      // flex: 1;
       .channel-inner{
         .small-title{
           margin-bottom: $margin-extra-large;
@@ -277,7 +251,6 @@ $iconSize: 22px;
       margin-right: $margin-extra-large;
     }
     .policies{
-      // margin-right: $margin-extra-large;
     }
   }
 }
@@ -317,24 +290,18 @@ $iconSize: 22px;
 
         .form-cta{
           width: span(14);
-
-          .large-wrapper{
-            position: absolute;
-            // bottom: -50%;
-            // left: -10%;
-            // display: none;
             .large-block{
               width: span(14);
-              bottom: -50%;
+              // bottom: -50%;
 
             }
-          }
+
           .medium-wrapper{
             top: -120%;
             left: 55%;
           }
         }
-      }
+
   }
 }
 
@@ -367,7 +334,7 @@ $iconSize: 22px;
       }
 
       .form-cta{
-        width: span(14);
+        width: span(12);
         .form-text{
           margin-top: 33px;
           .email-wrapper{
@@ -379,20 +346,13 @@ $iconSize: 22px;
           }
         }
 
-        .large-wrapper{
-          position: absolute;
-          // top: -70%;
-          // left: -10%;
-          // width: span(14);
-          // display: none;
           .large-block{
-            width: span(14);
-            // top: -70%;
-            // left: -10%;
+            width: span(12);
           }
         }
+
         .medium-wrapper{
-          top: -150%;
+          top: -50%;
           left: 55%;
         }
       }
