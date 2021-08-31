@@ -120,6 +120,7 @@ footer{
     .footer__column-left {
       width: span(28);
       position: relative;
+      margin-bottom: span(8);
 
         img {
           // @include abs-fill;
@@ -127,7 +128,7 @@ footer{
           top: 0;
           left: 50%;
           transform: translate(-50%, 0);
-          width: 120%;
+          width: 130%;
         }
 
         .form-text{
@@ -135,8 +136,8 @@ footer{
           z-index: 1;
           top:50%;
           transform: translate(0, -50%);
-          left:10%;
-          // margin-left: auto;
+          // left:10%;
+          margin-left: auto;
           margin-right: auto;
 
           .title-cta{
@@ -144,7 +145,7 @@ footer{
           }
           .subtext{
             margin-top: $margin-small;
-            padding-right: span(3);
+            padding-right: span(4);
           }
           .email-wrapper{
             margin-top: $margin-small;
@@ -322,8 +323,19 @@ footer{
 
     .footer__column-left {
       width: span(14);
+      position: relative;
+      margin-bottom: 0;
       grid-column: 1 / span 15;
       grid-row: 1 / span 3;
+
+        img {
+          // @include abs-fill;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+          width: 100%;
+        }
 
         .form-text{
           top:50%;
@@ -359,15 +371,11 @@ footer{
     }
 
     .social-flex{
-      // display: grid;
       grid-column: 18 / span 10;
       grid-row: 2;
       margin-bottom: $margin-large;
 
       .footer__column-right{
-        // grid-column: 18 / span 10;
-        // grid-row: 2;
-
         .channel-inner{
           .small-title{
             margin-bottom: $margin-extra-large;
@@ -444,10 +452,30 @@ footer{
   .footer-wrapper{
     padding: span(1);
     @include grid;
+    // grid-column: 1 / span 27;
+    // grid-row: 1 / span 2;
+
     .footer__column-left {
+      // width: span(14);
       width: span(14);
+      position: relative;
+      margin-bottom: 0;
       grid-column: 1 / span 15;
       grid-row: 1 / span 3;
+
+        img {
+          // @include abs-fill;
+          // position: absolute;
+          // top: 0;
+          // left: 50%;
+          // transform: translate(-50%, 0);
+          position: absolute;
+          top: 50%;
+          left: 0%;
+          transform: translate(0%, -50%);
+          // width: 130%;
+          width: 100%;
+        }
 
         .form-text{
           top:50%;
@@ -538,18 +566,10 @@ footer{
          }
         }
       }
-
-      // .footer__column-socials{
-      //   grid-column: 26 / span 3;
-      //   grid-row: 2;
-      //   margin-top: $margin-extra-large;
-      //   .socials{
-      //   }
-      // }
-   }
+    }
       .column-bottom{
-        grid-column: 18 / span 5;
-        grid-row: 3;
+        // grid-column: 18 / span 5;
+        // grid-row: 2;
       }
    }
 

@@ -161,9 +161,10 @@ Arrow Buttons
   $size: 30px;
   width: $size;
   height: $size;
-  background: $light-blue;
+  background: $white;
   border: none;
   outline: none;
+
   &:after {
     content: "";
     position: absolute;
@@ -173,7 +174,7 @@ Arrow Buttons
     transform: translate(-50%, -50%);
     height: 18px;
     width: 18px;
-    @include icon("right-arrow-minimal", $white, true);
+    @include icon("right-arrow-minimal", $light-blue, true);
     transition: transform $speed-demon ease;
   }
 

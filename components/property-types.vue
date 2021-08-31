@@ -12,7 +12,6 @@
     <div class="property-image-vertical">
       <div class="image__inner-property-vertical" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
-        <!-- <canvas @mousemove="breakDance" @mouseleave="reset" :width="img2.width" :height="img2.height" id="cnv2" ></canvas> -->
     </div>
   </section>
 </template>
@@ -114,20 +113,6 @@ export default{
       this._ctx.strokeStyle = '#999';
       this._heightBrowser= this._cnv.getBoundingClientRect().height;
       this._widthBrowser = this._cnv.getBoundingClientRect().width;
-      if(this._widthBrowser < 768){
-        this._rows=1;
-        this._cols=7;
-        this._width=1152;
-        this._height=3892;
-        console.log(this._width);
-      }
-      else{
-        this._rows=3;
-        this._cols=5;
-        this._width=2880;
-        this._height=1620;
-        console.log("here");
-      }
     },
 
     renderLines() {

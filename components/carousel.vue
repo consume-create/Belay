@@ -6,12 +6,6 @@
             alt: 'The Belay logo in white',
             width: '501',
             height: '216'
-          }"
-    :img2="{
-            src: 'header/belay-dev-logo-BLUE.png',
-            alt: 'The Belay logo in blue',
-            width: '500',
-            height: '216'
           }" />
     <div class="carousel-wrapper">
       <div class="carousel-image">

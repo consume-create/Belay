@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    <div class="small-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 200}}">
+    <div class="small-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 300}}">
       <div class="small-block-mobile">
         <div class="image__inner-small-mobile" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="medium-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 100}}">
+    <div class="medium-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 200}}">
       <div class="medium-block-mobile">
         <div class="image__inner-medium-mobile" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
@@ -95,12 +95,12 @@ import ResponsiveImage from "~/components/responsive-image";
   background-color: $deep-blue;
   color: $white;
   position: relative;
-  height: span(18);
+  height: span(28);
 
   .text-box {
     text-align: left;
     padding: span(2) span(5) span(2) span(2);
-    top: 18%;
+    top: 28%;
     left: 2%;
     z-index: 4;
     position: absolute;
@@ -145,7 +145,7 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block-wrapper-mobile{
       position: absolute;
       left: 70%;
-      top: -38%;
+      top: -45%;
       z-index: 3;
       display: block;
 
@@ -207,7 +207,7 @@ import ResponsiveImage from "~/components/responsive-image";
 
   .large-block-wrapper{
     position: absolute;
-    bottom: -64%;
+    bottom: -38%;
     z-index: 2;
 
     .large-block {
@@ -229,6 +229,8 @@ import ResponsiveImage from "~/components/responsive-image";
 
   @include respond-to($tablet) {
     .about{
+      height: span(18);
+
       .text-box {
         text-align: left;
         padding-right: span(8);
@@ -283,6 +285,7 @@ import ResponsiveImage from "~/components/responsive-image";
 
   @include respond-to($desktop) {
   .about{
+    height: span(18);
     .text-box {
       text-align: left;
       padding-right: span(10);

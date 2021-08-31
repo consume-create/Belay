@@ -4,10 +4,10 @@
         <div class="image__inner-header" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
     </div>
-    <div class="header-image-blue">
+    <!-- <div class="header-image-blue">
       <div class="image__inner-header-blue" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
       <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
-  </div>
+  </div> -->
  </section>
 </template>
 
@@ -53,24 +53,24 @@ import ResponsiveImage from "~/components/responsive-image";
     position: relative;
     width: span(6);
     margin: 0 auto;
-    display: none;
+    // display: none;
 
     img {
       @include abs-fill;
     }
   }
 
-    .header-image-blue {
-      position: relative;
-      width: span(6);
-      margin: 0 auto;
-      display: block;
-
-      img {
-        @include abs-fill;
-
-      }
-    }
+    // .header-image-blue {
+    //   position: relative;
+    //   width: span(6);
+    //   margin: 0 auto;
+    //   display: block;
+    //
+    //   img {
+    //     @include abs-fill;
+    //
+    //   }
+    // }
   }
 
   @include respond-to($tablet) {
@@ -79,10 +79,10 @@ import ResponsiveImage from "~/components/responsive-image";
           width: span(6);
           display: block;
       }
-      .header-image-blue {
-          width: span(4);
-          display: none;
-      }
+      // .header-image-blue {
+      //     width: span(4);
+      //     display: none;
+      // }
     }
   }
 
@@ -92,10 +92,10 @@ import ResponsiveImage from "~/components/responsive-image";
         width: span(4);
         display: block;
     }
-    .header-image-blue {
-        width: span(4);
-        display: none;
-    }
+    // .header-image-blue {
+    //     width: span(4);
+    //     display: none;
+    // }
   }
 
 
