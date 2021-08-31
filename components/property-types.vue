@@ -246,6 +246,7 @@ export default{
   @include respond-to($desktop) {
     .property-wrapper{
       margin-top: span(13);
+      margin-bottom: 0;
       position: relative;
 
       .title{

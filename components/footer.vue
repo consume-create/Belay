@@ -22,36 +22,38 @@
               <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
         </div>
 
-        <div class="footer__column-right">
-          <div class="channel-inner">
-            <p class="small-title spread"> Our Channels</p>
-            <div class="mail-wrapper">
-              <div class="mail-icon"/>
-              <p class="email-para">INFO@BELAYDEV.COM</p>
-            </div>
-            <div class="phone-wrapper">
-              <div class="phone-icon"/>
-              <p class="phone-number"> 303 / 607 / 6133</p>
+        <div class="social-flex">
+          <div class="footer__column-right">
+            <div class="channel-inner">
+              <p class="small-title spread"> Our Channels</p>
+              <div class="mail-wrapper">
+                <div class="mail-icon"/>
+                <p class="email-para">INFO@BELAYDEV.COM</p>
+              </div>
+              <div class="phone-wrapper">
+                <div class="phone-icon"/>
+                <p class="phone-number"> 303 / 607 / 6133</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="footer__column-socials">
-          <div class="socials">
-            <SocialLinks :links="
-            [
-              {
-                'type': 'instagram',
-                'url': 'https://twitter.com/facewaretech'
-              },
-              {
-                'type': 'linkedin',
-                'url': 'https://www.linkedin.com/company/faceware-technologies-inc-'
-              },
-              {
-                'type': 'twitter',
-                'url': 'https://discord.gg/ZurczeCeRY'
-              },
-            ]" />
+          <div class="footer__column-socials">
+            <div class="socials">
+              <SocialLinks :links="
+              [
+                {
+                  'type': 'instagram',
+                  'url': 'https://twitter.com/facewaretech'
+                },
+                {
+                  'type': 'linkedin',
+                  'url': 'https://www.linkedin.com/company/faceware-technologies-inc-'
+                },
+                {
+                  'type': 'twitter',
+                  'url': 'https://discord.gg/ZurczeCeRY'
+                },
+              ]" />
+            </div>
           </div>
         </div>
       <div class="column-bottom">
@@ -110,17 +112,22 @@ footer{
   color: white;
 
   .footer-wrapper{
-    @include grid;
+    // @include grid;
     position: relative;
-    padding: span(1);
+    padding: span(2);
+    overflow: hidden;
 
     .footer__column-left {
-      grid-column: 1 / span 27;
-      grid-row: 1;
+      width: span(28);
       position: relative;
 
         img {
-          @include abs-fill;
+          // @include abs-fill;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+          width: 120%;
         }
 
         .form-text{
@@ -129,7 +136,7 @@ footer{
           top:50%;
           transform: translate(0, -50%);
           left:10%;
-          margin-left: auto;
+          // margin-left: auto;
           margin-right: auto;
 
           .title-cta{
@@ -148,6 +155,11 @@ footer{
               border: none;
               padding:3px;
               width: span(16);
+            }
+
+            input::placeholder{
+              color: black;
+              font-weight: bold;
             }
             .right-arrow{
               position: relative;
@@ -172,9 +184,16 @@ footer{
         }
     }
 
+.social-flex{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+
+
     .footer__column-right{
-      grid-column: 1 / span 18;
-      grid-row: 2;
+      // grid-column: 1 / span 18;
+      // grid-row: 2;
 
       .channel-inner{
         .small-title{
@@ -237,26 +256,29 @@ footer{
         }
        }
       }
-
     }
 
     .footer__column-socials{
-      grid-column: 25 / span 5;
-      grid-row: 2;
+      // grid-column: 25 / span 5;
+      // grid-row: 2;
       margin-top: $margin-extra-large;
       .socials{
         flex-direction: column;
         justify-content: space-between;
-
+        align-items: center;
+        a {
+          margin-bottom: $margin-small;
+        }
       }
     }
-
+}
     .column-bottom{
-      grid-column: 1 / span 7;
-      grid-row: 3;
+      // grid-column: 1 / span 7;
+      // grid-row: 3;
       .policies{
         display: flex;
         align-items: center;
+        // justify-content: center;
         .policy{
           white-space: nowrap;
           margin-right: $margin-normal;
@@ -268,6 +290,7 @@ footer{
       }
     }
   }
+
   .medium-relative{
   position: relative;
   height: 50px;
@@ -286,16 +309,19 @@ footer{
         }
       }
     }
-   }
+  }
 }
 
 
 @include respond-to($tablet) {
 footer{
   .footer-wrapper{
+    @include grid;
+    padding: span(1);
     padding-bottom: span(2);
 
     .footer__column-left {
+      width: span(14);
       grid-column: 1 / span 15;
       grid-row: 1 / span 3;
 
@@ -315,14 +341,14 @@ footer{
 
           .email{
             padding: 5px;
-            width: span(8);
+            width: span(9);
           }
           .right-arrow{
             height: 25px;
             width: 25px;
             &:after {
-              height: 22px;
-              width: 22px;
+              height: 18px;
+              width: 18px;
               top: 50%;
               left: 50%;
               transform: translate(-50%, -50%);
@@ -332,9 +358,15 @@ footer{
       }
     }
 
+    .social-flex{
+      // display: grid;
+      grid-column: 18 / span 10;
+      grid-row: 2;
+      margin-bottom: $margin-large;
+
       .footer__column-right{
-        grid-column: 18 / span 10;
-        grid-row: 2;
+        // grid-column: 18 / span 10;
+        // grid-row: 2;
 
         .channel-inner{
           .small-title{
@@ -384,6 +416,7 @@ footer{
         .socials{
         }
       }
+    }
 
       .column-bottom{
         grid-column: 18 / span 7;
@@ -409,7 +442,10 @@ footer{
 @include respond-to($desktop) {
 footer{
   .footer-wrapper{
+    padding: span(1);
+    @include grid;
     .footer__column-left {
+      width: span(14);
       grid-column: 1 / span 15;
       grid-row: 1 / span 3;
 
@@ -429,7 +465,7 @@ footer{
 
           .email{
             padding:10px;
-            width: span(8);
+            width: span(9);
           }
           .right-arrow{
             height: 35px;
@@ -446,9 +482,15 @@ footer{
       }
     }
 
+
+    .social-flex{
+      // display: grid;
+      grid-column: 18 / span 10;
+      grid-row: 2;
+      margin-bottom: $margin-extra-large;
       .footer__column-right{
-        grid-column: 18 / span 10;
-        grid-row: 2;
+        // grid-column: 18 / span 10;
+        // grid-row: 2;
 
         .channel-inner{
           .small-title{
@@ -497,30 +539,28 @@ footer{
         }
       }
 
-      .footer__column-socials{
-        grid-column: 26 / span 3;
-        grid-row: 2;
-        margin-top: $margin-extra-large;
-        .socials{
-        }
-      }
-
+      // .footer__column-socials{
+      //   grid-column: 26 / span 3;
+      //   grid-row: 2;
+      //   margin-top: $margin-extra-large;
+      //   .socials{
+      //   }
+      // }
+   }
       .column-bottom{
-        grid-column: 20 / span 7;
+        grid-column: 18 / span 5;
         grid-row: 3;
       }
    }
 
    .medium-relative{
      height: 50px;
-
      .medium-wrapper{
        top: -80%;
        left: 38%;
 
        .medium-block {
          width: span(4);
-
        }
      }
     }

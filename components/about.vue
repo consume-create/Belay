@@ -44,11 +44,6 @@
 </template>
 
 <script>
-
-// <div class="medium-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 300}}">
-// <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 500}}">
-
-
 import ResponsiveImage from "~/components/responsive-image";
   export default{
     components: {
@@ -327,6 +322,7 @@ import ResponsiveImage from "~/components/responsive-image";
 
     .medium-block-wrapper{
       display: block;
+      z-index: 2;
       .medium-block{
         display: block;
       }
@@ -342,6 +338,7 @@ import ResponsiveImage from "~/components/responsive-image";
     .large-block-wrapper{
       // position: absolute;
       // z-index: 2;
+      z-index: 1;
       bottom: -58%;
     }
   }

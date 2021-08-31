@@ -204,7 +204,7 @@ $iconSize: 22px;
   }
   .arrow-button{
     top: 50%;
-    left: 90%;
+    left: 92%;
 
     &.left{
       top: 50%;
