@@ -28,11 +28,11 @@
               <p class="small-title spread"> Our Channels</p>
               <div class="mail-wrapper">
                 <div class="mail-icon"/>
-                <p class="email-para">INFO@BELAYDEV.COM</p>
+                <p class="email-para small">INFO@BELAYDEV.COM</p>
               </div>
               <div class="phone-wrapper">
                 <div class="phone-icon"/>
-                <p class="phone-number"> 303 / 607 / 6133</p>
+                <p class="phone-number small"> 303 / 607 / 6133</p>
               </div>
             </div>
           </div>
@@ -112,7 +112,6 @@ footer{
   color: white;
 
   .footer-wrapper{
-    // @include grid;
     position: relative;
     padding: span(2);
     overflow: hidden;
@@ -123,7 +122,6 @@ footer{
       margin-bottom: span(8);
 
         img {
-          // @include abs-fill;
           position: absolute;
           top: 0;
           left: 50%;
@@ -136,7 +134,6 @@ footer{
           z-index: 1;
           top:50%;
           transform: translate(0, -50%);
-          // left:10%;
           margin-left: auto;
           margin-right: auto;
 
@@ -185,17 +182,13 @@ footer{
         }
     }
 
-.social-flex{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-
+  .social-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
 
     .footer__column-right{
-      // grid-column: 1 / span 18;
-      // grid-row: 2;
-
       .channel-inner{
         .small-title{
           margin-bottom: $margin-normal;
@@ -260,26 +253,21 @@ footer{
     }
 
     .footer__column-socials{
-      // grid-column: 25 / span 5;
-      // grid-row: 2;
       margin-top: $margin-extra-large;
       .socials{
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         a {
-          margin-bottom: $margin-small;
+          margin-bottom: $margin-normal;
         }
       }
     }
 }
     .column-bottom{
-      // grid-column: 1 / span 7;
-      // grid-row: 3;
       .policies{
         display: flex;
         align-items: center;
-        // justify-content: center;
         .policy{
           white-space: nowrap;
           margin-right: $margin-normal;
@@ -329,11 +317,6 @@ footer{
       grid-row: 1 / span 3;
 
         img {
-          // @include abs-fill;
-          position: absolute;
-          top: 0;
-          left: 50%;
-          transform: translate(-50%, 0);
           width: 100%;
         }
 
@@ -373,12 +356,13 @@ footer{
     .social-flex{
       grid-column: 18 / span 10;
       grid-row: 2;
-      margin-bottom: $margin-large;
+      // margin-bottom: $margin-large;
+      justify-content: space-around;
 
       .footer__column-right{
         .channel-inner{
           .small-title{
-            margin-bottom: $margin-extra-large;
+            margin-bottom: $margin-normal;
           }
 
         .mail-wrapper{
@@ -415,13 +399,13 @@ footer{
           }
          }
         }
-      }
+       }
 
       .footer__column-socials{
-        grid-column: 28;
-        grid-row: 2;
-        margin-top: $margin-extra-large;
         .socials{
+          a {
+            margin-bottom: $margin-large;
+          }
         }
       }
     }
@@ -452,11 +436,8 @@ footer{
   .footer-wrapper{
     padding: span(1);
     @include grid;
-    // grid-column: 1 / span 27;
-    // grid-row: 1 / span 2;
 
     .footer__column-left {
-      // width: span(14);
       width: span(14);
       position: relative;
       margin-bottom: 0;
@@ -464,16 +445,6 @@ footer{
       grid-row: 1 / span 3;
 
         img {
-          // @include abs-fill;
-          // position: absolute;
-          // top: 0;
-          // left: 50%;
-          // transform: translate(-50%, 0);
-          position: absolute;
-          top: 50%;
-          left: 0%;
-          transform: translate(0%, -50%);
-          // width: 130%;
           width: 100%;
         }
 
@@ -512,24 +483,22 @@ footer{
 
 
     .social-flex{
-      // display: grid;
       grid-column: 18 / span 10;
       grid-row: 2;
-      margin-bottom: $margin-extra-large;
+      justify-content: space-around;
+      // margin-bottom: $margin-extra-large;
       .footer__column-right{
-        // grid-column: 18 / span 10;
-        // grid-row: 2;
 
         .channel-inner{
           .small-title{
-            margin-bottom: $margin-extra-large;
+            margin-bottom: $margin-normal;
           }
 
         .mail-wrapper{
           display: flex;
           align-items: center;
           flex-direction: row;
-          margin-bottom: $margin-normal;
+          margin-bottom: $margin-small;
 
           .mail-icon{
             position: relative;
@@ -566,11 +535,20 @@ footer{
          }
         }
       }
-    }
-      .column-bottom{
-        // grid-column: 18 / span 5;
-        // grid-row: 2;
+
+      .footer__column-socials{
+        .socials{
+          a {
+            margin-bottom: $margin-large;
+          }
+        }
       }
+    }
+
+    .column-bottom{
+      grid-column: 18 / span 5;
+      grid-row: 3;
+    }
    }
 
    .medium-relative{

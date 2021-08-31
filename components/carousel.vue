@@ -74,21 +74,21 @@ $iconSize: 22px;
   .arrow-button{
     position: absolute;
     top: 50%;
-    left: 95%;
+    left: 97%;
     display: none;
 
     &.left{
       display: none;
       position: absolute;
       top: 50%;
-      left: 5%;
+      left: 3%;
     }
   }
 
   .arrow-button-trapezoid{
     position: absolute;
     top: 50%;
-    left: 92%;
+    right: 0%;
 
     &.left{
       position: absolute;
@@ -198,11 +198,11 @@ $iconSize: 22px;
   }
   .arrow-button{
     top: 50%;
-    left: 92%;
+    left: 93%;
 
     &.left{
       top: 50%;
-      left: 5%;
+      left: 4%;
     }
   }
 
