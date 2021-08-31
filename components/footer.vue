@@ -486,9 +486,8 @@ footer{
       grid-column: 18 / span 10;
       grid-row: 2;
       justify-content: space-around;
-      // margin-bottom: $margin-extra-large;
+      
       .footer__column-right{
-
         .channel-inner{
           .small-title{
             margin-bottom: $margin-normal;
