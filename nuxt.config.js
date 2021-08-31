@@ -99,7 +99,7 @@ export default {
   // TODO
   plugins: [
     "~/plugins/lazysizes.client.js",
-  //   "~/plugins/vue-event-horizon.client.js",
+    "~/plugins/vue-event-horizon.client.js",
   //   {src: "~/plugins/vue-scrollto.client.js", ssr: false},
   //   {src: "~/plugins/vue-select.client.js", ssr: false},
   //   {src: "~/plugins/vue-body-scroll-lock.client.js", ssr: false},

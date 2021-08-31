@@ -1,7 +1,7 @@
 <template>
   <section class="tagline">
 
-    <h5>Look at Possible Differently.</h5>
+    <h4>Look at Possible Differently.</h4>
 
   </section>
 </template>
@@ -18,7 +18,6 @@
     text-align: center;
     background-color: $deep-blue;
     color: white;
-    // float: left;
   }
 
 
