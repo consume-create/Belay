@@ -205,7 +205,8 @@ export default{
 
 <style lang="scss">
   .property-wrapper{
-    margin-top: span(13);
+    margin-top: span(15);
+    margin-bottom: span(2);
     position: relative;
 
     .title{

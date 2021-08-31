@@ -1,7 +1,15 @@
 <template>
-  <section class="footer">
+  <footer>
+    <div class="medium-relative">
+      <div class="medium-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 200}}">
+        <div class="medium-block">
+          <div class="image__inner-medium" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
+          <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
+        </div>
+      </div>
+    </div>
     <div class="footer-wrapper">
-      <div class="form-cta">
+      <div class="footer__column-left">
           <div class="form-text">
             <h5 class="title-cta">Stay in Touch</h5>
             <p class="subtext">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,</p>
@@ -10,64 +18,51 @@
               <button class="right-arrow" name="email-button"></button>
             </div>
           </div>
-            <div class="large-block">
               <div class="image__inner-large" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
               <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
+        </div>
+
+        <div class="footer__column-right">
+          <div class="channel-inner">
+            <p class="small-title spread"> Our Channels</p>
+            <div class="mail-wrapper">
+              <div class="mail-icon"/>
+              <p class="email-para">INFO@BELAYDEV.COM</p>
             </div>
-      </div>
-
-        <div class="medium-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 200}}">
-          <div class="medium-block">
-            <div class="image__inner-medium" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
-            <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
+            <div class="phone-wrapper">
+              <div class="phone-icon"/>
+              <p class="phone-number"> 303 / 607 / 6133</p>
+            </div>
           </div>
         </div>
-
-
-      <div class="channels">
-        <div class="channel-inner">
-          <p class="small-title spread small"> Our Channels</p>
-          <div class="mail-wrapper">
-            <div class="mail-icon"/>
-            <p class="email-para">INFO@BELAYDEV.COM</p>
-          </div>
-          <div class="phone-wrapper">
-            <div class="phone-icon"/>
-            <p class="phone-number"> 303 / 607 / 6133</p>
+        <div class="footer__column-socials">
+          <div class="socials">
+            <SocialLinks :links="
+            [
+              {
+                'type': 'instagram',
+                'url': 'https://twitter.com/facewaretech'
+              },
+              {
+                'type': 'linkedin',
+                'url': 'https://www.linkedin.com/company/faceware-technologies-inc-'
+              },
+              {
+                'type': 'twitter',
+                'url': 'https://discord.gg/ZurczeCeRY'
+              },
+            ]" />
           </div>
         </div>
-        <div class="socials">
-          <SocialLinks :links="
-          [
-            {
-              'type': 'instagram',
-              'url': 'https://twitter.com/facewaretech'
-            },
-            {
-              'type': 'linkedin',
-              'url': 'https://www.linkedin.com/company/faceware-technologies-inc-'
-            },
-            {
-              'type': 'twitter',
-              'url': 'https://discord.gg/ZurczeCeRY'
-            },
-          ]" />
+      <div class="column-bottom">
+        <div class="policies">
+          <p class="policy mega-small">Privacy Policy</p>
+          <p class="copyright mega-small">Copyright Belay 2021</p>
         </div>
       </div>
     </div>
-    <div class="policies">
-      <p class="policy">Privacy Policy</p>
-      <p class="copyright">Copyright Belay 2021</p>
-    </div>
-  </section>
+  </footer>
 </template>
-
-<!-- <div class="large-wrapper">
-  <div class="large-block">
-    <div class="image__inner-large" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
-    <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
-  </div>
-</div> -->
 <script>
 import SocialLinks from "~/components/social-links.vue";
 import ResponsiveImage from "~/components/responsive-image";
@@ -109,76 +104,82 @@ export default{
 <style lang="scss">
 $iconSize: 22px;
 
-.footer{
-  padding: span(2);
+footer{
+  width: 100%;
   background-color: $deep-blue;
   color: white;
 
   .footer-wrapper{
-    .form-cta{
-      // width: span(24);
-      // height: span(10);
+    @include grid;
+    position: relative;
+    padding: span(1);
+
+    .footer__column-left {
+      grid-column: 1 / span 27;
+      grid-row: 1;
       position: relative;
-
-      .form-text{
-        position: absolute;
-        margin: 0 auto;
-        // top: 10%;
-        // @include abs-fill;
-        padding-right: span(6);
-        padding-top: span(2);
-        z-index: 2;
-
-        .title-cta{
-        }
-
-        .subtext{
-            margin-bottom: $margin-normal;
-        }
-
-        .email-wrapper{
-          display: flex;
-
-          .email{
-            padding: span(.6);
-            width: span(24);
-            height: span(0.3);
-          }
-          margin-bottom: $margin-extra-large*2;
-        }
-     }
-
-        .large-block {
-          position: relative;
-          width: span(28);
-          z-index: 0;
-
-          img {
-            @include abs-fill;
-          }
-        }
-    }
-
-    .medium-wrapper{
-      // position: absolute;
-      // top: -40%;
-      // left: 65%;
-
-      .medium-block {
-        position: relative;
-        width: span(4);
-        z-index: 0;
 
         img {
           @include abs-fill;
         }
-      }
+
+        .form-text{
+          position: absolute;
+          z-index: 1;
+          top:50%;
+          transform: translate(0, -50%);
+          left:10%;
+          margin-left: auto;
+          margin-right: auto;
+
+          .title-cta{
+
+          }
+          .subtext{
+            margin-top: $margin-small;
+            padding-right: span(3);
+          }
+          .email-wrapper{
+            margin-top: $margin-small;
+            display: flex;
+            align-items: center;
+
+            .email{
+              border: none;
+              padding:3px;
+              width: span(16);
+            }
+            .right-arrow{
+              position: relative;
+              height: 22px;
+              width: 22px;
+              background-color: $dark-blue;
+              border: 0;
+              &:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 18px;
+                width: 18px;
+                @include icon("right-arrow-mail", $white , true);
+                transition: transform $speed-demon ease;
+              }
+            }
+          }
+        }
     }
 
-    .channels{
+    .footer__column-right{
+      grid-column: 1 / span 18;
+      grid-row: 2;
+
       .channel-inner{
         .small-title{
-          margin-bottom: $margin-extra-large;
+          margin-bottom: $margin-normal;
+          margin-top: $margin-extra-large;
         }
 
       .mail-wrapper{
@@ -237,125 +238,291 @@ $iconSize: 22px;
        }
       }
 
+    }
+
+    .footer__column-socials{
+      grid-column: 25 / span 5;
+      grid-row: 2;
+      margin-top: $margin-extra-large;
       .socials{
+        flex-direction: column;
+        justify-content: space-between;
+
+      }
+    }
+
+    .column-bottom{
+      grid-column: 1 / span 7;
+      grid-row: 3;
+      .policies{
+        display: flex;
+        align-items: center;
+        .policy{
+          white-space: nowrap;
+          margin-right: $margin-normal;
+        }
+        .copyright{
+          white-space: nowrap;
+
+        }
       }
     }
   }
-  .policies{
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    flex-direction: row-reverse;
+  .medium-relative{
+  position: relative;
+  height: 50px;
+    .medium-wrapper{
+      position: absolute;
+      top: -80%;
+      left: 68%;
+      z-index: 1;
 
-    .copyright{
-      margin-right: $margin-extra-large;
+      .medium-block {
+        position: relative;
+        width: span(6);
+
+        img {
+          @include abs-fill;
+        }
+      }
     }
-    .policies{
-    }
-  }
+   }
 }
 
 
 @include respond-to($tablet) {
-  .footer{
-    .footer-wrapper{
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-around;
+footer{
+  .footer-wrapper{
+    padding-bottom: span(2);
 
-        .channels{
-          display: flex;
-          align-items: center;
-          justify-content: center;
+    .footer__column-left {
+      grid-column: 1 / span 15;
+      grid-row: 1 / span 3;
 
-          .channel-inner{
-            width: span(6);
+        .form-text{
+          top:50%;
+          transform: translate(0, -50%);
+          left:10%;
+          margin-left: auto;
+          margin-right: auto;
 
-            .small-title{
-              margin-bottom: $margin-extra-large;
-            }
+        .subtext{
+          margin-top: $margin-normal;
+          padding-right: span(2);
+        }
+        .email-wrapper{
+          margin-top: $margin-normal;
 
-            .email-para{
-              // margin-bottom: $margin-small;
+          .email{
+            padding: 5px;
+            width: span(8);
+          }
+          .right-arrow{
+            height: 25px;
+            width: 25px;
+            &:after {
+              height: 22px;
+              width: 22px;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
             }
           }
-          .socials{
-            width: span(2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+        }
+      }
+    }
+
+      .footer__column-right{
+        grid-column: 18 / span 10;
+        grid-row: 2;
+
+        .channel-inner{
+          .small-title{
+            margin-bottom: $margin-extra-large;
+          }
+
+        .mail-wrapper{
+          margin-bottom: $margin-normal;
+
+          .mail-icon{
+            position: relative;
+            height: 22px;
+            width: 22px;
+            &:after {
+              height: 22px;
+              width: 22px;
+            }
+          }
+
+          .email-para{
+            margin-left: $margin-small;
           }
         }
 
-        .form-cta{
-          width: span(14);
-            .large-block{
-              width: span(14);
-              // bottom: -50%;
+        .phone-wrapper{
+          margin-bottom: $margin-normal;
 
+          .phone-icon{
+            height: 22px;
+            width: 22px;
+            &:after {
+              height: 22px;
+              width: 22px;
             }
-
-          .medium-wrapper{
-            top: -120%;
-            left: 55%;
           }
+          .phone-number{
+            margin-left: $margin-small;
+          }
+         }
         }
+      }
 
+      .footer__column-socials{
+        grid-column: 28;
+        grid-row: 2;
+        margin-top: $margin-extra-large;
+        .socials{
+        }
+      }
+
+      .column-bottom{
+        grid-column: 18 / span 7;
+        grid-row: 3;
+      }
+   }
+
+   .medium-relative{
+     height: 20px;
+
+     .medium-wrapper{
+       top: -50%;
+       left: 38%;
+
+       .medium-block {
+         width: span(4);
+       }
+      }
+    }
   }
 }
 
 @include respond-to($desktop) {
-.footer{
+footer{
   .footer-wrapper{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
+    .footer__column-left {
+      grid-column: 1 / span 15;
+      grid-row: 1 / span 3;
 
-      .channels{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .channel-inner{
-          width: span(6);
-          .small-title{
-            margin-bottom: $margin-extra-large;
-          }
-        }
-
-        .socials{
-          width: span(2);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-        }
-      }
-
-      .form-cta{
-        width: span(12);
         .form-text{
-          margin-top: 33px;
-          .email-wrapper{
-            .email{
-              padding: span(.3);
-              width: span(24);
-              height: span(0.1);
+          top:50%;
+          transform: translate(0, -50%);
+          left:10%;
+          margin-left: auto;
+          margin-right: auto;
+
+        .subtext{
+          margin-top: $margin-normal;
+          padding-right: span(2);
+        }
+        .email-wrapper{
+          margin-top: $margin-normal;
+
+          .email{
+            padding:10px;
+            width: span(8);
+          }
+          .right-arrow{
+            height: 35px;
+            width: 35px;
+            &:after {
+              height: 22px;
+              width: 22px;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
             }
           }
         }
+      }
+    }
 
-          .large-block{
-            width: span(12);
+      .footer__column-right{
+        grid-column: 18 / span 10;
+        grid-row: 2;
+
+        .channel-inner{
+          .small-title{
+            margin-bottom: $margin-extra-large;
+          }
+
+        .mail-wrapper{
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          margin-bottom: $margin-normal;
+
+          .mail-icon{
+            position: relative;
+            height: 22px;
+            width: 22px;
+            &:after {
+              height: 22px;
+              width: 22px;
+            }
+          }
+
+          .email-para{
+            margin-left: $margin-small;
           }
         }
 
-        .medium-wrapper{
-          top: -50%;
-          left: 55%;
+        .phone-wrapper{
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          margin-bottom: $margin-normal;
+
+          .phone-icon{
+            height: 22px;
+            width: 22px;
+            &:after {
+              height: 22px;
+              width: 22px;
+            }
+          }
+          .phone-number{
+            margin-left: $margin-small;
+          }
+         }
         }
       }
+
+      .footer__column-socials{
+        grid-column: 26 / span 3;
+        grid-row: 2;
+        margin-top: $margin-extra-large;
+        .socials{
+        }
+      }
+
+      .column-bottom{
+        grid-column: 20 / span 7;
+        grid-row: 3;
+      }
+   }
+
+   .medium-relative{
+     height: 50px;
+
+     .medium-wrapper{
+       top: -80%;
+       left: 38%;
+
+       .medium-block {
+         width: span(4);
+
+       }
+     }
     }
   }
 }

@@ -105,6 +105,11 @@ p, .v-select, a, .text-link, li {
     line-height: 15px;
   }
 
+  &.mega-small {
+    font-size: 9px;
+    line-height: 12px;
+  }
+
   &.large {
     font-weight: 400;
     font-size: 18px;
@@ -208,6 +213,11 @@ HEADERS
       line-height: 20px;
     }
 
+    &.mega-small {
+      font-size: 13px;
+      line-height: 18px;
+    }
+
     &.large {
       font-size: 20px;
       line-height: 34px;
@@ -217,7 +227,7 @@ HEADERS
       // font-family: $gotham-bold;
       font-size: 16px;
       letter-spacing: 0.8em;
-      // line-height: 16px;
+      line-height: 20px;
       // text-transform: uppercase;
 
       &.small {

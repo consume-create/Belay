@@ -4,6 +4,10 @@
         <div class="image__inner-header" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
     </div>
+    <div class="header-image-blue">
+      <div class="image__inner-header-blue" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
+      <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
+  </div>
  </section>
 </template>
 
@@ -26,6 +30,18 @@ import ResponsiveImage from "~/components/responsive-image";
           }
         }
       },
+      img2:
+      {
+        type: Object,
+        default: () => {
+          return {
+            src: "",
+            alt: "",
+            height: "",
+            width: ""
+          }
+        }
+      },
     },
   }
 
@@ -33,31 +49,56 @@ import ResponsiveImage from "~/components/responsive-image";
 
 <style lang="scss">
 .header-wrapper{
-
   .header-image {
     position: relative;
     width: span(6);
     margin: 0 auto;
+    display: none;
 
     img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0px;
-      left: 0px;
+      @include abs-fill;
+    }
+  }
+
+    .header-image-blue {
+      position: relative;
+      width: span(6);
+      margin: 0 auto;
+      display: block;
+
+      img {
+        @include abs-fill;
+
+      }
     }
   }
 
   @include respond-to($tablet) {
-    .header-image {
+    .header-wrapper{
+      .header-image {
+          width: span(6);
+          display: block;
+      }
+      .header-image-blue {
+          width: span(4);
+          display: none;
+      }
     }
   }
 
   @include respond-to($desktop) {
+  .header-wrapper{
     .header-image {
         width: span(4);
+        display: block;
+    }
+    .header-image-blue {
+        width: span(4);
+        display: none;
     }
   }
-}
+
+
+  }
 
 </style>

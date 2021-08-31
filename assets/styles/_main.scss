@@ -84,9 +84,6 @@ a {
   text-overflow: ellipsis;
 }
 
-
-
-
 /**********************************************
 Loading Indicator
 **********************************************/
@@ -117,45 +114,11 @@ Loading Indicator
   }
 }
 
-/**********************************************
-Close Text Button
-**********************************************/
-// .close-button {
-//   $size: 35px;
-//   display: flex;
-//   align-items: center;
-//   text-transform: uppercase;
-//   font-size: 12px;
-//   color: $red;
-//   letter-spacing: 0.04em;
-//   cursor: pointer;
-//
-//   button {
-//     margin-left: 0.05em;
-//     width: $size;
-//     height: $size;
-//     background: none;
-//     outline: none;
-//     border: none;
-//     position: relative;
-//
-//     &:after {
-//       content: "";
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       width: 100%;
-//       height: 100%;
-//       @include icon("x", $red, true);
-//       cursor: pointer;
-//     }
-//   }
-// }
 
 /**********************************************
 Arrow Buttons
 **********************************************/
-.arrow-button {
+.arrow-button-trapezoid {
   // border-radius: 50%;
   // background: $deep-blue;
   // position: relative;
@@ -192,12 +155,63 @@ Arrow Buttons
   //   }
   // }
   position: relative;
+  // clip-path: polygon(0 23%, 100% 0, 100% 100%, 0 77%);
+  // clip-path: polygon(23% 25%, 100% 0, 100% 100%, 23% 77%);
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+  $size: 30px;
+  width: $size;
+  height: $size;
+  background: $light-blue;
+  border: none;
+  outline: none;
   &:after {
     content: "";
     position: absolute;
     width: 100%;
-    top: 0%;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 18px;
+    width: 18px;
+    @include icon("right-arrow-minimal", $white, true);
+    transition: transform $speed-demon ease;
+  }
+
+  &.left {
+    transform: rotate(180deg);
+  }
+
+  &:active {
+    transform: scale(1) !important;
+    &.left {
+      transform: scale(1) rotate(180deg) !important;
+    }
+  }
+
+
+  // &.animated {
+  //   &:before {
+  //     content: '';
+  //     @include circle($size);
+  //     position: absolute;
+  //     background: $white;
+  //     animation: grow $speed-metal * 2.5 $ease-out 0ms infinite;
+  //     transform-origin: 50% 50%;
+  //     top: 0;
+  //     left: 0;
+  //   }
+  // }
+}
+
+.arrow-button{
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 35px;
     width: 35px;
     @include icon("right-arrow-minimal", $white, true);
@@ -214,19 +228,6 @@ Arrow Buttons
       transform: scale(1) rotate(180deg) !important;
     }
   }
-
-  // &.animated {
-  //   &:before {
-  //     content: '';
-  //     @include circle($size);
-  //     position: absolute;
-  //     background: $white;
-  //     animation: grow $speed-metal * 2.5 $ease-out 0ms infinite;
-  //     transform-origin: 50% 50%;
-  //     top: 0;
-  //     left: 0;
-  //   }
-  // }
 }
 
 @keyframes grow {
@@ -273,88 +274,6 @@ Arrow Buttons
   }
 }
 
-//
-// .link-btn {
-//   display: inline-block;
-//   border: 3px solid $orange;
-//   color: $white;
-//   border-radius: 8px;
-//   font-size: 10px;
-//   text-transform: uppercase;
-//   text-align: center;
-//   letter-spacing: 0.05em;
-//   font-weight: 800;
-//   padding: 0.3em 2em;
-//   position: relative;
-//
-//   &.large {
-//     font-size: 14px;
-//     padding: 0.5em 2.4em;
-//   }
-//
-//   &.out {
-//     padding: 0.4em 2em;
-//     padding-right: 4em;
-//     border-color: $white;
-//
-//     &:after {
-//       content: "";
-//       display: block;
-//       position: absolute;
-//       top: 50%;
-//       right: 10px;
-//       width: 18px;
-//       height: 18px;
-//       margin-top: -9px;
-//       transform-origin: center center;
-//       border-radius: 50%;
-//       @include icon("out", $white, true);
-//       transition: transform $speed-demon $evil-ease $speed-demon / 2;
-//     }
-//   }
-//
-//   &.blue {
-//     border-color: $dark-blue;
-//     background: transparent;
-//
-//     &:after, &:focus {
-//       border-color: $deep-blue;
-//       outline: none;
-//     }
-//   }
-//
-//   &.plus {
-//     padding: 0.4em 2em;
-//     padding-right: 4em;
-//     border-color: $red;
-//
-//     &:after {
-//       content: "";
-//       display: block;
-//       position: absolute;
-//       top: 0.4em;
-//       right: 10px;
-//       width: 18px;
-//       height: 18px;
-//       transform-origin: center center;
-//       background: $white;
-//       border-radius: 50%;
-//       @include icon("clear", $white, true);
-//       transform: rotate(-45deg);
-//       transition: transform $speed-demon $evil-ease $speed-demon / 2;
-//     }
-//   }
-//
-//   &.inverted {
-//     border-color: $red;
-//     background: $red;
-//   }
-//
-//   &.centered {
-//     display: block;
-//     margin: auto;
-//   }
-// }
 
 @include respond-to($tablet) {
   .link-btn {
@@ -372,29 +291,6 @@ Arrow Buttons
     }
   }
 }
-
-// @include can-hover {
-//   .link-btn {
-//     cursor: pointer;
-//
-//     &:hover {
-//       &.blue {
-//         background: rgba(0, 0, 20, 0.2);
-//       }
-//       &.inverted {
-//         background: transparent;
-//       }
-//       &.plus {
-//         background: $red;
-//         &:after {
-//           background: $white;
-//           @include icon("clear", $red, true);
-//         }
-//       }
-//       background: $orange;
-//     }
-//   }
-// }
 
 /**********************************************
 Fade Transitions

@@ -3,10 +3,16 @@
     <Header class="logo"
     :img1="{
             src: 'header/belay-dev-logo-WHITE.png',
-            alt: 'The Belay logo',
+            alt: 'The Belay logo in white',
             width: '501',
             height: '216'
-          }"/>
+          }"
+    :img2="{
+            src: 'header/belay-dev-logo-BLUE.png',
+            alt: 'The Belay logo in blue',
+            width: '500',
+            height: '216'
+          }" />
     <div class="carousel-wrapper">
       <div class="carousel-image">
         <div class="image__inner-carousel" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
@@ -17,13 +23,11 @@
       <div class="arrow-button left"></div>
       <div class="arrow-button"></div>
 
-    <!-- <div class="hotel-title"> -->
-      <p class=" hotel-title spread">The Coloradan</p>
-    <!-- </div> -->
+      <div class="arrow-button-trapezoid left "></div>
+      <div class="arrow-button-trapezoid"></div>
 
-    <!-- <div class="hotel-date"> -->
+      <p class="hotel-title spread">The Coloradan</p>
       <p class="hotel-date spread">2021</p>
-    <!-- </div> -->
 
   </section>
 </template>
@@ -75,13 +79,27 @@ $iconSize: 22px;
 
   .arrow-button{
     position: absolute;
-    top: 3%;
-    left: 74%;
+    top: 50%;
+    left: 95%;
+    display: none;
+
+    &.left{
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 5%;
+    }
+  }
+
+  .arrow-button-trapezoid{
+    position: absolute;
+    top: 50%;
+    left: 92%;
 
     &.left{
       position: absolute;
-      top: 12%;
-      left: 25%;
+      top: 50%;
+      left: 0%;
     }
   }
 
@@ -139,10 +157,26 @@ $iconSize: 22px;
   .arrow-button{
     top: 50%;
     left: 90%;
+    display: block;
 
     &.left{
       top: 50%;
       left: 5%;
+      display: block;
+    }
+  }
+
+  .arrow-button-trapezoid{
+    position: absolute;
+    top: 50%;
+    left: 92%;
+    display: none;
+
+    &.left{
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      display: none;
     }
   }
 
@@ -152,7 +186,6 @@ $iconSize: 22px;
 
 @include respond-to($desktop) {
 .carousel{
-
   .carousel-wrapper{
     .carousel-image{
       width: span(28);
@@ -176,6 +209,20 @@ $iconSize: 22px;
     &.left{
       top: 50%;
       left: 5%;
+    }
+  }
+
+  .arrow-button-trapezoid{
+    position: absolute;
+    top: 50%;
+    left: 92%;
+    display: none;
+
+    &.left{
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      display: none;
     }
   }
  }

@@ -1,7 +1,6 @@
 <template>
   <section class="about">
-
-      <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 700}}">
+    <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 700}}">
       <div class="small-block">
         <div class="image__inner-small" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
@@ -9,10 +8,10 @@
     </div>
 
     <div class="small-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 200}}">
-    <div class="small-block-mobile">
-      <div class="image__inner-small-mobile" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
-      <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
-    </div>
+      <div class="small-block-mobile">
+        <div class="image__inner-small-mobile" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
+        <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
+      </div>
   </div>
 
     <div class="text-box">
@@ -106,21 +105,22 @@ import ResponsiveImage from "~/components/responsive-image";
   .text-box {
     text-align: left;
     padding: span(2) span(5) span(2) span(2);
-    top: 22%;
+    top: 18%;
     left: 2%;
     z-index: 4;
     position: absolute;
     margin: 0 auto;
 
     .title-upper{
-      margin-bottom: $margin-small;
+      margin-bottom: $margin-normal;
     }
     .subtitle{
       padding-bottom: span(1);
       border-bottom: 2px solid $light-blue;
-      margin-bottom: $margin-normal;
+      margin-bottom: $margin-small;
     }
     .text{
+
     }
   }
 
