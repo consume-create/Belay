@@ -29,7 +29,7 @@
       }"/>
     <PropertyTypes
     :img1="{
-        src: 'property-types/icon-set.png',
+        src: 'property-types/icon-set-2.png',
         alt: 'a 5 by 3 grid of illustrations of different building types',
         width: '2880',
         height: '1670'
