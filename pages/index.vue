@@ -1,13 +1,26 @@
 <template>
   <div class="outer">
     <Carousel
-      :img1="{
-          src: 'carousel/building1.png',
-          alt: 'A picture of a commercial building',
-          width: '1572',
-          height: '1348'
-        }"/>
-
+      :images="[
+        {
+          'src': 'carousel/building1.png',
+          'alt': 'A picture of a commercial building',
+          'width': '1572',
+          'height': '1348'
+        },
+        {
+          'src': 'carousel/building2.png',
+          'alt': 'A picture of a commercial building',
+          'width': '1280',
+          'height': '1920'
+        },
+      ]"/>
+        <!-- :img1="{
+            src: 'carousel/building1.png',
+            alt: 'A picture of a commercial building',
+            width: '1572',
+            height: '1348'
+          }" -->
     <About
     :img1="{
         src: 'about/small-block.png',

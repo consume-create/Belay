@@ -7,15 +7,27 @@
             width: '501',
             height: '216'
           }" />
-    <div class="carousel-wrapper">
+
+
+
+    <!-- <div class="carousel-wrapper">
       <div class="carousel-image">
         <div class="image__inner-carousel" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
           <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
+      </div>
+    </div> -->
+
+    <div class="carousel">
+      <div class="carousel-image">
+        <div v-for "image in images" class="image__inner-carousel" :style="{paddingBottom: image.height / image.width * 100 + '%'}"/>
+          <ResponsiveImage :src="`${image.src}`" :alt="`${image.alt}`" lazy />
       </div>
     </div>
 
       <div class="arrow-button left"></div>
       <div class="arrow-button"></div>
+      <div class="arrow left"></div>
+      <div class="arrow "></div>
 
       <div class="arrow-button-trapezoid left "></div>
       <div class="arrow-button-trapezoid"></div>
@@ -27,6 +39,13 @@
 </template>
 
 
+<!-- <div class="carousel">
+  <div class="carousel-image">
+    <div v-for" image in images" class="image__inner-carousel" :style="{paddingBottom: image.height / image.width * 100 + '%'}"/>
+      <ResponsiveImage :src="image.src" :alt="image.alt" lazy />
+  </div>
+</div> -->
+
 <script>
 import Header from '~/components/header';
 import ResponsiveImage from "~/components/responsive-image";
@@ -36,18 +55,21 @@ import ResponsiveImage from "~/components/responsive-image";
       ResponsiveImage
     },
     props: {
-      img1:
-      {
-        type: Object,
-        default: () => {
-          return {
-            src: "",
-            alt: "",
-            height: "",
-            width: ""
-          }
-        }
+    images: {
+        type: Array
       },
+      // img1:
+      // {
+      //   type: Object,
+      //   default: () => {
+      //     return {
+      //       src: "",
+      //       alt: "",
+      //       height: "",
+      //       width: ""
+      //     }
+      //   }
+      // },
     },
 
   }
@@ -117,7 +139,7 @@ $iconSize: 22px;
   .carousel-wrapper{
     .carousel-image{
       width: span(28);
-      height: span(28);
+      height: span(26);
       position: relative;
       margin: 0 auto;
 
@@ -148,7 +170,7 @@ $iconSize: 22px;
     top: 105%;
     left: 5%;
   }
-  .arrow-button{
+  .arrow{
     top: 50%;
     left: 90%;
     display: block;
@@ -183,7 +205,7 @@ $iconSize: 22px;
   .carousel-wrapper{
     .carousel-image{
       width: span(28);
-      height: span(16);
+      height: span(14);
     }
   }
 
@@ -196,9 +218,10 @@ $iconSize: 22px;
     top: 105%;
     left: 5%;
   }
-  .arrow-button{
+  .arrow{
+    position: absolute;
     top: 50%;
-    left: 93%;
+    right: 93%;
 
     &.left{
       top: 50%;

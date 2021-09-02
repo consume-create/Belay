@@ -1,6 +1,6 @@
 <template>
   <section class="about">
-    <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 700}}">
+    <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 900}}">
       <div class="small-block">
         <div class="image__inner-small" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
@@ -167,7 +167,7 @@ import ResponsiveImage from "~/components/responsive-image";
     position: absolute;
     left: 10%;
     top: 2%;
-    z-index: 1;
+    z-index: 2;
     display: none;
     .medium-block {
       position: relative;
@@ -188,7 +188,7 @@ import ResponsiveImage from "~/components/responsive-image";
     position: absolute;
     left:-10%;
     top: -42%;
-    z-index: 1;
+    z-index: 2;
     display: block;
     .medium-block-mobile {
       position: relative;
@@ -208,7 +208,7 @@ import ResponsiveImage from "~/components/responsive-image";
   .large-block-wrapper{
     position: absolute;
     bottom: -38%;
-    z-index: 2;
+    z-index: 1;
 
     .large-block {
       position: relative;
@@ -287,12 +287,9 @@ import ResponsiveImage from "~/components/responsive-image";
   .about{
     height: span(18);
     .text-box {
-      text-align: left;
       padding-right: span(10);
       top: 45%;
       left: 10%;
-      z-index: 4;
-      position: absolute;
 
       .title-upper{
         margin-bottom: $margin-small;
@@ -310,7 +307,7 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block-wrapper{
       display: block;
       left: 65%;
-      top: -8%;
+      top: -14%;
       .small-block {
         display: block;
       }
@@ -325,7 +322,6 @@ import ResponsiveImage from "~/components/responsive-image";
 
     .medium-block-wrapper{
       display: block;
-      z-index: 2;
       .medium-block{
         display: block;
       }
@@ -339,9 +335,6 @@ import ResponsiveImage from "~/components/responsive-image";
     }
 
     .large-block-wrapper{
-      // position: absolute;
-      // z-index: 2;
-      z-index: 1;
       bottom: -58%;
     }
   }

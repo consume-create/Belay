@@ -42,15 +42,15 @@
               [
                 {
                   'type': 'instagram',
-                  'url': 'https://twitter.com/facewaretech'
+                  'url': ''
                 },
                 {
                   'type': 'linkedin',
-                  'url': 'https://www.linkedin.com/company/faceware-technologies-inc-'
+                  'url': ''
                 },
                 {
                   'type': 'twitter',
-                  'url': 'https://discord.gg/ZurczeCeRY'
+                  'url': ''
                 },
               ]" />
             </div>
@@ -152,7 +152,7 @@ footer{
             .email{
               border: none;
               padding:3px;
-              width: span(16);
+              width: span(21);
             }
 
             input::placeholder{
@@ -307,10 +307,11 @@ footer{
   .footer-wrapper{
     @include grid;
     padding: span(1);
-    padding-bottom: span(2);
+    // padding-bottom: span(2);
 
     .footer__column-left {
-      width: span(14);
+      width: span(16);
+      height: 100%;
       position: relative;
       margin-bottom: 0;
       grid-column: 1 / span 15;
@@ -322,17 +323,16 @@ footer{
 
         .form-text{
           top:50%;
-          transform: translate(0, -50%);
           left:10%;
-          margin-left: auto;
+          transform: translate(0, -50%);
           margin-right: auto;
 
         .subtext{
-          margin-top: $margin-normal;
+          margin-top: $margin-small;
           padding-right: span(2);
         }
         .email-wrapper{
-          margin-top: $margin-normal;
+          margin-top: $margin-small;
 
           .email{
             padding: 5px;
@@ -354,8 +354,9 @@ footer{
     }
 
     .social-flex{
-      grid-column: 18 / span 10;
+      grid-column: 19 / span 10;
       grid-row: 2;
+      // margin-top: $margin-extra-large;
       // margin-bottom: $margin-large;
       justify-content: space-around;
 
@@ -431,6 +432,29 @@ footer{
   }
 }
 
+@include respond-to($large-tablet) {
+footer{
+  .footer-wrapper{
+    @include grid;
+    padding: span(1);
+    // padding-bottom: span(2);
+
+    .footer__column-left {
+      width: span(14);
+
+      }
+      .social-flex{
+        grid-column: 18 / span 10;
+        grid-row: 2;
+      }
+      .column-bottom{
+        grid-column: 19 / span 7;
+        grid-row: 3;
+      }
+    }
+  }
+}
+
 @include respond-to($desktop) {
 footer{
   .footer-wrapper{
@@ -486,7 +510,8 @@ footer{
       grid-column: 18 / span 10;
       grid-row: 2;
       justify-content: space-around;
-      
+      margin-bottom: $margin-extra-large *1.5;
+
       .footer__column-right{
         .channel-inner{
           .small-title{
@@ -497,15 +522,15 @@ footer{
           display: flex;
           align-items: center;
           flex-direction: row;
-          margin-bottom: $margin-small;
+          margin-bottom: $margin-normal;
 
           .mail-icon{
             position: relative;
-            height: 22px;
-            width: 22px;
+            height: 20px;
+            width: 20px;
             &:after {
-              height: 22px;
-              width: 22px;
+              height: 20px;
+              width: 20px;
             }
           }
 
@@ -521,11 +546,11 @@ footer{
           margin-bottom: $margin-normal;
 
           .phone-icon{
-            height: 22px;
-            width: 22px;
+            height: 20px;
+            width: 20px;
             &:after {
-              height: 22px;
-              width: 22px;
+              height: 20px;
+              width: 20px;
             }
           }
           .phone-number{
@@ -538,7 +563,7 @@ footer{
       .footer__column-socials{
         .socials{
           a {
-            margin-bottom: $margin-large;
+            margin-bottom: $margin-normal;
           }
         }
       }
