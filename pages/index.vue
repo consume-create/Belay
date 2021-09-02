@@ -3,18 +3,21 @@
     <Carousel
       :images="[
         {
-          'src': 'carousel/building1.png',
-          'alt': 'A picture of a commercial building',
-          'width': '1572',
-          'height': '1348'
+          src: 'carousel/building1.png',
+          alt: 'A picture of a commercial building',
+          width: '1572',
+          height: '1348', 
+          index: 1
         },
         {
-          'src': 'carousel/building2.png',
-          'alt': 'A picture of a commercial building',
-          'width': '1280',
-          'height': '1920'
+          src: 'carousel/building2.jpg',
+          alt: 'A picture of a commercial building',
+          width: '1280',
+          height: '1920',
+          index: 2
         },
       ]"/>
+      
         <!-- :img1="{
             src: 'carousel/building1.png',
             alt: 'A picture of a commercial building',
