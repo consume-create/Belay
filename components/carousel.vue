@@ -235,7 +235,7 @@ $iconSize: 22px;
 
       &.left {
         top: 50%;
-        left: 5%;
+        left: 7%;
         display: block;
       }
     }
@@ -273,13 +273,14 @@ $iconSize: 22px;
       left: 5%;
     }
     .arrow {
-      position: absolute;
       top: 50%;
-      right: 96%;
+      left: 93%;
+      display: block;
 
       &.left {
         top: 50%;
-        left: 4%;
+        left: 5%;
+        display: block;
       }
     }
 
