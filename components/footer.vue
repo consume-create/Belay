@@ -134,7 +134,8 @@ footer {
     overflow: hidden;
 
     .footer__column-left {
-      width: span(28);
+      //width: span(28);
+      width: 100%;
       position: relative;
       margin-bottom: span(8);
 

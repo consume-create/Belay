@@ -96,7 +96,8 @@ import ResponsiveImage from "~/components/responsive-image";
   color: $white;
   position: relative;
   height: span(28);
-  width: span(28);
+  //width: span(28);
+  width: 100%;
 
   .text-box {
     text-align: left;
@@ -206,11 +207,13 @@ import ResponsiveImage from "~/components/responsive-image";
   .large-block-wrapper{
     position: absolute;
     bottom: -38%;
+    width: 100%;
     z-index: 1;
 
     .large-block {
       position: relative;
-      width: span(28);
+      //width: span(28);
+      width: 100%;
       height: span(22);
 
       img {

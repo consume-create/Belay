@@ -86,7 +86,8 @@ $iconSize: 22px;
 
 .carousel {
   position: relative;
-  width: span(28);
+  //width: span(28);
+  width: 100%;
   height: span(26);
   z-index: 4;
   .logo {
@@ -220,7 +221,8 @@ $iconSize: 22px;
 }
 @include respond-to($tablet) {
   .carousel {
-    width: span(28);
+    //width: span(28);
+    width: 100%;
     height: span(18);
     .hotel-date {
       position: absolute;
@@ -262,13 +264,10 @@ $iconSize: 22px;
 
 @include respond-to($desktop) {
   .carousel {
-    width: span(28);
+    //width: span(28);
+    width: 100%;
     //height: span(14);
     height: 85vh;
-    .carousel-image {
-      // width: span(28);
-      // height: span(14);
-    }
 
     .hotel-date {
       top: 105%;

@@ -203,7 +203,8 @@ export default{
 
     .property-image-vertical {
       position: relative;
-      width: span(28);
+      //width: span(28);
+      width: 100%;
       // height: span(24);
       #cnv{
         display: block;
@@ -243,7 +244,8 @@ export default{
 
       .property-image {
         position: relative;
-        width: span(28);
+        //width: span(28);
+        width: 100%;
         display: block;
 
       img {

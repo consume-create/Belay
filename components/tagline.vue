@@ -14,7 +14,8 @@
 
 <style lang="scss">
   .tagline{
-    width: span(28);
+    //width: span(28);
+    width: 100%;
     padding: span(6);
     text-align: center;
     background-color: $deep-blue;
