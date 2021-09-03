@@ -1,3 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="1096" viewBox="0 0 1440 1096">
-  <image width="1440" height="1096" xlink:href="large-block.png"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1096" viewBox="0 0 1440 1096" >
+  <polygon fill="#22015A" points="886,909.333313 809,911 817,1052 886,1096 1883.4224854,161.809967 1883.4224854,47.3951225 "/>
+  <polygon fill="#220178" points="-142.5774841,394.0884399 -142.5774841,508.5036926 886,1096 886,909.333313 "/>
+  <polygon fill="#220196" points="828.5769043,0.7105969 -142.5774841,394.0884399 886,910.333313 1883.4224854,47.3951225 "/>
 </svg>

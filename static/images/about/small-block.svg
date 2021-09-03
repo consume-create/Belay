@@ -1,27 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="153.34" height="169.61" viewBox="0 0 153.34 169.61">
-  <defs>
-    <style>
-      .a {
-        fill: #220178;
-      }
-
-      .a, .b, .c, .d {
-        fill-rule: evenodd;
-      }
-
-      .b {
-        fill: #22015a;
-      }
-
-      .d {
-        fill: #f7f7f7;
-      }
-    </style>
-  </defs>
-  <g>
-    <polygon class="a" points="0 47.52 76.68 84.92 82.6 169.61 5.92 132.21 0 47.52"/>
-    <polygon class="b" points="76.68 84.92 147.41 37.21 153.34 121.9 82.6 169.61 76.68 84.92"/>
-    <polygon class="c" points="0.38 47.71 71.11 0 147.41 37.22 76.68 84.93 0.38 47.71"/>
-    <polygon class="d" points="0.38 47.71 71.11 0 147.41 37.22 76.68 84.93 0.38 47.71"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="154" height="170" viewBox="0 0 154 170">
+  <polygon fill="#220178" points="0 47.52 76.68 84.92 82.6 169.61 5.92 132.21 0 47.52"/>
+  <polygon fill="#22015a" points="76.68 84.92 147.41 37.21 153.34 121.9 82.6 169.61 76.68 84.92"/>
+  <polygon fill="#f7f7f7" points="0.38 47.71 71.11 0 147.41 37.22 76.68 84.93 0.38 47.71"/>
 </svg>

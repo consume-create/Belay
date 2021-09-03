@@ -1,3 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="665" height="474" viewBox="0 0 665 474">
-  <image width="665" height="474" xlink:href="medium-block.png"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="665" height="474" viewBox="0 0 665 474">
+  <polygon fill="#4100F5" points="184.34,312.03 664.35,405.02 498.96,93.84 18.96,0.86"/>
+  <polygon fill="#22015A" points="163.92,392.61 664.35,473.19 664.35,405.02 184.34,312.03 "/>
+  <polygon fill="#220178" points="18.96,0.86 0.15,62.65 163.92,392.61 184.34,312.03"/>
 </svg>

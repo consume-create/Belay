@@ -21,18 +21,18 @@
     :img1="{
         src: 'about/small-block.svg',
         alt: 'A small cube ',
-        width: '153',
-        height: '169',
+        width: '154',
+        height: '170',
       }"
       :img2="{
-        src: 'about/medium-block.png',
+        src: 'about/medium-block.svg',
         alt: 'A medium cube',
         width: '665',
         height: '474',
       }"
       :img3="{
-        src: 'about/large-block.png',
-        alt: 'a large cube',
+        src: 'about/large-block.svg',
+        alt: 'A large cube',
         width: '1440',
         height: '1096',
       }"/>
@@ -53,13 +53,13 @@
       <Tagline/>
     <Footer
     :img1="{
-        src: 'footer/footer-big-block.png',
+        src: 'footer/footer-big-block.svg',
         alt: 'A medium cube',
-        width: '633',
-        height: '384',
+        width: '618',
+        height: '376',
       }"
     :img2="{
-        src: 'footer/footer-small-block.png',
+        src: 'footer/footer-small-block.svg',
         alt: 'A small cube',
         width: '168',
         height: '118',
