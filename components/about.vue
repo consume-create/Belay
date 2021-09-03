@@ -96,6 +96,7 @@ import ResponsiveImage from "~/components/responsive-image";
   color: $white;
   position: relative;
   height: span(28);
+  width: span(28);
 
   .text-box {
     text-align: left;
@@ -294,7 +295,6 @@ import ResponsiveImage from "~/components/responsive-image";
       .subtitle{
         margin-bottom: $margin-extra-large;
         margin-top: $margin-extra-large;
-
         padding-bottom: $margin-large;
       }
       .text{
