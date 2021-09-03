@@ -120,7 +120,7 @@ $iconSize: 22px;
     top: 3%;
   }
 
-  .arrow-button {
+  .arrow {
     position: absolute;
     top: 50%;
     left: 97%;
@@ -170,6 +170,7 @@ $iconSize: 22px;
       margin: 0 auto;
 
       img {
+        object-fit: cover;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -243,7 +244,7 @@ $iconSize: 22px;
     .arrow {
       position: absolute;
       top: 50%;
-      right: 93%;
+      right: 96%;
 
       &.left {
         top: 50%;
