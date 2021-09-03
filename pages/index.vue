@@ -17,19 +17,12 @@
           index: 2
         },
       ]"/>
-      
-        <!-- :img1="{
-            src: 'carousel/building1.png',
-            alt: 'A picture of a commercial building',
-            width: '1572',
-            height: '1348'
-          }" -->
     <About
     :img1="{
-        src: 'about/small-block.png',
+        src: 'about/small-block.svg',
         alt: 'A small cube ',
-        width: '159',
-        height: '175',
+        width: '153',
+        height: '169',
       }"
       :img2="{
         src: 'about/medium-block.png',

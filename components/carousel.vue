@@ -20,12 +20,12 @@
     <div class="carousel-wrapper">
       <div class="carousel-image" 
         v-for="(image, index) in images"
-        :key="image.src">
+        :key="image.src"
+        :index="index">
         <div
           class="image__inner-carousel"
           :style="{ paddingBottom: image.height / image.width * 100 + '%' }"
         />
-        <!-- <ResponsiveImage :src="`${image.src}`" :alt="`${image.alt}`" lazy /> -->
         <ResponsiveImage :src="image.src" :alt="image.alt" lazy />
       </div>
     </div>
@@ -45,14 +45,6 @@
   </section>
 </template>
 
-
-<!-- <div class="carousel">
-  <div class="carousel-image">
-    <div v-for" image in images" class="image__inner-carousel" :style="{paddingBottom: image.height / image.width * 100 + '%'}"/>
-      <ResponsiveImage :src="image.src" :alt="image.alt" lazy />
-  </div>
-</div> -->
-
 <script>
 import Header from "~/components/header";
 import ResponsiveImage from "~/components/responsive-image";
@@ -65,30 +57,24 @@ export default {
     images: {
       type: Array,
     },
-    // img1:
-    // {
-    //   type: Object,
-    //   default: () => {
-    //     return {
-    //       src: "",
-    //       alt: "",
-    //       height: "",
-    //       width: ""
-    //     }
-    //   }
-    // },
+  },
+  data:{
+
   },
   methods: {
-    next(){
+    next(index){
+      console.log(index);
       const currentSlide = this.images[index];
-      this.index++;
-      this.slides[this.index] = currentSlide;
+      // index++;
+      // this.images[index] = currentSlide; 
+      return(currentSlide);
+      
     }, 
 
-    previous(){
+    previous(index){
       const currentSlide = this.images[index];
-      this.index--;
-      this.slides[this.index] = currentSlide;
+      index--;
+      this.images[index] = currentSlide;
     },
   }
 };
@@ -212,7 +198,10 @@ $iconSize: 22px;
 @include respond-to($desktop) {
   .carousel {
     .carousel-wrapper {
+      // overflow: hidden;
+      // display: none;
       .carousel-image {
+        
         width: span(28);
         height: span(14);
       }

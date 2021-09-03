@@ -114,9 +114,6 @@ import ResponsiveImage from "~/components/responsive-image";
       border-bottom: 2px solid $light-blue;
       margin-bottom: $margin-small;
     }
-    .text{
-
-    }
   }
 
     .small-block-wrapper{
