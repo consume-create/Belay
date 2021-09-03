@@ -7,15 +7,17 @@
           alt: 'A picture of a commercial building',
           width: '1572',
           height: '1348', 
-          className: 'first'
+          className: 'first',
+          objectPosition: '50% 0%'
         },
         {
           src: 'carousel/building2.jpg',
           alt: 'A picture of a commercial building',
           width: '1280',
           height: '1920',
-          className: 'second'
-        },
+          className: 'second',
+          objectPosition: '50% 50%'
+        }
       ]"/>
     <About
     :img1="{

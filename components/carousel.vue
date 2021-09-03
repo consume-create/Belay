@@ -15,26 +15,15 @@
         <div class="background-transition" :class="transitionClass">
           <div class="background-outer-1">
              <div class="background-inner-1">
-              <div
-                class="carousel-image"
-                v-if="show"
-                :key="current"
-                :class="images[current].className"
-              >
-                <div
-                  class="image__inner-carousel"
-                  :style="{
-                    paddingBottom:
-                      (images[current].height / images[current].width) * 100 + '%',
-                  }"
+                <img
+                  v-for="(image, i) in images"
+                  :key="i"
+                  class="carousel-image"
+                  :class="{ 'current': i === current }"
+                  :src="require(`~/static/images/${image.src}`)"
+                  :alt="image.alt"
+                  :style="{ 'object-position': image.objectPosition }"
                 />
-                <ResponsiveImage
-                  :src="images[current].src"
-                  :alt="images[current].alt"
-                  :class="fadeClass"
-                  lazy
-                />
-              </div>
             </div> 
           </div> 
         </div> 
@@ -69,10 +58,7 @@ export default {
     return {
       current: 0,
       direction: 1,
-      transitionName: "fade",
-      show: false,
       transitionClass: "", 
-      fadeClass: ""
     };
   },
   methods: {    
@@ -80,16 +66,10 @@ export default {
       this.direction = dir;
       const duration = 400;
       this.transitionClass ="out";
-
-    // window.setTimeout(() => {
-    this.fadeClass="fade"; 
-    // }, duration * 1.5);
-    this.fadeClass= "";
     
       window.setTimeout(() => {
       this.transitionClass = "";
       }, duration * 2);
-      
 
       var len = this.images.length;
       this.current = (this.current + (dir % len) + len) % len;
@@ -97,8 +77,6 @@ export default {
   },
 
   mounted() {
-    // this.init();
-    this.show = true;
   },
 };
 </script>
@@ -182,10 +160,10 @@ $iconSize: 22px;
       background-color: $deep-blue;
 
       .background-transition{
-        // width: 100%;
-        // height: 100%;
-        width: span(28);
-        height: span(26);
+        width: 100%;
+        height: 100%;
+        // width: span(28);
+        // height: span(26);
         perspective: 800px;
         overflow: hidden;
         transform-style: preserve-3d;
@@ -212,19 +190,19 @@ $iconSize: 22px;
             backface-visibility: hidden;
 
             .carousel-image {
-              img {
                 object-fit: cover;
                 position: absolute;
                 width: 100%;
                 height: 100%;
                 top: 0px;
                 left: 0px;
+                opacity: 0;
                 transition: opacity 1400ms;
-                // z-index: 1;
-                &.fade {
+                z-index: 10;
+                &.current {
                   opacity: 1;
+                  z-index: 20;
                 }
-              }
             }
           } 
         } 
@@ -285,7 +263,8 @@ $iconSize: 22px;
 @include respond-to($desktop) {
   .carousel {
     width: span(28);
-    height: span(14);
+    //height: span(14);
+    height: 85vh;
     .carousel-image {
       // width: span(28);
       // height: span(14);
