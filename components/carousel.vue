@@ -33,8 +33,8 @@
     <button class="arrow left" @click="slide(-1)"></button>
     <button class="arrow" @click="slide(1)"></button>
 
-    <div class="arrow-button-trapezoid left"></div>
-    <div class="arrow-button-trapezoid"></div>
+    <button class="arrow-button-trapezoid left" @click="slide(1)"></button>
+    <button class="arrow-button-trapezoid" @click="slide(1)"></button>
 
     <p class="hotel-title spread">The Coloradan</p>
     <p class="hotel-date spread">2021</p>
@@ -148,23 +148,17 @@ $iconSize: 22px;
     left: 0px;
     width: 100%;
     height: 100%;
-    //  width: span(28);
-    //  height: span(26);
 
     .background-inner{
       position: relative;
       width: 100%;
       height: 100%;
-      //  width: span(28);
-      //  height: span(26);
       overflow: hidden;
       background-color: $deep-blue;
 
       .background-transition{
         width: 100%;
         height: 100%;
-        // width: span(28);
-        // height: span(26);
         perspective: 800px;
         overflow: hidden;
         transform-style: preserve-3d;
@@ -198,10 +192,11 @@ $iconSize: 22px;
                 top: 0px;
                 left: 0px;
                 opacity: 0;
-                transition: opacity 1400ms;
+                transition: opacity 800ms;
                 z-index: 10;
                 &.current {
                   opacity: 1;
+                  transition-delay: 800ms;
                   z-index: 20;
                 }
             }
@@ -221,7 +216,6 @@ $iconSize: 22px;
 }
 @include respond-to($tablet) {
   .carousel {
-    //width: span(28);
     width: 100%;
     height: span(18);
     .hotel-date {

@@ -16,7 +16,7 @@
           width: '1280',
           height: '1920',
           className: 'second',
-          objectPosition: '50% 50%'
+          objectPosition: '50% 40%'
         }
       ]"/>
     <About
