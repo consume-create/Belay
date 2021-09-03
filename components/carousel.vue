@@ -75,48 +75,14 @@ export default {
       fadeClass: ""
     };
   },
-  methods: {
-    init() {
-      const el= document.getElementsByClassName("background-wrapper");
-      const bg_trans= document.getElementsByClassName('background-transition');
-      
-      // const imgs = document.querySelectorAll('img');
-      // const imgs= document.getElementsByClassName('carousel-image');
-      // console.log(imgs);
-      // imgs.classList.add('current');
-    }, 
-
-    backOut() {
-      const duration = 400;
-      this.bg_trans.classList.add('out');
-    
-    //window.setTimeout(() => {
-      // next();
-    //}, duration * 1.5);
-    
-      window.setTimeout(() => {
-      this.bg_trans.classList.remove('out');
-      }, duration * 2);
-    },
-      
+  methods: {    
     slide(dir) {
-      
-      // const el= document.getElementsByClassName("background-wrapper");
-      // const bg_trans = document.getElementsByClassName('background-transition');
-      // console.log(bg_trans);
-
       this.direction = dir;
-
       const duration = 400;
-      // bg_trans.classList.add('out');
-
       this.transitionClass ="out";
-      
-      
-      
-    
+
     // window.setTimeout(() => {
-      this.fadeClass="fade"; 
+    this.fadeClass="fade"; 
     // }, duration * 1.5);
     this.fadeClass= "";
     
@@ -128,23 +94,10 @@ export default {
       var len = this.images.length;
       this.current = (this.current + (dir % len) + len) % len;
     },
-
-    // next() {
-    //   var length = this.images.length;
-    //   this.imgs[this.current].classList.remove('current');
-    //   current++;
-    //   console.log(current);
-    //   if(this.current >= length) {
-    //     current = 0;
-    //   }
-    //   this.imgs[this.current].classList.add('current');
-    // }
-
-
   },
 
   mounted() {
-    this.init();
+    // this.init();
     this.show = true;
   },
 };
@@ -155,8 +108,8 @@ $iconSize: 22px;
 
 .carousel {
   position: relative;
-      width: span(28);
-       height: span(26);
+  width: span(28);
+  height: span(26);
   z-index: 4;
   .logo {
     position: absolute;
@@ -259,11 +212,6 @@ $iconSize: 22px;
             backface-visibility: hidden;
 
             .carousel-image {
-              // width: span(28);
-              // height: span(26);
-              // position: relative;
-              // margin: 0 auto;
-
               img {
                 object-fit: cover;
                 position: absolute;
@@ -294,6 +242,8 @@ $iconSize: 22px;
 }
 @include respond-to($tablet) {
   .carousel {
+    width: span(28);
+    height: span(18);
     .hotel-date {
       position: absolute;
       top: 105%;
@@ -334,9 +284,11 @@ $iconSize: 22px;
 
 @include respond-to($desktop) {
   .carousel {
+    width: span(28);
+    height: span(14);
     .carousel-image {
-      width: span(28);
-      height: span(14);
+      // width: span(28);
+      // height: span(14);
     }
 
     .hotel-date {
