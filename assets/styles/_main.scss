@@ -231,6 +231,20 @@ Arrow Buttons
   }
 }
 
+.arrow {
+  border: solid $white;
+  border-width: 0 3px 3px 0;
+  background: none;
+  display: inline-block;
+  padding: 12px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+    &.left {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+}
+
 @keyframes grow {
   0% {
     transform: scale(1);

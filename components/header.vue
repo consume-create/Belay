@@ -76,8 +76,8 @@ import ResponsiveImage from "~/components/responsive-image";
   @include respond-to($tablet) {
     .header-wrapper{
       .header-image {
-          width: span(6);
-          display: block;
+          width: span(4);
+          // display: block;
       }
       // .header-image-blue {
       //     width: span(4);
@@ -90,7 +90,7 @@ import ResponsiveImage from "~/components/responsive-image";
   .header-wrapper{
     .header-image {
         width: span(4);
-        display: block;
+        // display: block;
     }
     // .header-image-blue {
     //     width: span(4);

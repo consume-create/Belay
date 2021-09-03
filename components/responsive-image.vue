@@ -1,5 +1,5 @@
 <template>
-  <picture v-if="src.match('.jpg|.png')" class="picture">
+  <picture v-if="src.match('.jpg|.png|.svg')" class="picture">
     <source
       type="image/webp"
       v-bind="source_attrs"
