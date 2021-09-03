@@ -18,22 +18,23 @@
     </div> -->
 
     <div class="carousel-wrapper">
-      <div class="carousel-image" 
-        v-for="(image, index) in images"
-        :key="image.src"
-        :index="index">
+      <div class="carousel-image"
+       v-if="show" 
+       :key="current" 
+       :class="images[current].className">
+
         <div
-          class="image__inner-carousel"
-          :style="{ paddingBottom: image.height / image.width * 100 + '%' }"
-        />
-        <ResponsiveImage :src="image.src" :alt="image.alt" lazy />
+          class="image__inner-carousel"  
+          :style="{ paddingBottom: images[current].height / images[current].width * 100 + '%' }"
+          />
+        <ResponsiveImage :src="images[current].src" :alt="images[current].alt" lazy />
       </div>
     </div>
 
     <!-- <div class="arrow-button left"></div>
     <div class="arrow-button"></div> -->
-    <button class='arrow left' @click="previous"></button>
-    <button class='arrow' @click="next"></button>
+    <button class='arrow left' @click="slide(-1)"></button>
+    <button class='arrow' @click="slide(1)"></button>
     <!-- <div class="arrow left"></div>
     <div class="arrow"></div> -->
 
@@ -58,24 +59,47 @@ export default {
       type: Array,
     },
   },
-  data:{
-
+  data: function(){
+    return{
+      current: 0,
+      direction: 1,
+      transitionName: "fade",
+      show: true,
+    }
+ 
   },
   methods: {
-    next(index){
-      console.log(index);
-      const currentSlide = this.images[index];
-      // index++;
-      // this.images[index] = currentSlide; 
-      return(currentSlide);
+    // next(index){
+    //   console.log(index);
+    //   const currentSlide = this.images[index];
+    //   // index++;
+    //   // this.images[index] = currentSlide; 
+    //   // return(currentSlide);
       
-    }, 
+    // }, 
 
-    previous(index){
-      const currentSlide = this.images[index];
-      index--;
-      this.images[index] = currentSlide;
-    },
+    // previous(index){
+    //   const currentSlide = this.images[index];
+    //   index--;
+    //   this.images[index] = currentSlide;
+    // },
+
+    slide(dir) {
+      this.direction = dir;
+      dir === 1
+        ? (this.transitionName = "slide-next")
+        : (this.transitionName = "slide-prev");
+      console.log(dir);
+      var len = this.images.length;
+      console.log(this.images);
+      this.current = (this.current + dir % len + len) % len;
+      // console.log(this.current);
+    }
+  },
+
+  mounted() {
+    this.show = true;
+    console.log("here");
   }
 };
 </script>

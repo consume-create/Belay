@@ -153,9 +153,7 @@ footer {
         transform: translate(0, -50%);
         margin-left: auto;
         margin-right: auto;
-
-        .title-cta {
-        }
+        
         .subtext {
           margin-top: $margin-small;
           padding-right: span(4);
