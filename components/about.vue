@@ -7,12 +7,12 @@
       </div>
     </div>
 
-    <div class="small-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 300}}">
+    <div class="small-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 200}}">
       <div class="small-block-mobile">
         <div class="image__inner-small-mobile" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
       </div>
-  </div>
+    </div>
 
     <div class="text-box">
       <h3 class="title-upper">Our Angle</h3>
@@ -144,7 +144,7 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block-wrapper-mobile{
       position: absolute;
       left: 70%;
-      top: -45%;
+      top: -30%;
       z-index: 3;
       display: block;
 
