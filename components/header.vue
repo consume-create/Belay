@@ -51,7 +51,7 @@ import ResponsiveImage from "~/components/responsive-image";
 .header-wrapper{
   .header-image {
     position: relative;
-    width: span(6);
+    width: span(12);
     margin: 0 auto;
     // display: none;
 
@@ -76,7 +76,7 @@ import ResponsiveImage from "~/components/responsive-image";
   @include respond-to($tablet) {
     .header-wrapper{
       .header-image {
-          width: span(4);
+          width: span(8);
           // display: block;
       }
       // .header-image-blue {
@@ -89,7 +89,7 @@ import ResponsiveImage from "~/components/responsive-image";
   @include respond-to($desktop) {
   .header-wrapper{
     .header-image {
-        width: span(4);
+        width: span(8);
         // display: block;
     }
     // .header-image-blue {

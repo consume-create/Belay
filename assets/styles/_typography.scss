@@ -26,6 +26,7 @@
   font-style: normal;
 }
 
+$h4-line-height: calc(25px + (55 - 25) * ((100vw - 340px) / (1440 - 340)) * 1.6);
 // Typography
 h1,
 h2,
@@ -34,7 +35,7 @@ h4,
  {
   font-family: $lemonde-livre-bold;
   letter-spacing: 0.025em;
-  line-height: 0.95em;
+  line-height: $h4-line-height;
 }
 
 h5{
@@ -79,7 +80,6 @@ p, .v-select, a, .text-link, li {
   font-family: $gotham-book;
   font-size: 14px;
   line-height: 20px;
-  // letter-spacing: 0.07em;
 
   &.spread{
     font-family: $gotham-bold;
@@ -87,15 +87,12 @@ p, .v-select, a, .text-link, li {
     letter-spacing: 0.4em;
     line-height: 16px;
     text-transform: uppercase;
-    // letter-spacing: 0.07em;
 
     &.small {
-      // font-size: 12px;
       line-height: 15px;
     }
 
     &.large {
-      // font-size: 18px;
       line-height: 24px;
     }
   }

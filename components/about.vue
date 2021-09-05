@@ -1,6 +1,6 @@
 <template>
   <section class="about">
-    <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 900}}">
+    <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 500}}">
       <div class="small-block">
         <div class="image__inner-small" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />

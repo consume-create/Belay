@@ -137,8 +137,8 @@ export default{
 
     translate(current) {
       gsap.to(this._points, 0.4, {
-        x: (i, t) => current.includes(i) ? t.clean_x + Math.round((Math.random() * 50) - 25) : t.clean_x,
-        y: (i, t) => current.includes(i) ? t.clean_y + Math.round((Math.random() * 50) - 25) : t.clean_y,
+        x: (i, t) => current.includes(i) ? t.clean_x + Math.round((Math.random() * 75) - 37.5) : t.clean_x,
+        y: (i, t) => current.includes(i) ? t.clean_y + Math.round((Math.random() * 75) - 37.5) : t.clean_y,
         ease: EasePack.easeOut,
         overwrite: true
       });
