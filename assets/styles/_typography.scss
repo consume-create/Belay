@@ -27,11 +27,12 @@
 }
 
 $h4-line-height: calc(25px + (55 - 25) * ((100vw - 340px) / (1440 - 340)) * 1.6);
+
 // Typography
 h1,
 h2,
 h3,
-h4,
+h4
  {
   font-family: $lemonde-livre-bold;
   letter-spacing: 0.025em;

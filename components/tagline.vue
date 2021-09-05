@@ -26,9 +26,6 @@
 
 
   @include respond-to($tablet) {
-    .tagline{
-      padding: span(3);
-    }
 
   }
 

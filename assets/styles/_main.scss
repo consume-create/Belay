@@ -119,41 +119,6 @@ Loading Indicator
 Arrow Buttons
 **********************************************/
 .arrow-button-trapezoid {
-  // border-radius: 50%;
-  // background: $deep-blue;
-  // position: relative;
-  // border: none;
-  // outline: none;
-  //
-  // $size: 50px;
-  // width: $size;
-  // height: $size;
-  // transition: background-color $speed-demon ease;
-  //
-  // &:disabled {
-  //   background-color: #F8E9E9;
-  //   pointer-events: none;
-  //
-  //   &::after {
-  //   }
-  // }
-  //
-  // &:focus {
-  //   border: $dark-blue;
-  //   transform: scale(1.08);
-  //
-  //   &.left {
-  //     transform: scale(1.08) rotate(180deg);
-  //   }
-  // }
-  //
-  // &.special {
-  //   &:after {
-  //     margin: 20%;
-  //     left: 0;
-  //     @include icon("long-arrow-right", $white, true);
-  //   }
-  // }
   position: relative;
   // clip-path: polygon(0 23%, 100% 0, 100% 100%, 0 77%);
   // clip-path: polygon(23% 25%, 100% 0, 100% 100%, 23% 77%);
@@ -204,32 +169,32 @@ Arrow Buttons
   // }
 }
 
-.arrow-button{
-  position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 35px;
-    width: 35px;
-    @include icon("right-arrow-minimal", $white, true);
-    transition: transform $speed-demon ease;
-  }
+// .arrow-button{
+//   position: relative;
+//   &:after {
+//     content: "";
+//     position: absolute;
+//     width: 100%;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     height: 35px;
+//     width: 35px;
+//     @include icon("right-arrow-minimal", $white, true);
+//     transition: transform $speed-demon ease;
+//   }
 
-  &.left {
-    transform: rotate(180deg);
-  }
+//   &.left {
+//     transform: rotate(180deg);
+//   }
 
-  &:active {
-    transform: scale(1) !important;
-    &.left {
-      transform: scale(1) rotate(180deg) !important;
-    }
-  }
-}
+//   &:active {
+//     transform: scale(1) !important;
+//     &.left {
+//       transform: scale(1) rotate(180deg) !important;
+//     }
+//   }
+// }
 
 .arrow {
   border: solid $white;
@@ -242,6 +207,43 @@ Arrow Buttons
     &.left {
       transform: rotate(135deg);
       -webkit-transform: rotate(135deg);
+    }
+}
+
+.arrow-trap {
+  position: relative;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+  // clip-path: polygon(100% 0, 100% 100%, 23% 85%, 23% 25%);
+  $size: 30px;
+  width: $size;
+  height: $size;
+  background: $white;
+  border: none;
+  outline: none;
+
+    &:after{
+      content: "";
+      position: absolute;
+      border: solid $dark-blue;
+      border-width: 0 2px 2px 0;
+      background: none;
+      padding: 5px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      // -webkit-transform: rotate(-45deg);
+    }
+
+    &.left {
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+    }
+
+    &:active {
+      transform: scale(1) !important;
+      &.left {
+        transform: scale(1) rotate(180deg) !important;
+      }
     }
 }
 

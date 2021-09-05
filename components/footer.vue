@@ -150,8 +150,8 @@ footer {
       .form-text {
         position: absolute;
         z-index: 1;
-        top: 50%;
-        transform: translate(0, -50%);
+        top: 80%;
+        transform: translate(0, -80%);
         margin-left: auto;
         margin-right: auto;
         
