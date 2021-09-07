@@ -305,7 +305,7 @@ footer {
       padding: span(1);
 
       .footer__column-left {
-        width: span(16);
+        // width: span(16);
         height: 100%;
         position: relative;
         margin-bottom: 0;
@@ -421,6 +421,25 @@ footer {
         grid-row: 1 / span 3;
         width: 100%;
         margin-left: 0%;
+         .form-text {
+          .email-wrapper {
+            // margin-top: $margin-small;
+            
+            .email {
+              padding: 12px;
+              width: span(8);
+            }
+            .right-arrow {
+              height: 41px;
+              width: 41px;
+              &:after {
+                height: 26px;
+                width: 26px;
+              }
+            }
+          }
+        }
+      }
       }
       .social-flex {
         grid-column: 18 / span 10;
@@ -431,7 +450,7 @@ footer {
         grid-row: 3;
       }
     }
-  }
+  
 }
 
 @include respond-to($desktop) {
