@@ -33,8 +33,8 @@
     <button class="arrow left" @click="slide(-1)"></button>
     <button class="arrow" @click="slide(1)"></button>
 
-    <button class="arrow-button-trapezoid left" @click="slide(1)"></button>
-    <button class="arrow-button-trapezoid" @click="slide(1)"></button>
+    <button class="arrow-trap left" @click="slide(1)"></button>
+    <button class="arrow-trap" @click="slide(1)"></button>
 
     <p class="hotel-title spread">The Coloradan</p>
     <p class="hotel-date spread">2021</p>
@@ -114,7 +114,7 @@ $iconSize: 22px;
     }
   }
 
-  .arrow-button-trapezoid {
+  .arrow-trap {
     position: absolute;
     top: 50%;
     right: 0%;
@@ -154,7 +154,7 @@ $iconSize: 22px;
       width: 100%;
       height: 100%;
       overflow: hidden;
-      background-color: $deep-blue;
+      background-color: $blurple;
 
       .background-transition{
         width: 100%;
@@ -240,7 +240,7 @@ $iconSize: 22px;
       }
     }
 
-    .arrow-button-trapezoid {
+    .arrow-trap {
       position: absolute;
       top: 50%;
       left: 92%;
@@ -284,7 +284,7 @@ $iconSize: 22px;
       }
     }
 
-    .arrow-button-trapezoid {
+    .arrow-trap {
       position: absolute;
       top: 50%;
       left: 92%;

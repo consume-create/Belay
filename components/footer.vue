@@ -142,22 +142,23 @@ footer {
       img {
         position: absolute;
         top: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 130%;
+        left: 30%;
+        transform: translate(-30%, 0);
+        width: 160%;
       }
 
       .form-text {
         position: absolute;
         z-index: 1;
-        top: 50%;
-        transform: translate(0, -50%);
+        top: 130%;
+        transform: translate(0, -130%);
         margin-left: auto;
         margin-right: auto;
-        
+        padding-right: 0;
+
         .subtext {
           margin-top: $margin-small;
-          padding-right: span(4);
+          // padding-right: span(4);
         }
         .email-wrapper {
           margin-top: $margin-small;
@@ -166,8 +167,8 @@ footer {
 
           .email {
             border: none;
-            padding: 3px;
-            width: span(21);
+            padding: 9px;
+            width: span(20);
           }
 
           input::placeholder {
@@ -176,8 +177,8 @@ footer {
           }
           .right-arrow {
             position: relative;
-            height: 22px;
-            width: 22px;
+            height: 33px;
+            width: 33px;
             background-color: $dark-blue;
             border: 0;
             &:after {
@@ -187,8 +188,8 @@ footer {
               top: 50%;
               left: 50%;
               transform: translate(-50%, -50%);
-              height: 18px;
-              width: 18px;
+              height: 24px;
+              width: 24px;
               @include icon("right-arrow-mail", $white, true);
               transition: transform $speed-demon ease;
             }
@@ -218,16 +219,16 @@ footer {
 
             .mail-icon {
               position: relative;
-              height: 22px;
-              width: 22px;
+              height: 18px;
+              width: 18px;
               &:after {
                 content: "";
                 position: absolute;
                 width: 100%;
                 top: 0%;
                 left: 0;
-                height: 22px;
-                width: 22px;
+                height: 18px;
+                width: 18px;
                 @include icon("mail", $white, true);
                 transition: transform $speed-demon ease;
               }
@@ -246,16 +247,16 @@ footer {
 
             .phone-icon {
               position: relative;
-              height: 22px;
-              width: 22px;
+              height: 18px;
+              width: 18px;
               &:after {
                 content: "";
                 position: absolute;
                 width: 100%;
                 top: 0%;
                 left: 0;
-                height: 22px;
-                width: 22px;
+                height: 18px;
+                width: 18px;
                 @include icon("phone", $white, true);
                 transition: transform $speed-demon ease;
               }
@@ -348,15 +349,15 @@ footer {
             margin-top: $margin-small;
 
             .email {
-              padding: 5px;
+              padding: 12px;
               width: span(9);
             }
             .right-arrow {
-              height: 25px;
-              width: 25px;
+              height: 39px;
+              width: 39px;
               &:after {
-                height: 18px;
-                width: 18px;
+                height: 25px;
+                width: 25px;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -488,26 +489,27 @@ footer {
           top: 50%;
           transform: translate(0, -50%);
           left: 10%;
+          padding-right: span(2);
           margin-left: auto;
           margin-right: auto;
 
           .subtext {
             margin-top: $margin-normal;
-            padding-right: span(2);
+            padding-right: 15%;
           }
           .email-wrapper {
             margin-top: $margin-normal;
 
             .email {
-              padding: 10px;
-              width: span(9);
+              padding: 12px;
+              width: span(8);
             }
             .right-arrow {
-              height: 35px;
-              width: 35px;
+              height: 52px;
+              width: 52px;
               &:after {
-                height: 22px;
-                width: 22px;
+                height: 34px;
+                width: 34px;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -521,7 +523,7 @@ footer {
         grid-column: 18 / span 10;
         grid-row: 2;
         justify-content: space-around;
-        margin-bottom: $margin-extra-large * 1.5;
+        margin-bottom: $margin-extra-large * 0.9;
 
         .footer__column-right {
           .channel-inner {
