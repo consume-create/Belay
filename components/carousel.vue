@@ -111,27 +111,29 @@ $iconSize: 22px;
 
   .arrow {
     position: absolute;
-    top: 50%;
+    top: calc(50% - 50px);
     right: 5%;
     display: none;
 
     &.left {
       display: none;
       position: absolute;
-      top: 50%;
+      top: calc(50% - 50px);
       left: 5%;
     }
   }
 
   .arrow-trap {
     position: absolute;
-    top: 50%;
+    top: calc(50% - 55px);
     right: 0%;
+    display: block;
 
     &.left {
       position: absolute;
-      top: 50%;
+      top: calc(50% - 55px);
       left: 0%;
+      display: block;
     }
   }
 
