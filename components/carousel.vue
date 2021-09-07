@@ -15,15 +15,19 @@
         <div class="background-transition" :class="transitionClass">
           <div class="background-outer-1">
              <div class="background-inner-1">
-                <img
+               <div
+                  class="carousel-image-wrap"
                   v-for="(image, i) in images"
                   :key="i"
-                  class="carousel-image"
                   :class="{ 'current': i === current }"
-                  :src="require(`~/static/images/${image.src}`)"
-                  :alt="image.alt"
-                  :style="{ 'object-position': image.objectPosition }"
-                />
+                >
+                  <img
+                    class="carousel-image"
+                    :src="require(`~/static/images/${image.src}`)"
+                    :alt="image.alt"
+                    :style="{ 'object-position': image.objectPosition }"
+                  />
+                </div>
             </div> 
           </div> 
         </div> 
@@ -91,13 +95,15 @@ $iconSize: 22px;
   height: span(26);
   z-index: 4;
   .logo {
+    //background: rgba(red, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
-    pointer-events: none;
+    //pointer-events: none;
     position: absolute;
     z-index: 5;
-    height: 25%;
+    //height: 20%;
+    height: 15vh;
     left: 0;
     right: 0;
     top: 0;
@@ -134,7 +140,8 @@ $iconSize: 22px;
     z-index: 4;
     bottom: 0%;
     left: 5%;
-    line-height: 80px;
+    height: 80px;
+    line-height: 90px;
     color: $white;
   }
 
@@ -143,18 +150,19 @@ $iconSize: 22px;
     z-index: 4;
     bottom: 0%;
     right: 5%;
-    line-height: 80px;
+    height: 80px;
+    line-height: 90px;
     color: $white;
   }
 
   .background-wrapper{
     position: absolute;
-    // top: 0px;
+    top: 0px;
     // left: 0px;
     right: 0px; 
     bottom: 80px;
     width: 100%;
-    height: 100%;
+    //height: 100%;
 
     .background-inner{
       position: relative;
@@ -181,7 +189,7 @@ $iconSize: 22px;
           backface-visibility: hidden;
 
           .background-inner-1{
-            background: linear-gradient(#8fcde1, #c5e7f1);
+            //background: linear-gradient(#8fcde1, #c5e7f1);
             position: relative;
             width: 100%;
             height: 100%;
@@ -192,21 +200,41 @@ $iconSize: 22px;
             transform-style: preserve-3d;
             backface-visibility: hidden;
 
-            .carousel-image {
+            .carousel-image-wrap {
+              background: linear-gradient(#8fcde1, #c5e7f1);
+              //height: calc(100% - 15vh);
+              opacity: 0;
+              position: absolute;
+              transition: opacity 800ms;
+              z-index: 6;
+              bottom: 0;
+              left: 0px;
+              top: 0;
+              width: 100%;
+              &.current {
+                opacity: 1;
+                transition-delay: 800ms;
+                z-index: 7;
+              }
+              .carousel-image {
                 object-fit: contain;
                 position: absolute;
                 width: 100%;
-                height: 75%;
+                height: calc(100% - 15vh);
+                //height: 100%;
                 bottom: 0;
-                left: 0px;
-                opacity: 0;
-                transition: opacity 800ms;
-                z-index: 6;
-                &.current {
-                  opacity: 1;
-                  transition-delay: 800ms;
-                  z-index: 7;
-                }
+                left: 0;
+                // bottom: 0;
+                // left: 0px;
+                //opacity: 0;
+                //transition: opacity 800ms;
+                //z-index: 6;
+                // &.current {
+                //   opacity: 1;
+                //   transition-delay: 800ms;
+                //   z-index: 7;
+                // }
+              }
             }
           } 
         } 

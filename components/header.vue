@@ -1,11 +1,16 @@
 <template>
   <section class="header-wrapper">
     <div class="header-image">
-      <div
+      <!-- <div
         class="image__inner-header"
         :style="{ paddingBottom: (img1.height / img1.width) * 100 + '%' }"
+      /> -->
+      <img
+        :src="require(`~/static/images/${img1.src}`)"
+        :alt="img1.alt"
+        :style="{ 'object-position': img1.objectPosition }"
       />
-      <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
+      <!-- <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy /> -->
     </div>
   </section>
 </template>
@@ -35,7 +40,7 @@ export default {
 <style lang="scss">
 .header-wrapper {
   .header-image {
-    height: 75%;
+    height: 65%;
     position: relative;
     width: 100%;
     img {

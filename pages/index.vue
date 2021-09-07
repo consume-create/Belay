@@ -8,7 +8,7 @@
           width: '1126',
           height: '1128', 
           className: 'first',
-          objectPosition: '50% 0%'
+          objectPosition: '50% 100%'
         },
         {
           src: 'carousel/building1-cutout.png',
@@ -16,23 +16,7 @@
           width: '1126',
           height: '1128', 
           className: 'first',
-          objectPosition: '50% 0%'
-        },
-        {
-          src: 'carousel/building1-cutout.png',
-          alt: 'A picture of a commercial building',
-          width: '1126',
-          height: '1128', 
-          className: 'first',
-          objectPosition: '50% 0%'
-        },
-        {
-          src: 'carousel/building1-cutout.png',
-          alt: 'A picture of a commercial building',
-          width: '1126',
-          height: '1128', 
-          className: 'first',
-          objectPosition: '50% 0%'
+          objectPosition: '50% 100%'
         },
       ]"/>
     <About
