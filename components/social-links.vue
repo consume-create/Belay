@@ -23,7 +23,7 @@ $iconSize: 22px;
 
 ul.socials {
   width: 100%;
-  margin: -9px 0 $margin-normal -9px;
+  // margin: -9px 0 $margin-normal -9px;
   display: flex;
   li {
     display: flex;

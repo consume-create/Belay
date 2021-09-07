@@ -96,7 +96,6 @@ import ResponsiveImage from "~/components/responsive-image";
   color: $white;
   position: relative;
   height: span(28);
-  //width: span(28);
   width: 100%;
 
   .text-box {
@@ -104,9 +103,8 @@ import ResponsiveImage from "~/components/responsive-image";
     padding: span(2) span(5) span(2) span(2);
     top: 28%;
     left: 2%;
-    z-index: 4;
+    z-index: 5;
     position: absolute;
-    margin: 0 auto;
 
     .title-upper{
       margin-bottom: $margin-normal;
@@ -119,14 +117,14 @@ import ResponsiveImage from "~/components/responsive-image";
   }
 
     .small-block-wrapper{
-      z-index: 3;
+      z-index: 4;
       left: 65%;
       top: -8%;
       position: absolute;
       display: none;
 
       .small-block {
-        z-index: 3;
+        z-index: 4;
         position: relative;
         width: span(4);
         display: none;
@@ -144,8 +142,8 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block-wrapper-mobile{
       position: absolute;
       left: 70%;
-      top: -30%;
-      z-index: 3;
+      top: -75px;
+      z-index: 4;
       display: block;
 
       .small-block-mobile {
@@ -172,7 +170,6 @@ import ResponsiveImage from "~/components/responsive-image";
       position: relative;
       width: span(12);
       display: none;
-
       img {
         position: absolute;
         width: 100%;
@@ -186,7 +183,7 @@ import ResponsiveImage from "~/components/responsive-image";
   .medium-block-wrapper-mobile{
     position: absolute;
     left:-10%;
-    top: -42%;
+    top: -100px;
     z-index: 2;
     display: block;
     .medium-block-mobile {
@@ -212,7 +209,6 @@ import ResponsiveImage from "~/components/responsive-image";
 
     .large-block {
       position: relative;
-      //width: span(28);
       width: 100%;
       height: span(22);
 
@@ -231,7 +227,6 @@ import ResponsiveImage from "~/components/responsive-image";
   @include respond-to($tablet) {
     .about{
       height: span(18);
-
       .text-box {
         text-align: left;
         padding-right: span(8);
@@ -257,7 +252,7 @@ import ResponsiveImage from "~/components/responsive-image";
       .small-block-wrapper{
         display: block;
         left: 70%;
-        top: -45%;
+        top: -100px;
         .small-block {
           display: block;
         }
@@ -270,15 +265,32 @@ import ResponsiveImage from "~/components/responsive-image";
         }
       }
 
-      .medium-block-wrapper{
-        // position: absolute;
-        left: 10%;
-        top: 2%;
-      }
+      // .medium-block-wrapper{
+      //   left: 10%;
+      //   top: 2%;
+      //   .medium-block{
+      //     width: span(8);
+      //   }
+      // }
 
+
+    .medium-block-wrapper{
+      left: 10%;
+      top: -50px;
+      display: block;
+      .medium-block{
+        display: block;
+        width: span(12);
+      }
+    }
+
+    .medium-block-wrapper-mobile{
+      display: none;
+      .medium-block-mobile {
+        display: none;
+      }
+    }
       .large-block-wrapper{
-        // position: absolute;
-        // top: 10%;
         bottom: -58%;
       }
     }
@@ -293,11 +305,10 @@ import ResponsiveImage from "~/components/responsive-image";
       left: 10%;
 
       .title-upper{
-        margin-bottom: $margin-small;
+        margin-bottom: $margin-extra-large;
       }
       .subtitle{
         margin-bottom: $margin-extra-large;
-        margin-top: $margin-extra-large;
         padding-bottom: $margin-large;
       }
       .text{
@@ -307,7 +318,7 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block-wrapper{
       display: block;
       left: 65%;
-      top: -14%;
+      top: -100px;
       .small-block {
         display: block;
       }
@@ -322,8 +333,10 @@ import ResponsiveImage from "~/components/responsive-image";
 
     .medium-block-wrapper{
       display: block;
+      top: -30px;
       .medium-block{
         display: block;
+        width: span(12);
       }
     }
 

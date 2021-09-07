@@ -57,8 +57,6 @@
     :img1="{
         src: 'footer/footer-big-block.svg',
         alt: 'A medium cube',
-        width: '618',
-        height: '376',
       }"
     :img2="{
         src: 'footer/footer-small-block.svg',

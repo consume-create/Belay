@@ -3,7 +3,7 @@
     <div class="medium-relative">
       <div
         class="medium-wrapper"
-        v-event-horizon:parallax="{ y: { from: 0, to: 200 } }"
+        v-event-horizon:parallax="{ y: { from: 0, to: 150 } }"
       >
         <div class="medium-block">
           <div
@@ -33,10 +33,6 @@
             <button class="right-arrow" name="email-button"></button>
           </div>
         </div>
-        <div
-          class="image__inner-large"
-          :style="{ paddingBottom: (img1.height / img1.width) * 100 + '%' }"
-        />
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
       </div>
 
@@ -119,7 +115,6 @@ export default {
 };
 </script>
 
-
 <style lang="scss">
 $iconSize: 22px;
 
@@ -130,35 +125,26 @@ footer {
 
   .footer-wrapper {
     position: relative;
-    padding: span(2);
+    padding: 0 span(2);
+    padding-bottom: span(4);
     overflow: hidden;
 
     .footer__column-left {
       //width: span(28);
-      width: 100%;
       position: relative;
-      margin-bottom: span(8);
-
-      img {
-        position: absolute;
-        top: 0;
-        left: 30%;
-        transform: translate(-30%, 0);
-        width: 160%;
-      }
+      width: 160%;
+      margin-bottom: span(5);
+      margin-left: -30%;
 
       .form-text {
         position: absolute;
         z-index: 1;
-        top: 130%;
-        transform: translate(0, -130%);
-        margin-left: auto;
-        margin-right: auto;
-        padding-right: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
         .subtext {
           margin-top: $margin-small;
-          // padding-right: span(4);
         }
         .email-wrapper {
           margin-top: $margin-small;
@@ -208,7 +194,6 @@ footer {
         .channel-inner {
           .small-title {
             margin-bottom: $margin-normal;
-            margin-top: $margin-extra-large;
           }
 
           .mail-wrapper {
@@ -243,8 +228,6 @@ footer {
             display: flex;
             align-items: center;
             flex-direction: row;
-            margin-bottom: $margin-normal;
-
             .phone-icon {
               position: relative;
               height: 18px;
@@ -269,12 +252,12 @@ footer {
       }
 
       .footer__column-socials {
-        margin-top: $margin-extra-large;
+        margin-top: -9px;
         .socials {
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
-          a {
+          li:not(:last-child) a {
             margin-bottom: $margin-normal;
           }
         }
@@ -297,10 +280,9 @@ footer {
 
   .medium-relative {
     position: relative;
-    height: 50px;
     .medium-wrapper {
       position: absolute;
-      top: -80%;
+      top: -75px;
       left: 68%;
       z-index: 1;
 
@@ -321,29 +303,21 @@ footer {
     .footer-wrapper {
       @include grid;
       padding: span(1);
-      // padding-bottom: span(2);
 
       .footer__column-left {
         width: span(16);
         height: 100%;
         position: relative;
         margin-bottom: 0;
-        grid-column: 1 / span 15;
+        grid-column: 1 / span 16;
         grid-row: 1 / span 3;
-
-        img {
-          width: 100%;
-        }
+        width: 100%;
+        margin-left: 0%;
 
         .form-text {
-          top: 50%;
-          left: 10%;
-          transform: translate(0, -50%);
-          margin-right: auto;
-
           .subtext {
             margin-top: $margin-small;
-            padding-right: span(2);
+            padding-right: span(0.5);
           }
           .email-wrapper {
             margin-top: $margin-small;
@@ -370,9 +344,8 @@ footer {
       .social-flex {
         grid-column: 19 / span 10;
         grid-row: 2;
-        // margin-top: $margin-extra-large;
-        // margin-bottom: $margin-large;
         justify-content: space-around;
+        margin-bottom: span(1);
 
         .footer__column-right {
           .channel-inner {
@@ -399,8 +372,6 @@ footer {
             }
 
             .phone-wrapper {
-              margin-bottom: $margin-normal;
-
               .phone-icon {
                 height: 22px;
                 width: 22px;
@@ -415,14 +386,6 @@ footer {
             }
           }
         }
-
-        .footer__column-socials {
-          .socials {
-            a {
-              margin-bottom: $margin-large;
-            }
-          }
-        }
       }
 
       .column-bottom {
@@ -432,10 +395,8 @@ footer {
     }
 
     .medium-relative {
-      height: 20px;
-
       .medium-wrapper {
-        top: -50%;
+        top: -75px;
         left: 38%;
 
         .medium-block {
@@ -451,10 +412,15 @@ footer {
     .footer-wrapper {
       @include grid;
       padding: span(1);
-      // padding-bottom: span(2);
 
       .footer__column-left {
-        width: span(14);
+        height: 100%;
+        position: relative;
+        margin-bottom: 0;
+        grid-column: 1 / span 16;
+        grid-row: 1 / span 3;
+        width: 100%;
+        margin-left: 0%;
       }
       .social-flex {
         grid-column: 18 / span 10;
@@ -475,27 +441,16 @@ footer {
       @include grid;
 
       .footer__column-left {
-        width: span(14);
         position: relative;
         margin-bottom: 0;
-        grid-column: 1 / span 15;
+        grid-column: 1 / span 14;
         grid-row: 1 / span 3;
-
-        img {
-          width: 100%;
-        }
+        width: 100%;
+        margin-left: 0%;
 
         .form-text {
-          top: 50%;
-          transform: translate(0, -50%);
-          left: 10%;
-          padding-right: span(2);
-          margin-left: auto;
-          margin-right: auto;
-
           .subtext {
             margin-top: $margin-normal;
-            padding-right: 15%;
           }
           .email-wrapper {
             margin-top: $margin-normal;
@@ -523,7 +478,7 @@ footer {
         grid-column: 18 / span 10;
         grid-row: 2;
         justify-content: space-around;
-        margin-bottom: $margin-extra-large * 0.9;
+        margin-bottom: span(1.5);
 
         .footer__column-right {
           .channel-inner {
@@ -556,7 +511,7 @@ footer {
               display: flex;
               align-items: center;
               flex-direction: row;
-              margin-bottom: $margin-normal;
+              // margin-bottom: $margin-normal;
 
               .phone-icon {
                 height: 20px;
@@ -572,28 +527,18 @@ footer {
             }
           }
         }
-
-        .footer__column-socials {
-          .socials {
-            a {
-              margin-bottom: $margin-normal;
-            }
-          }
-        }
       }
 
       .column-bottom {
-        grid-column: 18 / span 5;
+        grid-column: 19 / span 5;
         grid-row: 3;
       }
     }
 
     .medium-relative {
-      height: 50px;
       .medium-wrapper {
-        top: -80%;
+        top: -75px;
         left: 38%;
-
         .medium-block {
           width: span(4);
         }

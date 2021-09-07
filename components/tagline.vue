@@ -14,10 +14,7 @@
   .tagline{
     //width: span(28);
     width: 100%;
-    padding-top: span(6);
-    padding-bottom: span(6);
-    padding-right: 0;
-    padding-left: 0;
+    padding: span(6) 0;
     text-align: center;
     background-color: $deep-blue;
     color: white;
