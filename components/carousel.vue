@@ -86,8 +86,8 @@ $iconSize: 22px;
 
 .carousel {
   position: relative;
-  //width: span(28);
   width: 100%;
+  // height: 100vh;
   height: span(26);
   z-index: 4;
   .logo {
@@ -106,14 +106,14 @@ $iconSize: 22px;
   .arrow {
     position: absolute;
     top: 50%;
-    left: 97%;
+    right: 5%;
     display: none;
 
     &.left {
       display: none;
       position: absolute;
       top: 50%;
-      left: 3%;
+      left: 5%;
     }
   }
 
@@ -132,23 +132,27 @@ $iconSize: 22px;
   .hotel-title {
     position: absolute;
     z-index: 4;
-    top: 105%;
+    bottom: 0%;
     left: 5%;
+    line-height: 80px;
     color: $white;
   }
 
   .hotel-date {
     position: absolute;
     z-index: 4;
-    top: 105%;
-    left: 85%;
+    bottom: 0%;
+    right: 5%;
+    line-height: 80px;
     color: $white;
   }
 
   .background-wrapper{
     position: absolute;
-    top: 0px;
-    left: 0px;
+    // top: 0px;
+    // left: 0px;
+    right: 0px; 
+    bottom: 80px;
     width: 100%;
     height: 100%;
 
@@ -197,11 +201,11 @@ $iconSize: 22px;
                 left: 0px;
                 opacity: 0;
                 transition: opacity 800ms;
-                z-index: 10;
+                z-index: 6;
                 &.current {
                   opacity: 1;
                   transition-delay: 800ms;
-                  z-index: 20;
+                  z-index: 7;
                 }
             }
           } 
@@ -221,39 +225,21 @@ $iconSize: 22px;
 @include respond-to($tablet) {
   .carousel {
     width: 100%;
-    height: span(18);
-    .hotel-date {
-      position: absolute;
-      top: 105%;
-      left: 88%;
-    }
+    // height: span(18);
+     height: 85vh;
 
-    .hotel-title {
-      top: 105%;
-      left: 5%;
-    }
     .arrow {
-      top: 50%;
-      left: 90%;
       display: block;
 
       &.left {
-        top: 50%;
-        left: 5%;
         display: block;
       }
     }
 
     .arrow-trap {
-      position: absolute;
-      top: 50%;
-      left: 92%;
       display: none;
 
       &.left {
-        position: absolute;
-        top: 50%;
-        left: 0%;
         display: none;
       }
     }
@@ -262,41 +248,22 @@ $iconSize: 22px;
 
 @include respond-to($desktop) {
   .carousel {
-    //width: span(28);
     width: 100%;
-    //height: span(14);
-    height: 85vh;
+    // height: span(14);
+    height: 100vh;
 
-    .hotel-date {
-      top: 105%;
-      left: 90%;
-    }
-
-    .hotel-title {
-      top: 105%;
-      left: 5%;
-    }
     .arrow {
-      position: absolute;
-      top: 50%;
-      right: 96%;
+     display: block;
 
       &.left {
-        top: 50%;
-        left: 4%;
+        display: block;
       }
     }
 
     .arrow-trap {
-      position: absolute;
-      top: 50%;
-      left: 92%;
       display: none;
 
       &.left {
-        position: absolute;
-        top: 50%;
-        left: 0%;
         display: none;
       }
     }
