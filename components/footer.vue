@@ -155,7 +155,7 @@ footer {
         margin-left: auto;
         margin-right: auto;
         padding-right: 0;
-        
+
         .subtext {
           margin-top: $margin-small;
           // padding-right: span(4);
@@ -349,15 +349,15 @@ footer {
             margin-top: $margin-small;
 
             .email {
-              padding: 5px;
+              padding: 12px;
               width: span(9);
             }
             .right-arrow {
-              height: 25px;
-              width: 25px;
+              height: 39px;
+              width: 39px;
               &:after {
-                height: 18px;
-                width: 18px;
+                height: 25px;
+                width: 25px;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -523,7 +523,7 @@ footer {
         grid-column: 18 / span 10;
         grid-row: 2;
         justify-content: space-around;
-        margin-bottom: $margin-extra-large *.9;
+        margin-bottom: $margin-extra-large * 0.9;
 
         .footer__column-right {
           .channel-inner {
