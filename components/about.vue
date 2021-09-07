@@ -96,7 +96,9 @@ import ResponsiveImage from "~/components/responsive-image";
   color: $white;
   position: relative;
   height: span(28);
+  // height: 40vh;
   width: 100%;
+  margin-top: -80px;
 
   .text-box {
     text-align: left;
@@ -142,7 +144,7 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block-wrapper-mobile{
       position: absolute;
       left: 70%;
-      top: -75px;
+      top: -50px;
       z-index: 4;
       display: block;
 
@@ -236,13 +238,13 @@ import ResponsiveImage from "~/components/responsive-image";
         position: absolute;
 
         .title-upper{
-          margin-bottom: $margin-small;
+          margin-bottom: $margin-large;
         }
         .subtitle{
-          margin-bottom: $margin-extra-large;
-          margin-top: $margin-extra-large;
+          margin-bottom: $margin-large;
+          // margin-top: $margin-extra-large;
           border-bottom: 2px solid $light-blue;
-          padding-bottom: $margin-large;
+          padding-bottom: $margin-normal;
         }
         .text{
           padding-right: span(1);
