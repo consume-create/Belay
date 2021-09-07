@@ -87,8 +87,8 @@ $iconSize: 22px;
 .carousel {
   position: relative;
   width: 100%;
-  height: 100vh;
-  // height: span(26);
+  // height: 100vh;
+  height: span(26);
   z-index: 4;
   .logo {
     position: absolute;
