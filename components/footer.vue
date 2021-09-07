@@ -303,6 +303,7 @@ footer {
     .footer-wrapper {
       @include grid;
       padding: span(1);
+      padding-bottom: span(2);
 
       .footer__column-left {
         // width: span(16);
@@ -323,15 +324,15 @@ footer {
             margin-top: $margin-small;
 
             .email {
-              padding: 12px;
+              padding: 8px;
               width: span(9);
             }
             .right-arrow {
-              height: 39px;
-              width: 39px;
+              height: 31px;
+              width: 31px;
               &:after {
-                height: 25px;
-                width: 25px;
+                height: 21px;
+                width: 21px;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -342,10 +343,10 @@ footer {
       }
 
       .social-flex {
-        grid-column: 19 / span 10;
+        grid-column: 18 / span 12;
         grid-row: 2;
         justify-content: space-around;
-        margin-bottom: span(1);
+        // margin-bottom: span(1);
 
         .footer__column-right {
           .channel-inner {
@@ -386,11 +387,19 @@ footer {
             }
           }
         }
+        .footer__column-socials {
+          .socials {
+            li:not(:last-child) a {
+              margin-bottom: $margin-small;
+            }
+          }
+        }
       }
 
       .column-bottom {
-        grid-column: 18 / span 7;
+        grid-column: 19 / span 5;
         grid-row: 3;
+        // margin-top: $margin-extra-large;
       }
     }
 
@@ -421,10 +430,8 @@ footer {
         grid-row: 1 / span 3;
         width: 100%;
         margin-left: 0%;
-         .form-text {
+        .form-text {
           .email-wrapper {
-            // margin-top: $margin-small;
-            
             .email {
               padding: 12px;
               width: span(8);
@@ -440,17 +447,23 @@ footer {
           }
         }
       }
-      }
       .social-flex {
-        grid-column: 18 / span 10;
-        grid-row: 2;
+        margin-bottom: $margin-large;
+
+        .footer__column-socials {
+          .socials {
+            li:not(:last-child) a {
+              margin-bottom: $margin-normal;
+            }
+          }
+        }
       }
       .column-bottom {
-        grid-column: 19 / span 7;
+        grid-column: 19 / span 5;
         grid-row: 3;
       }
     }
-  
+  }
 }
 
 @include respond-to($desktop) {
