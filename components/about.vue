@@ -143,8 +143,8 @@ import ResponsiveImage from "~/components/responsive-image";
 
     .small-block-wrapper-mobile{
       position: absolute;
-      left: 70%;
-      top: -50px;
+      left: 63%;
+      top: -120px;
       z-index: 4;
       display: block;
 
@@ -254,7 +254,7 @@ import ResponsiveImage from "~/components/responsive-image";
       .small-block-wrapper{
         display: block;
         left: 70%;
-        top: -100px;
+        top: -50px;
         .small-block {
           display: block;
         }
