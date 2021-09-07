@@ -3,10 +3,10 @@
     <Header
       class="logo"
       :img1="{
-        src: 'header/belay-dev-logo-WHITE.png',
+        src: 'header/belay-logo-white.svg',
         alt: 'The Belay logo in white',
-        width: '501',
-        height: '216',
+        width: '183',
+        height: '87',
       }"
     />
       
@@ -91,13 +91,16 @@ $iconSize: 22px;
   height: span(26);
   z-index: 4;
   .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
     position: absolute;
     z-index: 5;
-    margin-left: auto;
-    margin-right: auto;
+    height: 25%;
     left: 0;
     right: 0;
-    top: 3%;
+    top: 0;
   }
 
   .arrow {
@@ -174,6 +177,7 @@ $iconSize: 22px;
           backface-visibility: hidden;
 
           .background-inner-1{
+            background: linear-gradient(#8fcde1, #c5e7f1);
             position: relative;
             width: 100%;
             height: 100%;
@@ -185,11 +189,11 @@ $iconSize: 22px;
             backface-visibility: hidden;
 
             .carousel-image {
-                object-fit: cover;
+                object-fit: contain;
                 position: absolute;
                 width: 100%;
-                height: 100%;
-                top: 0px;
+                height: 75%;
+                bottom: 0;
                 left: 0px;
                 opacity: 0;
                 transition: opacity 800ms;

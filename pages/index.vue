@@ -3,21 +3,37 @@
     <Carousel
       :images="[
         {
-          src: 'carousel/building1.png',
+          src: 'carousel/building1-cutout.png',
           alt: 'A picture of a commercial building',
-          width: '1572',
-          height: '1348', 
+          width: '1126',
+          height: '1128', 
           className: 'first',
           objectPosition: '50% 0%'
         },
         {
-          src: 'carousel/building2.jpg',
+          src: 'carousel/building1-cutout.png',
           alt: 'A picture of a commercial building',
-          width: '1280',
-          height: '1920',
-          className: 'second',
-          objectPosition: '50% 40%'
-        }
+          width: '1126',
+          height: '1128', 
+          className: 'first',
+          objectPosition: '50% 0%'
+        },
+        {
+          src: 'carousel/building1-cutout.png',
+          alt: 'A picture of a commercial building',
+          width: '1126',
+          height: '1128', 
+          className: 'first',
+          objectPosition: '50% 0%'
+        },
+        {
+          src: 'carousel/building1-cutout.png',
+          alt: 'A picture of a commercial building',
+          width: '1126',
+          height: '1128', 
+          className: 'first',
+          objectPosition: '50% 0%'
+        },
       ]"/>
     <About
     :img1="{

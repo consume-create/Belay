@@ -35,28 +35,39 @@ export default {
 <style lang="scss">
 .header-wrapper {
   .header-image {
+    height: 75%;
     position: relative;
-    width: span(10);
-    margin: 0 auto;
+    width: 100%;
     img {
       @include abs-fill;
     }
   }
 }
 
-@include respond-to($tablet) {
-  .header-wrapper {
-    .header-image {
-      width: span(7);
-    }
-  }
-}
+// .header-wrapper {
+//   .header-image {
+//     position: relative;
+//     width: span(10);
+//     margin: 0 auto;
+//     img {
+//       @include abs-fill;
+//     }
+//   }
+// }
 
-@include respond-to($desktop) {
-  .header-wrapper {
-    .header-image {
-      width: span(7);
-    }
-  }
-}
+// @include respond-to($tablet) {
+//   .header-wrapper {
+//     .header-image {
+//       width: span(7);
+//     }
+//   }
+// }
+
+// @include respond-to($desktop) {
+//   .header-wrapper {
+//     .header-image {
+//       width: span(7);
+//     }
+//   }
+// }
 </style>
