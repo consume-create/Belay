@@ -49,7 +49,7 @@
       :class="{ current: i === current }"
     >
       <p class="hotel-title spread">{{ image.title }}</p>
-      <p class="hotel-date spread">{{image.date}}</p>
+      <p class="hotel-date spread">{{ image.date }}</p>
     </div>
   </section>
 </template>
@@ -85,7 +85,6 @@ export default {
       }, duration * 2);
 
       var len = this.images.length;
-      console.log(this.current);
       this.current = (this.current + (dir % len) + len) % len;
     },
   },
@@ -98,8 +97,8 @@ $iconSize: 22px;
 .carousel {
   position: relative;
   width: 100%;
-  // height: 100vh;
-  height: span(26);
+  height: 70vh;
+  // height: span(26);
   z-index: 4;
   .logo {
     //background: rgba(red, 0.25);
@@ -148,16 +147,16 @@ $iconSize: 22px;
     opacity: 0;
     transition: opacity 800ms;
     z-index: 6;
-    
-    .hotel-title { 
+
+    .hotel-title {
       position: absolute;
       bottom: 0%;
-      left: 5%; 
+      left: 5%;
       height: 80px;
       line-height: 80px;
       color: $white;
     }
-  
+
     .hotel-date {
       position: absolute;
       bottom: 0%;
@@ -170,7 +169,7 @@ $iconSize: 22px;
       opacity: 1;
       transition-delay: 800ms;
       z-index: 7;
-     }
+    }
   }
 
   .background-wrapper {

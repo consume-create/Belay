@@ -102,8 +102,8 @@ import ResponsiveImage from "~/components/responsive-image";
 
   .text-box {
     text-align: left;
-    padding: span(2) span(5) span(2) span(2);
-    top: 28%;
+    padding: span(2) span(4) span(2) span(2);
+    top: 35%;
     left: 2%;
     z-index: 5;
     position: absolute;
@@ -144,7 +144,7 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block-wrapper-mobile{
       position: absolute;
       left: 63%;
-      top: -120px;
+      top: -90px;
       z-index: 4;
       display: block;
 
@@ -231,8 +231,8 @@ import ResponsiveImage from "~/components/responsive-image";
       height: span(18);
       .text-box {
         text-align: left;
-        padding-right: span(8);
-        top: 45%;
+        padding-right: span(10);
+        top: 40%;
         left: 10%;
         z-index: 4;
         position: absolute;
@@ -293,7 +293,7 @@ import ResponsiveImage from "~/components/responsive-image";
   .about{
     height: span(18);
     .text-box {
-      padding-right: span(10);
+      padding-right: span(14);
       top: 45%;
       left: 10%;
 

@@ -13,18 +13,22 @@
 <style lang="scss">
   .tagline{
     width: 100%;
-    padding: span(6) 0;
+    padding: span(14) 0;
     text-align: center;
     background-color: $deep-blue;
     color: white;
   }
 
   @include respond-to($tablet) {
-
+    .tagline{
+      padding: span(6) 0;
+    }
   }
 
   @include respond-to($desktop) {
-
+    .tagline{
+      padding: span(6) 0;
+    }
   }
 
 </style>
