@@ -254,7 +254,7 @@ import ResponsiveImage from "~/components/responsive-image";
       .small-block-wrapper{
         display: block;
         left: 70%;
-        top: -50px;
+        top: -80px;
         .small-block {
           display: block;
         }
@@ -266,15 +266,6 @@ import ResponsiveImage from "~/components/responsive-image";
           display: none;
         }
       }
-
-      // .medium-block-wrapper{
-      //   left: 10%;
-      //   top: 2%;
-      //   .medium-block{
-      //     width: span(8);
-      //   }
-      // }
-
 
     .medium-block-wrapper{
       left: 10%;

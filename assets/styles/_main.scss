@@ -120,8 +120,6 @@ Arrow Buttons
 **********************************************/
 .arrow-button-trapezoid {
   position: relative;
-  // clip-path: polygon(0 23%, 100% 0, 100% 100%, 0 77%);
-  // clip-path: polygon(23% 25%, 100% 0, 100% 100%, 23% 77%);
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
   $size: 30px;
   width: $size;
@@ -153,48 +151,8 @@ Arrow Buttons
       transform: scale(1) rotate(180deg) !important;
     }
   }
-
-
-  // &.animated {
-  //   &:before {
-  //     content: '';
-  //     @include circle($size);
-  //     position: absolute;
-  //     background: $white;
-  //     animation: grow $speed-metal * 2.5 $ease-out 0ms infinite;
-  //     transform-origin: 50% 50%;
-  //     top: 0;
-  //     left: 0;
-  //   }
-  // }
 }
 
-// .arrow-button{
-//   position: relative;
-//   &:after {
-//     content: "";
-//     position: absolute;
-//     width: 100%;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     height: 35px;
-//     width: 35px;
-//     @include icon("right-arrow-minimal", $white, true);
-//     transition: transform $speed-demon ease;
-//   }
-
-//   &.left {
-//     transform: rotate(180deg);
-//   }
-
-//   &:active {
-//     transform: scale(1) !important;
-//     &.left {
-//       transform: scale(1) rotate(180deg) !important;
-//     }
-//   }
-// }
 
 .arrow {
   border: solid $white;
