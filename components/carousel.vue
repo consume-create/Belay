@@ -171,7 +171,7 @@ $iconSize: 22px;
       width: 100%;
       height: 100%;
       overflow: hidden;
-      background-color: $blurple;
+      background-color: #220178;
 
       .background-transition{
         width: 100%;
