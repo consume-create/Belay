@@ -1,13 +1,13 @@
 <template>
   <section class="about">
-    <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 200}}">
+    <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 100}}">
       <div class="small-block">
         <div class="image__inner-small" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
       </div>
     </div>
 
-    <div class="small-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 150}}">
+    <div class="small-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 75}}">
       <div class="small-block-mobile">
         <div class="image__inner-small-mobile" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
@@ -144,7 +144,7 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block-wrapper-mobile{
       position: absolute;
       left: 63%;
-      top: -70px;
+      top: -50px;
       z-index: 4;
       display: block;
 
@@ -250,7 +250,7 @@ import ResponsiveImage from "~/components/responsive-image";
       .small-block-wrapper{
         display: block;
         left: 70%;
-        top: -60px;
+        top: -30px;
         .small-block {
           display: block;
         }
@@ -304,7 +304,7 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block-wrapper{
       display: block;
       left: 65%;
-      top: -100px;
+      top: -30px;
       .small-block {
         display: block;
       }
@@ -319,7 +319,7 @@ import ResponsiveImage from "~/components/responsive-image";
 
     .medium-block-wrapper{
       display: block;
-      top: -30px;
+      top: -10px;
       .medium-block{
         display: block;
         width: span(12);

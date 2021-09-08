@@ -199,7 +199,7 @@ $iconSize: 22px;
           width: 100%;
           height: 100%;
           perspective: 800px;
-          transform-origin: 0% 60%;
+          transform-origin: 0% 100%;
           transform: rotateX(0deg) rotateY(0deg);
           transition: transform 400ms cubic-bezier(0.666, 0, 0.333, 1);
           transform-style: preserve-3d;
@@ -211,7 +211,7 @@ $iconSize: 22px;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            transform-origin: 60% 0%;
+            transform-origin: 100% 0%;
             transform: rotateY(0deg) rotateX(0deg);
             transition: transform 400ms cubic-bezier(0.666, 0, 0.333, 1) 300ms;
             transform-style: preserve-3d;
@@ -258,9 +258,9 @@ $iconSize: 22px;
       }
       .background-transition.out {
         .background-outer-1 {
-          transform: rotateX(8deg) rotateY(4deg);
+          transform: rotateX(4deg) rotateY(2deg);
           .background-inner-1 {
-            transform: rotateY(-4deg) rotateX(-8deg);
+            transform: rotateY(-2deg) rotateX(-4deg);
           }
         }
       }
