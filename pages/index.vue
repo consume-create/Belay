@@ -8,7 +8,9 @@
           width: '1126',
           height: '1128', 
           className: 'first',
-          objectPosition: '50% 100%'
+          objectPosition: '50% 100%', 
+          title: 'THE COLORADAN', 
+          date: '2021'
         },
         {
           src: 'carousel/building1-cutout.png',
@@ -16,7 +18,19 @@
           width: '1126',
           height: '1128', 
           className: 'first',
-          objectPosition: '50% 100%'
+          objectPosition: '50% 100%', 
+          title: 'THE COLORADAN 2', 
+          date: '2022'
+        },
+        {
+          src: 'carousel/building1-cutout.png',
+          alt: 'A picture of a commercial building',
+          width: '1126',
+          height: '1128', 
+          className: 'first',
+          objectPosition: '50% 100%', 
+          title: 'THE COLORADAN 3', 
+          date: '2023'
         },
       ]"/>
     <About

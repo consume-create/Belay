@@ -153,6 +153,7 @@ footer {
 
           .email {
             border: none;
+            border-radius: 0;
             padding: 9px;
             width: span(20);
           }
