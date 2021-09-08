@@ -451,7 +451,7 @@ footer {
         }
       }
       .social-flex {
-        margin-bottom: $margin-large;
+        margin-bottom: $margin-large - 5px;
 
         .footer__column-socials {
           .socials {
