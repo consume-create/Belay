@@ -1,13 +1,13 @@
 <template>
   <section class="about">
-    <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 300}}">
+    <div class="small-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 200}}">
       <div class="small-block">
         <div class="image__inner-small" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
       </div>
     </div>
 
-    <div class="small-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 200}}">
+    <div class="small-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 150}}">
       <div class="small-block-mobile">
         <div class="image__inner-small-mobile" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
@@ -20,14 +20,14 @@
       <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt quis urna non facilisis. Donec sit amet faucibus dui, mattis fringilla odio.</p>
     </div>
 
-    <div class="medium-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 300}}">
+    <div class="medium-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 450}}">
       <div class="medium-block">
         <div class="image__inner-medium" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
       </div>
     </div>
 
-    <div class="medium-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 200}}">
+    <div class="medium-block-wrapper-mobile" v-event-horizon:parallax="{y: {from: 0, to: 300}}">
       <div class="medium-block-mobile">
         <div class="image__inner-medium-mobile" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
@@ -144,7 +144,7 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block-wrapper-mobile{
       position: absolute;
       left: 63%;
-      top: -90px;
+      top: -70px;
       z-index: 4;
       display: block;
 
@@ -250,7 +250,7 @@ import ResponsiveImage from "~/components/responsive-image";
       .small-block-wrapper{
         display: block;
         left: 70%;
-        top: -80px;
+        top: -60px;
         .small-block {
           display: block;
         }
@@ -265,7 +265,7 @@ import ResponsiveImage from "~/components/responsive-image";
 
     .medium-block-wrapper{
       left: 10%;
-      top: -50px;
+      top: -30px;
       display: block;
       .medium-block{
         display: block;

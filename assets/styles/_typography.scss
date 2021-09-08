@@ -72,7 +72,7 @@ h3 {
 }
 
 h4 {
-  font-size: calc(25px + (55 - 25) * ((100vw - 340px) / (1440 - 340)));
+  font-size: calc(22px + (55 - 25) * ((100vw - 340px) / (1440 - 340)));
 }
 
 h5 {
@@ -213,6 +213,11 @@ HEADERS
     font-size: 55px;
     line-height: 48px;
   }
+
+  // h5 {
+  //   font-size: 45px;
+  //   line-height: 4px;
+  // }
 
 
   p, textarea, a, .text-link, li, input {

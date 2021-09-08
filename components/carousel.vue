@@ -14,20 +14,22 @@
       <div class="background-inner">
         <div class="background-transition" :class="transitionClass">
           <div class="background-outer-1">
-             <div class="background-inner-1">
-               <div
-                  class="carousel-image-wrap"
-                  v-for="(image, i) in images"
-                  :key="i"
-                  :class="{ 'current': i === current }"
-                >
-                  <img
-                    class="carousel-image"
-                    :src="require(`~/static/images/${image.src}`)"
-                    :alt="image.alt"
-                    :style="{ 'object-position': image.objectPosition }"
-                  />
-                </div>
+            <div class="background-inner-1">
+              <div
+                class="carousel-image-wrap"
+                v-for="(image, i) in images"
+                :key="i"
+                :class="{ current: i === current }"
+              >
+                <img
+                  class="carousel-image"
+                  :src="require(`~/static/images/${image.src}`)"
+                  :alt="image.alt"
+                  :style="{ 'object-position': image.objectPosition }"
+                />
+                <!-- <p class="hotel-title spread">{{image.title}}</p>
+                  <p class="hotel-date spread">2021</p> -->
+              </div>
             </div>
           </div>
         </div>
@@ -76,7 +78,7 @@ export default {
     slide(dir) {
       this.direction = dir;
       const duration = 400;
-      this.transitionClass ="out";
+      this.transitionClass = "out";
 
       window.setTimeout(() => {
         this.transitionClass = "";
@@ -197,7 +199,7 @@ $iconSize: 22px;
           width: 100%;
           height: 100%;
           perspective: 800px;
-          transform-origin: 0% 100%;
+          transform-origin: 0% 60%;
           transform: rotateX(0deg) rotateY(0deg);
           transition: transform 400ms cubic-bezier(0.666, 0, 0.333, 1);
           transform-style: preserve-3d;
@@ -209,7 +211,7 @@ $iconSize: 22px;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            transform-origin: 100% 0%;
+            transform-origin: 60% 0%;
             transform: rotateY(0deg) rotateX(0deg);
             transition: transform 400ms cubic-bezier(0.666, 0, 0.333, 1) 300ms;
             transform-style: preserve-3d;

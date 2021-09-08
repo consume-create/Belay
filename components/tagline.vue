@@ -13,7 +13,7 @@
 <style lang="scss">
   .tagline{
     width: 100%;
-    padding: span(14) 0;
+    padding: span(10) 0;
     text-align: center;
     background-color: $deep-blue;
     color: white;
