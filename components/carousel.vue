@@ -9,39 +9,48 @@
         height: '87',
       }"
     />
-      
+
     <div class="background-wrapper">
       <div class="background-inner">
         <div class="background-transition" :class="transitionClass">
           <div class="background-outer-1">
-             <div class="background-inner-1">
-               <div
-                  class="carousel-image-wrap"
-                  v-for="(image, i) in images"
-                  :key="i"
-                  :class="{ 'current': i === current }"
-                >
-                  <img
-                    class="carousel-image"
-                    :src="require(`~/static/images/${image.src}`)"
-                    :alt="image.alt"
-                    :style="{ 'object-position': image.objectPosition }"
-                  />
-                </div>
-            </div> 
-          </div> 
-        </div> 
+            <div class="background-inner-1">
+              <div
+                class="carousel-image-wrap"
+                v-for="(image, i) in images"
+                :key="i"
+                :class="{ current: i === current }"
+              >
+                <img
+                  class="carousel-image"
+                  :src="require(`~/static/images/${image.src}`)"
+                  :alt="image.alt"
+                  :style="{ 'object-position': image.objectPosition }"
+                />
+                <!-- <p class="hotel-title spread">{{image.title}}</p>
+                  <p class="hotel-date spread">2021</p> -->
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <button class="arrow left" @click="slide(-1)"></button>
     <button class="arrow" @click="slide(1)"></button>
 
-    <button class="arrow-trap left" @click="slide(1)"></button>
+    <button class="arrow-trap left" @click="slide(-1)"></button>
     <button class="arrow-trap" @click="slide(1)"></button>
 
-    <p class="hotel-title spread">The Coloradan</p>
-    <p class="hotel-date spread">2021</p>
+    <div
+      class="text-wrapper"
+      v-for="(image, i) in images"
+      :key="i"
+      :class="{ current: i === current }"
+    >
+      <p class="hotel-title spread">{{ image.title }}</p>
+      <p class="hotel-date spread">{{image.date}}</p>
+    </div>
   </section>
 </template>
 
@@ -62,25 +71,23 @@ export default {
     return {
       current: 0,
       direction: 1,
-      transitionClass: "", 
+      transitionClass: "",
     };
   },
-  methods: {    
+  methods: {
     slide(dir) {
       this.direction = dir;
       const duration = 400;
-      this.transitionClass ="out";
-    
+      this.transitionClass = "out";
+
       window.setTimeout(() => {
-      this.transitionClass = "";
+        this.transitionClass = "";
       }, duration * 2);
 
       var len = this.images.length;
+      console.log(this.current);
       this.current = (this.current + (dir % len) + len) % len;
     },
-  },
-
-  mounted() {
   },
 };
 </script>
@@ -137,60 +144,69 @@ $iconSize: 22px;
     }
   }
 
-  .hotel-title {
-    position: absolute;
-    z-index: 4;
-    bottom: 0%;
-    left: 5%;
-    height: 80px;
-    line-height: 90px;
-    color: $white;
+  .text-wrapper {
+    opacity: 0;
+    transition: opacity 800ms;
+    z-index: 6;
+    
+    .hotel-title { 
+      position: absolute;
+      bottom: 0%;
+      left: 5%; 
+      height: 80px;
+      line-height: 80px;
+      color: $white;
+    }
+  
+    .hotel-date {
+      position: absolute;
+      bottom: 0%;
+      right: 5%;
+      height: 80px;
+      line-height: 80px;
+      color: $white;
+    }
+    &.current {
+      opacity: 1;
+      transition-delay: 800ms;
+      z-index: 7;
+     }
   }
 
-  .hotel-date {
-    position: absolute;
-    z-index: 4;
-    bottom: 0%;
-    right: 5%;
-    height: 80px;
-    line-height: 90px;
-    color: $white;
-  }
-
-  .background-wrapper{
+  .background-wrapper {
     position: absolute;
     top: 0px;
     // left: 0px;
-    right: 0px; 
+    right: 0px;
     bottom: 80px;
     width: 100%;
     //height: 100%;
 
-    .background-inner{
+    .background-inner {
       position: relative;
       width: 100%;
       height: 100%;
       overflow: hidden;
       background-color: #220178;
 
-      .background-transition{
+      .background-transition {
         width: 100%;
         height: 100%;
         perspective: 800px;
         overflow: hidden;
         transform-style: preserve-3d;
 
-        .background-outer-1{
+        .background-outer-1 {
           width: 100%;
           height: 100%;
           perspective: 800px;
           transform-origin: 0% 100%;
           transform: rotateX(0deg) rotateY(0deg);
-          transition: transform 400ms cubic-bezier(0.666, 0.000, 0.333, 1.000);
+          transition: transform 400ms cubic-bezier(0.666, 0, 0.333, 1);
           transform-style: preserve-3d;
           backface-visibility: hidden;
 
-          .background-inner-1{
+          .background-inner-1 {
             //background: linear-gradient(#8fcde1, #c5e7f1);
             position: relative;
             width: 100%;
@@ -198,7 +214,7 @@ $iconSize: 22px;
             overflow: hidden;
             transform-origin: 100% 0%;
             transform: rotateY(0deg) rotateX(0deg);
-            transition: transform 400ms cubic-bezier(0.666, 0.000, 0.333, 1.000) 300ms;
+            transition: transform 400ms cubic-bezier(0.666, 0, 0.333, 1) 300ms;
             transform-style: preserve-3d;
             backface-visibility: hidden;
 
@@ -238,17 +254,17 @@ $iconSize: 22px;
                 // }
               }
             }
-          } 
-        } 
-      } 
-      .background-transition.out{
-      .background-outer-1{
-       transform: rotateX(8deg) rotateY(4deg);
-          .background-inner-1{
-         transform: rotateY(-4deg) rotateX(-8deg);
-       }
+          }
+        }
       }
-     } 
+      .background-transition.out {
+        .background-outer-1 {
+          transform: rotateX(8deg) rotateY(4deg);
+          .background-inner-1 {
+            transform: rotateY(-4deg) rotateX(-8deg);
+          }
+        }
+      }
     }
   }
 }
@@ -256,7 +272,7 @@ $iconSize: 22px;
   .carousel {
     width: 100%;
     // height: span(18);
-     height: 85vh;
+    height: 85vh;
 
     .arrow {
       display: block;
@@ -283,7 +299,7 @@ $iconSize: 22px;
     height: 100vh;
 
     .arrow {
-     display: block;
+      display: block;
 
       &.left {
         display: block;
