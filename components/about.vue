@@ -102,7 +102,7 @@ import ResponsiveImage from "~/components/responsive-image";
 
   .text-box {
     text-align: left;
-    padding: span(2) span(4) span(2) span(2);
+    padding: span(2);
     top: 35%;
     left: 2%;
     z-index: 5;
@@ -188,6 +188,7 @@ import ResponsiveImage from "~/components/responsive-image";
     top: -100px;
     z-index: 2;
     display: block;
+
     .medium-block-mobile {
       position: relative;
       width: span(18);
@@ -225,7 +226,6 @@ import ResponsiveImage from "~/components/responsive-image";
   }
 }
 
-
   @include respond-to($tablet) {
     .about{
       height: span(18);
@@ -242,12 +242,8 @@ import ResponsiveImage from "~/components/responsive-image";
         }
         .subtitle{
           margin-bottom: $margin-large;
-          // margin-top: $margin-extra-large;
           border-bottom: 2px solid $light-blue;
           padding-bottom: $margin-normal;
-        }
-        .text{
-          padding-right: span(1);
         }
       }
 
@@ -293,7 +289,7 @@ import ResponsiveImage from "~/components/responsive-image";
   .about{
     height: span(18);
     .text-box {
-      padding-right: span(14);
+      padding-right: span(12);
       top: 45%;
       left: 10%;
 
@@ -303,9 +299,6 @@ import ResponsiveImage from "~/components/responsive-image";
       .subtitle{
         margin-bottom: $margin-extra-large;
         padding-bottom: $margin-large;
-      }
-      .text{
-        padding-right: span(1);
       }
     }
     .small-block-wrapper{
