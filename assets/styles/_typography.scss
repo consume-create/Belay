@@ -83,6 +83,8 @@ h6 {
 }
 
 
+
+
 p, .v-select, a, .text-link, li {
   font-family: $gotham-book;
   font-size: 14px;
@@ -180,6 +182,10 @@ strong {
 
 .bold {
   font-family: $gotham-bold;
+}
+
+input{
+  font-family: $gotham-medium;
 }
 
 /*************************************************

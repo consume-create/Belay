@@ -134,7 +134,7 @@ footer {
       position: relative;
       width: 160%;
       margin-bottom: span(5);
-      margin-left: -30%;
+      margin-left: -33%;
 
       .form-text {
         position: absolute;
@@ -160,6 +160,7 @@ footer {
           input::placeholder {
             color: black;
             font-weight: bold;
+            // line-height: 33px;
           }
           .right-arrow {
             position: relative;
@@ -283,12 +284,12 @@ footer {
     .medium-wrapper {
       position: absolute;
       top: -75px;
-      left: 68%;
+      right: 2%;
       z-index: 1;
 
       .medium-block {
         position: relative;
-        width: span(6);
+        width: span(8);
 
         img {
           @include abs-fill;
@@ -303,14 +304,14 @@ footer {
     .footer-wrapper {
       @include grid;
       padding: span(1);
-      padding-bottom: span(2);
+      // padding-bottom: span(2);
 
       .footer__column-left {
         // width: span(16);
         height: 100%;
         position: relative;
         margin-bottom: 0;
-        grid-column: 1 / span 16;
+        grid-column: 1 / span 17;
         grid-row: 1 / span 3;
         width: 100%;
         margin-left: 0%;
@@ -343,10 +344,11 @@ footer {
       }
 
       .social-flex {
-        grid-column: 18 / span 12;
+        grid-column: 19 / span 10;
         grid-row: 2;
-        justify-content: space-around;
-        // margin-bottom: span(1);
+        justify-content: space-between;
+
+        margin-bottom: $margin-normal;
 
         .footer__column-right {
           .channel-inner {
@@ -507,9 +509,9 @@ footer {
       }
 
       .social-flex {
-        grid-column: 18 / span 10;
+        grid-column: 17 / span 10;
         grid-row: 2;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-bottom: span(1.5);
 
         .footer__column-right {
@@ -543,8 +545,7 @@ footer {
               display: flex;
               align-items: center;
               flex-direction: row;
-              // margin-bottom: $margin-normal;
-
+              
               .phone-icon {
                 height: 20px;
                 width: 20px;
@@ -562,7 +563,7 @@ footer {
       }
 
       .column-bottom {
-        grid-column: 19 / span 5;
+        grid-column: 17 / span 5;
         grid-row: 3;
       }
     }
