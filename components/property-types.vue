@@ -199,6 +199,7 @@ export default{
       margin: 0 auto;
       margin-bottom: $margin-extra-large;
       margin-top: $margin-extra-large;
+      line-height: 3.6em;
     }
 
     .property-image-vertical {
