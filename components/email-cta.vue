@@ -274,7 +274,7 @@ export default {
 
         &:disabled + .submit-button {
           &:after {
-            // opacity: 0.6;
+            opacity: 0.6;
           }
           background: $dark-blue;
           cursor: unset;
