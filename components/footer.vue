@@ -22,16 +22,7 @@
             Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum
             dolor sit amet, Lorem ipsum dolor sit amet,
           </p>
-          <div class="email-wrapper">
-            <input
-              type="email"
-              class="email"
-              size="30"
-              placeholder="hello@belaydev.com"
-              required
-            />
-            <button class="right-arrow" name="email-button"></button>
-          </div>
+          <EmailCta/>
         </div>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
       </div>
@@ -77,16 +68,19 @@
           <p class="copyright mega-small">Copyright Belay 2021</p>
         </div>
       </div>
+      
     </div>
   </footer>
 </template>
 <script>
 import SocialLinks from "~/components/social-links.vue";
 import ResponsiveImage from "~/components/responsive-image";
+import EmailCta from "~/components/email-cta";
 export default {
   components: {
     SocialLinks,
     ResponsiveImage,
+    EmailCta,
   },
   props: {
     img1: {
@@ -145,43 +139,6 @@ footer {
 
         .subtext {
           margin-top: $margin-small;
-        }
-        .email-wrapper {
-          margin-top: $margin-small;
-          display: flex;
-          align-items: center;
-
-          .email {
-            border: none;
-            border-radius: 0;
-            padding: 9px;
-            width: span(20);
-          }
-
-          input::placeholder {
-            color: black;
-            font-weight: bold;
-            // line-height: 33px;
-          }
-          .right-arrow {
-            position: relative;
-            height: 33px;
-            width: 33px;
-            background-color: $dark-blue;
-            border: 0;
-            &:after {
-              content: "";
-              position: absolute;
-              width: 100%;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              height: 24px;
-              width: 24px;
-              @include icon("right-arrow-mail", $white, true);
-              transition: transform $speed-demon ease;
-            }
-          }
         }
       }
     }
@@ -321,25 +278,6 @@ footer {
           .subtext {
             margin-top: $margin-small;
             padding-right: span(0.5);
-          }
-          .email-wrapper {
-            margin-top: $margin-small;
-
-            .email {
-              padding: 8px;
-              width: span(9);
-            }
-            .right-arrow {
-              height: 31px;
-              width: 31px;
-              &:after {
-                height: 21px;
-                width: 21px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-              }
-            }
           }
         }
       }
@@ -486,25 +424,6 @@ footer {
         .form-text {
           .subtext {
             margin-top: $margin-normal;
-          }
-          .email-wrapper {
-            margin-top: $margin-normal;
-
-            .email {
-              padding: 12px;
-              width: span(8);
-            }
-            .right-arrow {
-              height: 52px;
-              width: 52px;
-              &:after {
-                height: 34px;
-                width: 34px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-              }
-            }
           }
         }
       }
