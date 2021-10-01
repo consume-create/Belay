@@ -98,17 +98,14 @@ $iconSize: 22px;
   position: relative;
   width: 100%;
   height: 70vh;
-  // height: span(26);
   z-index: 4;
+
   .logo {
-    //background: rgba(red, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
-    //pointer-events: none;
     position: absolute;
     z-index: 5;
-    //height: 20%;
     height: 15vh;
     left: 0;
     right: 0;
@@ -117,6 +114,7 @@ $iconSize: 22px;
 
   .arrow {
     position: absolute;
+    // top: 50%;
     top: calc(50% - 50px);
     right: 5%;
     display: none;
@@ -125,7 +123,8 @@ $iconSize: 22px;
       display: none;
       position: absolute;
       top: calc(50% - 50px);
-      left: 5%;
+      right: 93.2%; 
+      // left: 5%;
     }
   }
 
@@ -270,7 +269,6 @@ $iconSize: 22px;
 @include respond-to($tablet) {
   .carousel {
     width: 100%;
-    // height: span(18);
     height: 85vh;
 
     .arrow {
@@ -294,7 +292,6 @@ $iconSize: 22px;
 @include respond-to($desktop) {
   .carousel {
     width: 100%;
-    // height: span(14);
     height: 100vh;
 
     .arrow {

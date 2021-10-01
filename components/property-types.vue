@@ -1,7 +1,7 @@
 <template>
   <section class="property-wrapper">
 
-    <h5 class="title">Property Types</h5>
+    <h5 class="title">Project Types</h5>
 
     <div class="property-image">
       <div class="image__inner-property" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
