@@ -124,7 +124,7 @@ import ResponsiveImage from "~/components/responsive-image";
       top: -8%;
       position: absolute;
       display: none;
-
+      transition: transform 111ms linear;
       .small-block {
         z-index: 4;
         position: relative;
@@ -147,7 +147,7 @@ import ResponsiveImage from "~/components/responsive-image";
       top: -50px;
       z-index: 4;
       display: block;
-
+      transition: transform 111ms linear;
       .small-block-mobile {
         position: relative;
         width: span(4);
@@ -168,6 +168,7 @@ import ResponsiveImage from "~/components/responsive-image";
     top: 2%;
     z-index: 2;
     display: none;
+    transition: transform 111ms linear;
     .medium-block {
       position: relative;
       width: span(12);
@@ -209,7 +210,7 @@ import ResponsiveImage from "~/components/responsive-image";
     bottom: -38%;
     width: 100%;
     z-index: 1;
-
+    transition: transform 111ms linear;
     .large-block {
       position: relative;
       width: 100%;
