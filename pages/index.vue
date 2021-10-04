@@ -54,13 +54,13 @@
       }"/>
     <PropertyTypes
     :img1="{
-        src: 'property-types/icon-set-2.png',
+        src: 'property-types/icons-8.png',
         alt: 'a 5 by 3 grid of illustrations of different building types',
         width: '2880',
         height: '1670'
       }"
       :img2="{
-          src: 'property-types/icon-set-vertical.png',
+          src: 'property-types/iconset-vertical-update.png',
           alt: 'a 2 by 7 grid of illustrations of different building types',
           width: '1152',
           height: '3892'
