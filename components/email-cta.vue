@@ -8,6 +8,7 @@
         :class="{ succeeded, processing }"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        @submit="onSubmit"
       >
         <input
           type="text"
@@ -345,11 +346,7 @@ export default {
   .email-cta {
     .email-cta__inner {
       form {
-        // width: 420px;
         width: span(10);
-        // border: 4px solid $black;
-        // margin: $margin-large auto;
-        // margin-bottom: 0;
 
         .fieldset {
           label {
