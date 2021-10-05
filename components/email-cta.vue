@@ -8,7 +8,7 @@
         :class="{ succeeded, processing }"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        @submit="onSubmit"
+        @submit="handleSubmit"
       >
         <input
           type="text"
@@ -66,10 +66,13 @@
 
 <script>
 import debounce from "lodash.debounce";
+import axios from 'axios';
+// @submit.prevent="handleSubmit"
+
 export default {
   data() {
     return {
-      form_name: "mc-embedded-subscribe-form",
+      form_name: "subscribe-form",
       email: {
         value: undefined,
         focused: false,
@@ -124,6 +127,29 @@ export default {
         this.ready_to_send = true;
       }
     },
+
+    encode (data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
+
+     handleSubmit () {
+      const axiosConfig = {
+        header: { "Content-Type": "application/x-www-form-urlencoded" }
+      };
+      // this.form_name = this.
+      axios.post(
+        "/",
+        this.encode({
+          "form-name": "ask-question",
+          ...this.form
+        }),
+        axiosConfig
+      );
+    },
     async onSubmit(e) {
       // prevent resubmission;
       if (this.processing || this.succeeded) return;
@@ -143,6 +169,7 @@ export default {
       this.processing = false;
       this.succeeded = true;
     },
+
     reset(clear) {
       this.send_attempted = false;
       this.failed = false;
