@@ -54,7 +54,7 @@
       }"/>
     <PropertyTypes
     :img1="{
-        src: 'property-types/icons-8.png',
+        src: 'property-types/iconset-horizontal.png',
         alt: 'a 5 by 3 grid of illustrations of different building types',
         width: '2880',
         height: '1670'

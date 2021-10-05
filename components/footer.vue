@@ -17,11 +17,11 @@
     <div class="footer-wrapper">
       <div class="footer__column-left">
         <div class="form-text">
-          <h5 class="title-cta">Stay in Touch</h5>
-          <p class="subtext">
+          <h5 class="title-cta">Get in Touch</h5>
+          <!-- <p class="subtext">
             Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum
             dolor sit amet, Lorem ipsum dolor sit amet,
-          </p>
+          </p> -->
           <EmailCta/>
         </div>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />

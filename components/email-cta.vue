@@ -391,7 +391,7 @@ export default {
   .email-cta {
     .email-cta__inner {
       form{
-         width: span(10);
+         width: span(8.5);
       }
      
     }
