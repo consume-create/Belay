@@ -4,11 +4,10 @@
       <form
         ref="formRef"
         :name="form_name"
-        method="post"
-        action=""
-        target="_blank"
+        method="POST"
         :class="{ succeeded, processing }"
-        @submit="onSubmit"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
       >
         <input
           type="text"
@@ -168,10 +167,8 @@ export default {
     color: white;
 
     form {
-    //   width: 100%;
       width: span(22);
       display: flex;
-    //   color: $white;
       overflow: hidden;
       transition: background-color $speed-demon ease;
       position: relative;
