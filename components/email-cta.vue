@@ -169,7 +169,7 @@ export default {
 
     form {
     //   width: 100%;
-      width: span(20);
+      width: span(22);
       display: flex;
     //   color: $white;
       overflow: hidden;
@@ -283,7 +283,7 @@ export default {
 
       .submit-button {
         position: relative;
-        width: span(1);
+        width: span(3);
         // border-left: 3px solid $white;
         background: $dark-blue;
         transition: background-color $speed-demon ease,
@@ -384,6 +384,11 @@ export default {
       .success {
         font-size: 16px;
       }
+      form{
+        .submit-button {
+        width: span(1);
+        }
+      }
     }
   }
 }
@@ -391,9 +396,13 @@ export default {
   .email-cta {
     .email-cta__inner {
       form{
-         width: span(8.5);
+         width: span(8);
+
+
+      .submit-button {
+        width: span(1);
       }
-     
+    }
     }
   }
 }
