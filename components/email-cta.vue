@@ -8,7 +8,7 @@
         :class="{ succeeded, processing }"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        @submit="handleSubmit"
+        @submit.prevent="handleSubmit"
       >
         <input
           type="text"
@@ -137,9 +137,11 @@ export default {
     },
 
      handleSubmit () {
+      // if (this.processing || this.succeeded) return;
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
       };
+      console.log(this.email.value);
       axios.post(
         "/",
         this.encode({
