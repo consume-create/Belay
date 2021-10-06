@@ -140,16 +140,16 @@ export default {
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
       };
-      // this.form_name = this.
       axios.post(
         "/",
         this.encode({
-          "form-name": "ask-question",
-          ...this.form
+          "form-name": this.form_name,
+          "email" : "sam@consumeandcreate.co"
         }),
         axiosConfig
       );
     },
+
     async onSubmit(e) {
       // prevent resubmission;
       if (this.processing || this.succeeded) return;
