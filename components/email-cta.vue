@@ -146,7 +146,7 @@ export default {
         "/",
         this.encode({
           "form-name": this.form_name,
-          "email" : this.email.value
+          "EMAIL" : this.email.value
         }),
         axiosConfig
       );
