@@ -144,7 +144,7 @@ export default {
         "/",
         this.encode({
           "form-name": this.form_name,
-          "email" : "sam@consumeandcreate.co"
+          "email" : this.email.value
         }),
         axiosConfig
       );
