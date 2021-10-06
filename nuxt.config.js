@@ -169,6 +169,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    html: {
+      minify: {
+        collapseWhitespace: true
+      }
+    },
     /*
      ** You can extend webpack config here
      */
