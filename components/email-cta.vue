@@ -148,8 +148,11 @@ export default {
           "form-name": this.form_name,
           "EMAIL" : this.email.value
         }),
+        
         axiosConfig
       );
+      this.processing = false;
+      this.succeeded = true;
     },
 
     async onSubmit(e) {
