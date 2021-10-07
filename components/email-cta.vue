@@ -10,14 +10,14 @@
         data-netlify-honeypot="bot-field"
         @submit.prevent="handleSubmit"
       >
-        <input
+        <!-- <input
           type="text"
           id="filter"
           name=""
           tabindex="-1"
           value=""
           aria-label="Honeypot"
-        />
+        /> -->
         <div
           class="fieldset"
           :class="[
