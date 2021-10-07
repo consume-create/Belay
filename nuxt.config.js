@@ -168,6 +168,7 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
+  //ADD THIS TO USE NETLIFY FORMS
   build: {
     html: {
       minify: {

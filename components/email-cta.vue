@@ -10,14 +10,14 @@
         data-netlify-honeypot="bot-field"
         @submit.prevent="handleSubmit"
       >
-        <!-- <input
+        <input
           type="text"
           id="filter"
           name=""
           tabindex="-1"
           value=""
           aria-label="Honeypot"
-        /> -->
+        />
         <div
           class="fieldset"
           :class="[
@@ -282,7 +282,7 @@ export default {
         left: 0;
         width: 100%;
         height: 100%;
-        text-align: center;
+        text-align: left;
         font-size: 10px;
         line-height: 35px;
         letter-spacing: 0.05em;
