@@ -9,7 +9,6 @@
         height: '87',
       }"
     />
-
     <div class="background-wrapper">
       <div class="background-inner">
         <div class="background-transition" :class="transitionClass">
@@ -174,11 +173,9 @@ $iconSize: 22px;
   .background-wrapper {
     position: absolute;
     top: 0px;
-    // left: 0px;
     right: 0px;
     bottom: 80px;
     width: 100%;
-    //height: 100%;
 
     .background-inner {
       position: relative;
@@ -233,11 +230,11 @@ $iconSize: 22px;
                 z-index: 7;
               }
               .carousel-image {
-                object-fit: contain;
+                object-fit: cover;
                 position: absolute;
                 width: 100%;
-                height: calc(100% - 15vh);
-                //height: 100%;
+                // height: calc(100% - 15vh);
+                height: 100%;
                 bottom: 0;
                 left: 0;
                 // bottom: 0;
