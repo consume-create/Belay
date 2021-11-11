@@ -1,7 +1,7 @@
 <template>
   <section class="property-wrapper">
 
-    <h5 class="title">Project Types</h5>
+    <h5 class="title">Specializing In</h5>
 
     <div class="property-image">
       <div class="image__inner-property" :style="{paddingBottom: img1.height / img1.width * 100 + '%'}"/>
@@ -109,8 +109,8 @@ export default{
           this._points.push({x, y, clean_x: x, clean_y: y});
         }
       }
-      this._ctx.lineWidth = 1;
-      this._ctx.strokeStyle = '#999';
+      this._ctx.lineWidth = 2;
+      this._ctx.strokeStyle = '#eee';
       this._heightBrowser= this._cnv.getBoundingClientRect().height;
       this._widthBrowser = this._cnv.getBoundingClientRect().width;
     },
@@ -136,7 +136,7 @@ export default{
     },
 
     translate(current) {
-      gsap.to(this._points, 0.4, {
+      gsap.to(this._points, 0.5, {
         x: (i, t) => current.includes(i) ? t.clean_x + Math.round((Math.random() * 75) - 37.5) : t.clean_x,
         y: (i, t) => current.includes(i) ? t.clean_y + Math.round((Math.random() * 75) - 37.5) : t.clean_y,
         ease: EasePack.easeOut,

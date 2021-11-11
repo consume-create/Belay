@@ -31,7 +31,7 @@
           ]"
         >
           <div class="field label">
-            <label :for="`cf-email`">HELLO@BELAYEV.COM</label>
+            <label :for="`cf-email`">ENTER YOUR EMAIL</label>
           </div>
           <div class="field">
             <input
@@ -115,7 +115,7 @@ export default {
       }
 
       const valid = this.email.validate(this.email.value);
-      
+
       this.error = false;
 
       // If any fields are invalid or there is an error with the logo
@@ -148,7 +148,7 @@ export default {
           "form-name": this.form_name,
           "EMAIL" : this.email.value
         }),
-        
+
         axiosConfig
       );
       this.processing = false;
@@ -322,7 +322,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
         &:after {
           content: "";
           position: absolute;

@@ -122,7 +122,7 @@ $iconSize: 22px;
       display: none;
       position: absolute;
       top: calc(50% - 50px);
-      right: 93.2%; 
+      right: 93.2%;
       // left: 5%;
     }
   }
@@ -270,6 +270,7 @@ $iconSize: 22px;
 
     .arrow {
       display: block;
+      cursor: pointer;
 
       &.left {
         display: block;

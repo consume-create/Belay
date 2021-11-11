@@ -17,11 +17,8 @@
     <div class="footer-wrapper">
       <div class="footer__column-left">
         <div class="form-text">
-          <h5 class="title-cta">Get in Touch</h5>
-          <!-- <p class="subtext">
-            Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum
-            dolor sit amet, Lorem ipsum dolor sit amet,
-          </p> -->
+          <h5 class="title-cta">Subscribe</h5>
+          <p class="subtext">Get updates delivered to your inbox.</p>
           <EmailCta/>
         </div>
         <ResponsiveImage :src="`${img1.src}`" :alt="`${img1.alt}`" lazy />
@@ -35,10 +32,10 @@
               <div class="mail-icon" />
               <p class="email-para small">INFO@BELAYDEV.COM</p>
             </a>
-            <div class="phone-wrapper">
+            <a class="phone-wrapper" href="tel:(303) 607-6133">
               <div class="phone-icon" />
-              <p class="phone-number small">303 / 607 / 6133</p>
-            </div>
+              <p class="phone-number small">(303) 607-6133</p>
+            </a>
           </div>
         </div>
         <div class="footer__column-socials">
@@ -64,11 +61,10 @@
       </div>
       <div class="column-bottom">
         <div class="policies">
-          <p class="policy mega-small">Privacy Policy</p>
-          <p class="copyright mega-small">Copyright Belay 2021</p>
+          <p class="copyright mega-small">Copyright &copy; 2021 Belay Development. All Rights Reserved.</p>
         </div>
       </div>
-      
+
     </div>
   </footer>
 </template>
@@ -188,6 +184,8 @@ footer {
             display: flex;
             align-items: center;
             flex-direction: row;
+            color: $white;
+
             .phone-icon {
               position: relative;
               height: 18px;
@@ -466,7 +464,7 @@ footer {
               display: flex;
               align-items: center;
               flex-direction: row;
-              
+
               .phone-icon {
                 height: 20px;
                 width: 20px;
