@@ -3,33 +3,53 @@
     <Carousel
       :images="[
         {
-          src: 'carousel/building1-cutout.png',
+          src: 'carousel/flora.jpg',
           alt: 'A picture of a commercial building',
-          width: '1126',
-          height: '1128', 
+          width: '3783',
+          height: '4146', 
           className: 'first',
-          objectPosition: '50% 100%', 
-          title: 'THE COLORADAN', 
+          objectPosition: '50% 50%', 
+          title: 'THE FLORA', 
           date: '2021'
         },
         {
-          src: 'carousel/building1-cutout.png',
+          src: 'carousel/popdenver.jpg',
           alt: 'A picture of a commercial building',
-          width: '1126',
-          height: '1128', 
+          width: '3251',
+          height: '3084', 
           className: 'first',
-          objectPosition: '50% 100%', 
-          title: 'THE COLORADAN 2', 
+          objectPosition: '50% 70%', 
+          title: 'POP DENVER', 
           date: '2022'
         },
         {
-          src: 'carousel/building1-cutout.png',
+          src: 'carousel/tennyson.jpg',
           alt: 'A picture of a commercial building',
-          width: '1126',
-          height: '1128', 
+          width: '4750',
+          height: '5632', 
+          className: 'first',
+          objectPosition: '50% 70%', 
+          title: 'THE TENNYSON', 
+          date: '2023'
+        },
+          {
+          src: 'carousel/sunnyside.jpg',
+          alt: 'A picture of a commercial building',
+          width: '320',
+          height: '240', 
           className: 'first',
           objectPosition: '50% 100%', 
-          title: 'THE COLORADAN 3', 
+          title: 'SUNNYSIDE', 
+          date: '2023'
+        },
+          {
+          src: 'carousel/condor.jpeg',
+          alt: 'A picture of a commercial building',
+          width: '320',
+          height: '213', 
+          className: 'first',
+          objectPosition: '50% 100%', 
+          title: 'CONDOR', 
           date: '2023'
         },
       ]"/>

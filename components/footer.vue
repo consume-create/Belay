@@ -31,10 +31,10 @@
         <div class="footer__column-right">
           <div class="channel-inner">
             <p class="small-title spread">Our Channels</p>
-            <div class="mail-wrapper">
+            <a class="mail-wrapper" href="mailto:info@belaydev.com">
               <div class="mail-icon" />
               <p class="email-para small">INFO@BELAYDEV.COM</p>
-            </div>
+            </a>
             <div class="phone-wrapper">
               <div class="phone-icon" />
               <p class="phone-number small">303 / 607 / 6133</p>
@@ -47,15 +47,15 @@
               :links="[
                 {
                   type: 'instagram',
-                  url: '1',
+                  url: 'https://www.instagram.com/belay_development/?utm_medium=copy_link',
                 },
                 {
                   type: 'linkedin',
-                  url: '2',
+                  url: 'https://www.linkedin.com/company/belay-dev',
                 },
                 {
                   type: 'twitter',
-                  url: '3',
+                  url: 'https://twitter.com/belaydev?s=21',
                 },
               ]"
             />
@@ -160,6 +160,7 @@ footer {
             align-items: center;
             flex-direction: row;
             margin-bottom: $margin-normal;
+            color: $white;
 
             .mail-icon {
               position: relative;
