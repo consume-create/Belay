@@ -10,7 +10,7 @@
           className: 'first',
           objectPosition: '50% 50%',
           title: 'FLORA', 
-          date: '2021'
+          date: '2023'
         },
         {
           src: 'carousel/popdenver.jpg',
@@ -20,7 +20,7 @@
           className: 'first',
           objectPosition: '50% 70%',
           title: 'POP DENVER',
-          date: '2022'
+          date: '2023'
         },
         {
           src: 'carousel/tennyson.jpg',
@@ -33,14 +33,14 @@
           date: '2023'
         },
           {
-          src: 'carousel/sunny-side.jpeg',
+          src: 'carousel/sunny_side.jpeg',
           alt: 'A picture of a commercial building',
-          width: '640',
-          height: '480',
+          width: '4096',
+          height: '3072',
           className: 'first',
           objectPosition: '50% 100%',
           title: 'SUNNYSIDE',
-          date: '2023'
+          date: '2025'
         },
           {
           src: 'carousel/condor.jpeg',
@@ -50,7 +50,7 @@
           className: 'first',
           objectPosition: '50% 100%',
           title: 'CONDOR',
-          date: '2023'
+          date: '2020'
         },
       ]"/>
     <About
