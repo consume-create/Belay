@@ -22,7 +22,7 @@
       <p class="text">Above all, we create exceptional value for our partners by delivering high-performing assets that enrich our communities.</p>
     </div>
 
-    <div class="medium-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 450}}">
+    <div class="medium-block-wrapper" v-event-horizon:parallax="{y: {from: 0, to: 350}}">
       <div class="medium-block">
         <div class="image__inner-medium" :style="{paddingBottom: img2.height / img2.width * 100 + '%'}"/>
         <ResponsiveImage :src="`${img2.src}`" :alt="`${img2.alt}`" lazy />
@@ -97,15 +97,15 @@ import ResponsiveImage from "~/components/responsive-image";
   background-color: $deep-blue;
   color: $white;
   position: relative;
-  height: span(28);
+  height: span(38);
   // height: 40vh;
   width: 100%;
   margin-top: -80px;
 
   .text-box {
     text-align: left;
-    padding: span(2);
-    top: 35%;
+    padding: span(1);
+    top: 15%;
     left: 2%;
     z-index: 5;
     position: absolute;
@@ -120,7 +120,7 @@ import ResponsiveImage from "~/components/responsive-image";
     }
 
     .text {
-      margin-bottom: $margin-normal;
+      margin-bottom: $margin-small;
 
       &:last-of-type {
         margin-bottom: 0;
@@ -217,7 +217,7 @@ import ResponsiveImage from "~/components/responsive-image";
 
   .large-block-wrapper{
     position: absolute;
-    bottom: -38%;
+    bottom: -28%;
     width: 100%;
     z-index: 1;
     transition: transform 111ms linear;
@@ -241,9 +241,8 @@ import ResponsiveImage from "~/components/responsive-image";
     .about{
       height: span(18);
       .text-box {
-        text-align: left;
-        padding-right: span(10);
-        top: 40%;
+        padding-right: span(8);
+        top: 20%;
         left: 10%;
         z-index: 4;
         position: absolute;
@@ -301,8 +300,9 @@ import ResponsiveImage from "~/components/responsive-image";
     height: span(18);
     .text-box {
       padding-right: span(12);
-      top: 45%;
+      top: 25%;
       left: 10%;
+      // right: 10%;
 
       .title-upper{
         margin-bottom: $margin-extra-large;

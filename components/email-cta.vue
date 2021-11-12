@@ -67,7 +67,6 @@
 <script>
 import debounce from "lodash.debounce";
 import axios from 'axios';
-// @submit.prevent="handleSubmit"
 
 export default {
   data() {
@@ -141,11 +140,10 @@ export default {
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
       };
-      console.log(this.email.value);
       axios.post(
         "/",
         this.encode({
-          "form-name": this.form_name,
+          // "form-name": this.form_name,
           "EMAIL" : this.email.value
         }),
 

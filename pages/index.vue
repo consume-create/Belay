@@ -33,10 +33,10 @@
           date: '2023'
         },
           {
-          src: 'carousel/sunnyside.jpg',
+          src: 'carousel/sunny-side.jpeg',
           alt: 'A picture of a commercial building',
-          width: '320',
-          height: '240',
+          width: '640',
+          height: '480',
           className: 'first',
           objectPosition: '50% 100%',
           title: 'SUNNYSIDE',
