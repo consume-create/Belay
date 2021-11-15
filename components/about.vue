@@ -215,7 +215,7 @@ import ResponsiveImage from "~/components/responsive-image";
 
   .large-block-wrapper{
     position: absolute;
-    bottom: -26%;
+    bottom: -24%;
     width: 100%;
     z-index: 1;
     // height: span(34);

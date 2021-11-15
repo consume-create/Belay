@@ -239,14 +239,14 @@ export default {
           position: absolute;
           top: 0;
           left: 0;
-          padding: 12px $margin-small;
+          padding: 3px 4px;
           transition: opacity $speed-demon ease;
 
           label {
             color: $black;
             font-family: $gotham-bold;
-            font-size: 14px;
-            line-height: 35px;
+            // font-size: 14px;
+            // line-height: 35px;
             padding: 6px $margin-small;
           }
         }
@@ -256,11 +256,11 @@ export default {
 
           input {
             width: 100%;
-            padding: 6px $margin-small;
-            font-size: 16px;
-            line-height: 35px;
-            letter-spacing: 0.05em;
-            font-family: $gotham-medium;
+            padding: 8px $margin-small;
+            // font-size: 16px;
+            // line-height: 35px;
+            // letter-spacing: 0.05em;
+            // font-family: $gotham-medium;
             background: none;
             color: $black;
             border: none;
@@ -278,10 +278,10 @@ export default {
         width: 100%;
         height: 100%;
         text-align: left;
-        font-size: 10px;
-        line-height: 35px;
-        letter-spacing: 0.05em;
-        font-family: $gotham-medium;
+        // font-size: 10px;
+        // line-height: 35px;
+        // letter-spacing: 0.05em;
+        // font-family: $gotham-medium;
         text-transform: uppercase;
 
          &.active {
@@ -374,53 +374,68 @@ export default {
       form {
         width: span(10);
         .submit-button {
-          width: span(2);
+          width: span(1.2);
         }
 
-        .fieldset {
-          label {
-            font-size: 14px;
-          }
-          .field {
-            input {
-              font-size: 14px;
+        .fieldset{
+          .field.label {
+            // padding: 3px $margin-small;
+            padding: 6px 4px;
+            transition: opacity $speed-demon ease;
+
+            label {
+              padding: 3px $margin-small;
             }
           }
         }
-
-        .success {
-          font-size: 14px;
+        .field {
+          background: $white;
+          input {
+            padding: 8px $margin-small;
+          }
         }
-      }
-
       .error {
         margin-top: $margin-normal;
-        font-size: 14px;
+        // font-size: 14px;
+      }
       }
     }
   }
 }
 
-@include respond-to($tablet-landscape) {
-  .email-cta {
-    .email-cta__inner {
-      .success {
-        font-size: 16px;
-      }
-      form{
-        .submit-button {
-        width: span(1);
-        }
-      }
-    }
-  }
-}
+// @include respond-to($tablet-landscape) {
+//   .email-cta {
+//     .email-cta__inner {
+//       .success {
+//         // font-size: 16px;
+//       }
+//       form{
+//         .submit-button {
+//         // width: span(0.8);
+//         }
+//       }
+//     }
+//   }
+// }
 @include respond-to($desktop) {
   .email-cta {
     .email-cta__inner {
       form{
          width: span(8);
-         
+
+        .fieldset{
+
+     
+          .field.label {
+          // padding: 3px $margin-small;
+          padding: 6px 4px;
+          transition: opacity $speed-demon ease;
+
+          label {
+            padding: 3px $margin-small;
+          }
+        }
+      }
       .submit-button {
         width: span(1);
       }
@@ -429,20 +444,4 @@ export default {
   }
 }
 
-@include can-hover {
-  .email-cta {
-    .email-cta__inner {
-      form {
-        .submit-button {
-        //   border-left: 4px solid $blurple;
-        // background: $deep-blue;
-
-          &:hover {
-            // background: $blurple;
-          }
-        }
-      }
-    }
-  }
-}
 </style>

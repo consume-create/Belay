@@ -8,7 +8,7 @@
           width: '2495',
           height: '2880',
           className: 'first',
-          objectPosition: '50% 50%',
+          objectPosition: '50% 45%',
           title: 'FLORA',
           date: '2023'
         },

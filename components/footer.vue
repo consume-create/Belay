@@ -145,6 +145,7 @@ footer {
       flex-direction: row;
       align-items: flex-start;
       justify-content: space-between;
+      margin-bottom: $margin-normal;
 
       .footer__column-right {
         .channel-inner {
@@ -261,7 +262,7 @@ footer {
   footer {
     .footer-wrapper {
       @include grid;
-      padding: span(1);
+      padding: span(2);
       // padding-bottom: span(2);
 
       .footer__column-left {
@@ -275,7 +276,7 @@ footer {
         margin-left: 0%;
 
         .form-text {
-          margin-top: $margin-normal;
+          margin-top: $margin-small;
           .subtext {
             margin-top: $margin-small;
             padding-right: span(0.5);
@@ -284,10 +285,9 @@ footer {
       }
 
       .social-flex {
-        grid-column: 19 / span 10;
+        grid-column: 18 / span 11;
         grid-row: 2;
         justify-content: space-between;
-
         margin-bottom: $margin-normal;
 
         .footer__column-right {
@@ -339,7 +339,7 @@ footer {
       }
 
       .column-bottom {
-        grid-column: 19 / span 5;
+        grid-column: 15 / span 8;
         grid-row: 3;
         // margin-top: $margin-extra-large;
       }
@@ -402,7 +402,7 @@ footer {
         }
       }
       .column-bottom {
-        grid-column: 19 / span 5;
+        grid-column: 18 / span 5;
         grid-row: 3;
       }
     }
@@ -412,13 +412,13 @@ footer {
 @include respond-to($desktop) {
   footer {
     .footer-wrapper {
-      padding: span(1);
+      padding: span(2);
       @include grid;
 
       .footer__column-left {
         position: relative;
         margin-bottom: 0;
-        grid-column: 1 / span 14;
+        grid-column: 1 / span 16;
         grid-row: 1 / span 3;
         width: 100%;
         margin-left: 0%;
@@ -432,7 +432,7 @@ footer {
       }
 
       .social-flex {
-        grid-column: 17 / span 10;
+        grid-column: 19 / span 10;
         grid-row: 2;
         justify-content: space-between;
         margin-bottom: span(1.5);
@@ -486,7 +486,7 @@ footer {
       }
 
       .column-bottom {
-        grid-column: 17 / span 5;
+        grid-column: 19 / span 5;
         grid-row: 3;
       }
     }
