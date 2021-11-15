@@ -245,10 +245,7 @@ export default {
           label {
             color: $black;
             font-family: $gotham-bold;
-            // letter-spacing: 0.15em;
-            // text-transform: uppercase;
             font-size: 14px;
-            // padding-top: 6px;
             line-height: 35px;
             padding: 6px $margin-small;
           }
@@ -312,7 +309,6 @@ export default {
       .submit-button {
         position: relative;
         width: span(3);
-        // border-left: 3px solid $white;
         background: $dark-blue;
         transition: background-color $speed-demon ease,
         transform $speed-demon $evil-ease;
@@ -421,8 +417,7 @@ export default {
     .email-cta__inner {
       form{
          width: span(8);
-
-
+         
       .submit-button {
         width: span(1);
       }

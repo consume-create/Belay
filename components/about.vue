@@ -97,21 +97,21 @@ import ResponsiveImage from "~/components/responsive-image";
   background-color: $deep-blue;
   color: $white;
   position: relative;
-  height: span(38);
-  // height: 40vh;
+  height: span(48);
   width: 100%;
   margin-top: -80px;
+  // overflow-x: hidden;
 
   .text-box {
     text-align: left;
     padding: span(1);
-    top: 15%;
+    top: 25%;
     left: 2%;
     z-index: 5;
     position: absolute;
 
     .title-upper{
-      margin-bottom: $margin-normal;
+      margin-bottom: $margin-small;
     }
     .subtitle{
       padding-bottom: span(1);
@@ -154,7 +154,7 @@ import ResponsiveImage from "~/components/responsive-image";
     .small-block-wrapper-mobile{
       position: absolute;
       left: 63%;
-      top: -50px;
+      top: -40px;
       z-index: 4;
       display: block;
       transition: transform 111ms linear;
@@ -220,12 +220,17 @@ import ResponsiveImage from "~/components/responsive-image";
     bottom: -28%;
     width: 100%;
     z-index: 1;
+    height: span(28);
     transition: transform 111ms linear;
+    overflow: hidden;
+ 
+    // overflow-y: no;
     .large-block {
+      
       position: relative;
-      width: 100%;
-      height: span(22);
-
+      width: 150%;
+      transform: translateX(-25%);
+      height: span(28);
       img {
         position: absolute;
         width: 100%;
@@ -242,7 +247,7 @@ import ResponsiveImage from "~/components/responsive-image";
       height: span(18);
       .text-box {
         padding-right: span(8);
-        top: 20%;
+        top: 15%;
         left: 10%;
         z-index: 4;
         position: absolute;
@@ -290,7 +295,13 @@ import ResponsiveImage from "~/components/responsive-image";
       }
     }
       .large-block-wrapper{
-        bottom: -58%;
+        bottom: -78%;
+        // height: span(38);
+        .large-block{
+          width: 100%;
+          transform: translateX(0);
+          // height: span(38);
+      }
       }
     }
   }
@@ -300,7 +311,7 @@ import ResponsiveImage from "~/components/responsive-image";
     height: span(18);
     .text-box {
       padding-right: span(12);
-      top: 25%;
+      top: 33%;
       left: 10%;
       // right: 10%;
 
@@ -345,7 +356,13 @@ import ResponsiveImage from "~/components/responsive-image";
     }
 
     .large-block-wrapper{
-      bottom: -58%;
+      bottom: -78%;
+      // height: span(38);
+      .large-block{
+         width: 100%;
+          transform: translateX(0);
+        //  height: span(38);
+      }
     }
   }
 }

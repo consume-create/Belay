@@ -38,7 +38,7 @@ h3
 }
 
 $h4-line-height: calc(25px + (55 - 25) * ((100vw - 340px) / (1440 - 340)) * 1.6);
-$h5-line-height: calc(20px + (40 - 20) * ((100vw - 340px) / (1440 - 340)) * 1.6);
+$h5-line-height: calc(20px + (40 - 20) * ((100vw - 340px) / (1440 - 340)) * 2.0);
 
 h4{
   font-family: $lemonde-livre-bold;
@@ -49,7 +49,8 @@ h4{
 h5{
   font-family: $gotham-bold;
   letter-spacing: 0.025em;
-  line-height:$h5-line-height;
+  // line-height:$h5-line-height;
+  line-height: 1.4em;
 }
 
 h6{
