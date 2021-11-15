@@ -422,24 +422,19 @@ export default {
     .email-cta__inner {
       form{
          width: span(8);
-
         .fieldset{
-
-     
           .field.label {
-          // padding: 3px $margin-small;
-          padding: 6px 4px;
-          transition: opacity $speed-demon ease;
-
-          label {
-            padding: 3px $margin-small;
+            padding: 4px 4px;
+            transition: opacity $speed-demon ease;
+            label {
+              padding: 3px $margin-small;
+            }
           }
         }
+        .submit-button {
+          width: span(1);
+        }
       }
-      .submit-button {
-        width: span(1);
-      }
-    }
     }
   }
 }

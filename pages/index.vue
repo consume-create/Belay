@@ -8,7 +8,7 @@
           width: '2495',
           height: '2880',
           className: 'first',
-          objectPosition: '50% 45%',
+          objectPosition: '50% 60%',
           title: 'FLORA',
           date: '2023'
         },
@@ -18,7 +18,7 @@
           width: '3036',
           height: '2880',
           className: 'first',
-          objectPosition: '50% 65%',
+          objectPosition: '50% 75%',
           title: 'POP DENVER',
           date: '2023'
         },
@@ -28,8 +28,8 @@
           width: '2429',
           height: '2880',
           className: 'first',
-          objectPosition: '50% 65%',
-          title: 'THE TENNYSON',
+          objectPosition: '50% 75%',
+          title: '4553 TENNYSON',
           date: '2023'
         },
           {
@@ -39,14 +39,14 @@
           height: '2249',
           className: 'first',
           objectPosition: '50% 50%',
-          title: 'SUNNYSIDE',
+          title: 'SUNNYSIDE FLATS',
           date: '2025'
         },
           {
           src: 'carousel/condor.jpeg',
           alt: 'A picture of a commercial building',
-          width: '320',
-          height: '213',
+          width: '1500',
+          height: '1000',
           className: 'first',
           objectPosition: '50% 100%',
           title: 'CONDOR',

@@ -20,14 +20,13 @@
                 :key="i"
                 :class="{ current: i === current }"
               >
+               <!-- <ResponsiveImage :src="`${image.src}`" :alt="`${image.alt}`" lazy class="carousel-image" /> -->
                 <img
                   class="carousel-image"
                   :src="require(`~/static/images/${image.src}`)"
                   :alt="image.alt"
                   :style="{ 'object-position': image.objectPosition }"
                 />
-                <!-- <p class="hotel-title spread">{{image.title}}</p>
-                  <p class="hotel-date spread">2021</p> -->
               </div>
             </div>
           </div>

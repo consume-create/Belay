@@ -23,7 +23,7 @@ export default {
       { property: "og:description", content: meta_description  },
       // TODO
       { property: "og:url", content: "" },
-      { property: "og:image", content: "Social-Static@2x.jpg" },
+      { property: "og:image", content: "Social-Static@2x.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/jpg" },
