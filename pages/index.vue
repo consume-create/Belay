@@ -9,7 +9,7 @@
           height: '4146',
           className: 'first',
           objectPosition: '50% 50%',
-          title: 'FLORA', 
+          title: 'FLORA',
           date: '2021'
         },
         {
@@ -29,7 +29,7 @@
           height: '5632',
           className: 'first',
           objectPosition: '50% 70%',
-          title: 'THE TENNYSON',
+          title: '4353 TENNYSON',
           date: '2023'
         },
           {

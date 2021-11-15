@@ -17,7 +17,7 @@
     <div class="footer-wrapper">
       <div class="footer__column-left">
         <div class="form-text">
-          <h5 class="title-cta">Subscribe</h5>
+          <h5 class="title-cta">Stay in Touch</h5>
           <p class="subtext">Get updates delivered to your inbox.</p>
           <EmailCta/>
         </div>
