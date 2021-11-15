@@ -104,7 +104,7 @@ import ResponsiveImage from "~/components/responsive-image";
 
   .text-box {
     text-align: left;
-    padding: span(12) span(1) span(1) span(1);
+    padding: span(12) span(2) span(1) span(2);
     z-index: 5;
     position: relative;
 
@@ -243,8 +243,8 @@ import ResponsiveImage from "~/components/responsive-image";
     .about{
       // height: span(18);
       .text-box {
-        padding: span(4) span(8) span(1) span(4);
-        z-index: 4;
+        padding: span(6) span(8) span(1) span(2);
+        // z-index: 4;
 
         .title-upper{
           margin-bottom: $margin-large;
@@ -290,12 +290,13 @@ import ResponsiveImage from "~/components/responsive-image";
     }
       .large-block-wrapper{
         // bottom: -58%;
-        bottom: -72%;
-        height: span(22);
+        bottom: -50%;
+        height: auto;
         .large-block{
-          width: 100%;
-          transform: translateX(0);
-          height: span(22);
+         width: 100%;
+         transform: translateX(0);
+        //  height: span(22);
+         height: auto;
       }
       }
     }
@@ -304,8 +305,7 @@ import ResponsiveImage from "~/components/responsive-image";
   @include respond-to($desktop) {
   .about{
     .text-box {
-      padding: span(4) span(10) span(1) span(4);
-
+      padding: span(6) span(12) span(1) span(2);
       .title-upper{
         margin-bottom: $margin-extra-large;
       }

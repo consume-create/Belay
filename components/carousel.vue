@@ -115,14 +115,16 @@ $iconSize: 22px;
     position: absolute;
     // top: 50%;
     top: calc(50% - 50px);
-    right: 5%;
+    right: span(2);
     display: none;
 
     &.left {
       display: none;
       position: absolute;
       top: calc(50% - 50px);
-      right: 93.2%;
+      // right: 93.2%;
+      right: auto; 
+      left: span(2);
       // left: 5%;
     }
   }
@@ -149,7 +151,7 @@ $iconSize: 22px;
     .hotel-title {
       position: absolute;
       bottom: 0%;
-      left: 5%;
+      left: span(2);
       height: 80px;
       line-height: 80px;
       color: $white;
@@ -158,7 +160,7 @@ $iconSize: 22px;
     .hotel-date {
       position: absolute;
       bottom: 0%;
-      right: 5%;
+      right: span(2);
       height: 80px;
       line-height: 80px;
       color: $white;

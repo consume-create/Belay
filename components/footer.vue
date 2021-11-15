@@ -32,10 +32,10 @@
               <div class="mail-icon" />
               <p class="email-para small">INFO@BELAYDEV.COM</p>
             </a>
-            <a class="phone-wrapper" href="tel:(303) 607-6133">
+            <!-- <a class="phone-wrapper" href="tel:(303) 607-6133">
               <div class="phone-icon" />
               <p class="phone-number small">(303) 607-6133</p>
-            </a>
+            </a> -->
           </div>
         </div>
         <div class="footer__column-socials">
@@ -132,6 +132,7 @@ footer {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        margin-top: 0;
 
         .subtext {
           margin-top: $margin-small;
@@ -216,7 +217,7 @@ footer {
           justify-content: space-around;
           align-items: center;
           li:not(:last-child) a {
-            margin-bottom: $margin-normal;
+            margin-bottom: $margin-small;
           }
         }
       }
@@ -274,6 +275,7 @@ footer {
         margin-left: 0%;
 
         .form-text {
+          margin-top: $margin-normal;
           .subtext {
             margin-top: $margin-small;
             padding-right: span(0.5);
@@ -360,7 +362,7 @@ footer {
   footer {
     .footer-wrapper {
       @include grid;
-      padding: span(1);
+      padding: span(2);
 
       .footer__column-left {
         height: 100%;
@@ -371,6 +373,7 @@ footer {
         width: 100%;
         margin-left: 0%;
         .form-text {
+          margin-top: 0;
           .email-wrapper {
             .email {
               padding: 12px;
@@ -393,7 +396,7 @@ footer {
         .footer__column-socials {
           .socials {
             li:not(:last-child) a {
-              margin-bottom: $margin-normal;
+              margin-bottom: $margin-small;
             }
           }
         }
@@ -421,6 +424,7 @@ footer {
         margin-left: 0%;
 
         .form-text {
+          margin-top: 0;
           .subtext {
             margin-top: $margin-normal;
           }

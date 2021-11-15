@@ -373,6 +373,9 @@ export default {
     .email-cta__inner {
       form {
         width: span(10);
+        .submit-button {
+          width: span(2);
+        }
 
         .fieldset {
           label {
