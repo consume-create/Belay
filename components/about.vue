@@ -100,7 +100,6 @@ import ResponsiveImage from "~/components/responsive-image";
   height: span(48);
   width: 100%;
   margin-top: -80px;
-  // overflow-x: hidden;
 
   .text-box {
     text-align: left;
@@ -111,7 +110,7 @@ import ResponsiveImage from "~/components/responsive-image";
     position: absolute;
 
     .title-upper{
-      margin-bottom: $margin-small;
+      margin-bottom: $margin-normal;
     }
     .subtitle{
       padding-bottom: span(1);
@@ -220,17 +219,16 @@ import ResponsiveImage from "~/components/responsive-image";
     bottom: -28%;
     width: 100%;
     z-index: 1;
-    height: span(28);
+    height: span(34);
     transition: transform 111ms linear;
     overflow: hidden;
  
     // overflow-y: no;
     .large-block {
-      
       position: relative;
       width: 150%;
       transform: translateX(-25%);
-      height: span(28);
+      height: span(34);
       img {
         position: absolute;
         width: 100%;
@@ -247,7 +245,7 @@ import ResponsiveImage from "~/components/responsive-image";
       height: span(18);
       .text-box {
         padding-right: span(8);
-        top: 15%;
+        top: 25%;
         left: 10%;
         z-index: 4;
         position: absolute;
@@ -295,12 +293,12 @@ import ResponsiveImage from "~/components/responsive-image";
       }
     }
       .large-block-wrapper{
-        bottom: -78%;
-        // height: span(38);
+        bottom: -58%;
+        height: span(22);
         .large-block{
           width: 100%;
           transform: translateX(0);
-          // height: span(38);
+          height: span(22);
       }
       }
     }
@@ -311,7 +309,7 @@ import ResponsiveImage from "~/components/responsive-image";
     height: span(18);
     .text-box {
       padding-right: span(12);
-      top: 33%;
+      top: 30%;
       left: 10%;
       // right: 10%;
 
@@ -356,12 +354,12 @@ import ResponsiveImage from "~/components/responsive-image";
     }
 
     .large-block-wrapper{
-      bottom: -78%;
-      // height: span(38);
+      bottom: -58%;
+      height: span(22);
       .large-block{
          width: 100%;
           transform: translateX(0);
-        //  height: span(38);
+         height: span(22);
       }
     }
   }
