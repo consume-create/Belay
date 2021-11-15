@@ -418,7 +418,7 @@ footer {
       .footer__column-left {
         position: relative;
         margin-bottom: 0;
-        grid-column: 1 / span 16;
+        grid-column: 1 / span 14;
         grid-row: 1 / span 3;
         width: 100%;
         margin-left: 0%;
