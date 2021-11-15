@@ -97,17 +97,16 @@ import ResponsiveImage from "~/components/responsive-image";
   background-color: $deep-blue;
   color: $white;
   position: relative;
-  height: span(48);
+  // height: span(48);
+  height: auto;
   width: 100%;
   margin-top: -80px;
 
   .text-box {
     text-align: left;
-    padding: span(1);
-    top: 25%;
-    left: 2%;
+    padding: span(12) span(1) span(1) span(1);
     z-index: 5;
-    position: absolute;
+    position: relative;
 
     .title-upper{
       margin-bottom: $margin-normal;
@@ -216,19 +215,19 @@ import ResponsiveImage from "~/components/responsive-image";
 
   .large-block-wrapper{
     position: absolute;
-    bottom: -28%;
+    bottom: -26%;
     width: 100%;
     z-index: 1;
-    height: span(34);
-    transition: transform 111ms linear;
+    // height: span(34);
+    height: auto;
     overflow: hidden;
- 
-    // overflow-y: no;
+
     .large-block {
       position: relative;
       width: 150%;
       transform: translateX(-25%);
-      height: span(34);
+      // height: span(34);
+       height: auto;
       img {
         position: absolute;
         width: 100%;
@@ -242,13 +241,10 @@ import ResponsiveImage from "~/components/responsive-image";
 
   @include respond-to($tablet) {
     .about{
-      height: span(18);
+      // height: span(18);
       .text-box {
-        padding-right: span(8);
-        top: 25%;
-        left: 10%;
+        padding: span(4) span(8) span(1) span(4);
         z-index: 4;
-        position: absolute;
 
         .title-upper{
           margin-bottom: $margin-large;
@@ -293,7 +289,8 @@ import ResponsiveImage from "~/components/responsive-image";
       }
     }
       .large-block-wrapper{
-        bottom: -58%;
+        // bottom: -58%;
+        bottom: -72%;
         height: span(22);
         .large-block{
           width: 100%;
@@ -306,12 +303,8 @@ import ResponsiveImage from "~/components/responsive-image";
 
   @include respond-to($desktop) {
   .about{
-    height: span(18);
     .text-box {
-      padding-right: span(12);
-      top: 30%;
-      left: 10%;
-      // right: 10%;
+      padding: span(4) span(10) span(1) span(4);
 
       .title-upper{
         margin-bottom: $margin-extra-large;
@@ -354,12 +347,15 @@ import ResponsiveImage from "~/components/responsive-image";
     }
 
     .large-block-wrapper{
-      bottom: -58%;
-      height: span(22);
+      bottom: -72%;
+      // height: span(22);
+      height: auto;
+      
       .large-block{
          width: 100%;
-          transform: translateX(0);
-         height: span(22);
+         transform: translateX(0);
+        //  height: span(22);
+         height: auto;
       }
     }
   }
