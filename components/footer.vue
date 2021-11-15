@@ -262,7 +262,7 @@ footer {
   footer {
     .footer-wrapper {
       @include grid;
-      padding: span(2);
+      padding: span(1);
       // padding-bottom: span(2);
 
       .footer__column-left {
@@ -339,7 +339,7 @@ footer {
       }
 
       .column-bottom {
-        grid-column: 15 / span 8;
+        grid-column: 16 / span 8;
         grid-row: 3;
         // margin-top: $margin-extra-large;
       }
@@ -362,7 +362,7 @@ footer {
   footer {
     .footer-wrapper {
       @include grid;
-      padding: span(2);
+      padding: 0 span(2) span(1) span(2);
 
       .footer__column-left {
         height: 100%;
@@ -412,7 +412,7 @@ footer {
 @include respond-to($desktop) {
   footer {
     .footer-wrapper {
-      padding: span(2);
+      padding: 0 span(2) span(1) span(2);
       @include grid;
 
       .footer__column-left {
