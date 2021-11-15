@@ -18,7 +18,7 @@
           width: '3251',
           height: '3084',
           className: 'first',
-          objectPosition: '50% 70%',
+          objectPosition: '50% 65%',
           title: 'POP DENVER',
           date: '2023'
         },
@@ -28,8 +28,8 @@
           width: '4750',
           height: '5632',
           className: 'first',
-          objectPosition: '50% 70%',
-          title: '4353 TENNYSON',
+          objectPosition: '50% 65%',
+          title: 'THE TENNYSON',
           date: '2023'
         },
           {
@@ -38,7 +38,7 @@
           width: '4096',
           height: '3072',
           className: 'first',
-          objectPosition: '50% 100%',
+          objectPosition: '50% 50%',
           title: 'SUNNYSIDE',
           date: '2025'
         },
