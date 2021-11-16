@@ -29,7 +29,7 @@
           height: '2880',
           className: 'first',
           objectPosition: '50% 75%',
-          title: '4553 TENNYSON',
+          title: '4353 TENNYSON',
           date: '2023'
         },
           {
