@@ -98,6 +98,8 @@ import ResponsiveImage from "~/components/responsive-image";
   color: $white;
   position: relative;
   // height: span(48);
+
+  
   height: auto;
   width: 100%;
   margin-top: -80px;
