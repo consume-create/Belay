@@ -5,8 +5,8 @@
         {
           src: 'carousel/flora.jpg',
           alt: 'A picture of a commercial building',
-          width: '2495',
-          height: '2880',
+          width: '2880',
+          height: '1620',
           className: 'first',
           objectPosition: '50% 60%',
           title: 'FLORA',
@@ -43,10 +43,10 @@
           date: '2025'
         },
           {
-          src: 'carousel/condor.jpeg',
+          src: 'carousel/condor.jpg',
           alt: 'A picture of a commercial building',
-          width: '1500',
-          height: '1000',
+          width: '2880',
+          height: '1620',
           className: 'first',
           objectPosition: '50% 100%',
           title: 'CONDOR',

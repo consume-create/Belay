@@ -97,7 +97,6 @@ $aspect-ratio: calc(1620px / 2880px);;
 .carousel {
   position: relative;
   width: 100%;
-  // height: 56.25%;
   height: 100vw;
 
   // padding-bottom: calc($aspect-ratio );
