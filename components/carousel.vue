@@ -122,7 +122,7 @@ $iconSize: 22px;
       position: absolute;
       top: calc(50% - 50px);
       // right: 93.2%;
-      right: auto; 
+      right: auto;
       left: span(2);
       // left: 5%;
     }
@@ -144,7 +144,7 @@ $iconSize: 22px;
 
   .text-wrapper {
     opacity: 0;
-    transition: opacity 800ms;
+    transition: opacity 700ms;
     z-index: 6;
 
     .hotel-title {
@@ -166,7 +166,7 @@ $iconSize: 22px;
     }
     &.current {
       opacity: 1;
-      transition-delay: 800ms;
+      transition-delay: 700ms;
       z-index: 7;
     }
   }
@@ -219,7 +219,7 @@ $iconSize: 22px;
               //height: calc(100% - 15vh);
               opacity: 0;
               position: absolute;
-              transition: opacity 800ms;
+              transition: opacity 700ms;
               z-index: 6;
               bottom: 0;
               left: 0px;
@@ -227,7 +227,7 @@ $iconSize: 22px;
               width: 100%;
               &.current {
                 opacity: 1;
-                transition-delay: 800ms;
+                transition-delay: 700ms;
                 z-index: 7;
               }
               .carousel-image {
@@ -255,9 +255,9 @@ $iconSize: 22px;
       }
       .background-transition.out {
         .background-outer-1 {
-          transform: rotateX(4deg) rotateY(2deg);
+          transform: rotateX(3deg);
           .background-inner-1 {
-            transform: rotateY(-2deg) rotateX(-4deg);
+            transform: rotateX(-3deg);
           }
         }
       }

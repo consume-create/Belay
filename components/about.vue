@@ -305,7 +305,9 @@ import ResponsiveImage from "~/components/responsive-image";
   @include respond-to($desktop) {
   .about{
     .text-box {
-      padding: span(6) span(12) span(1) span(2);
+      padding: span(6) 0 span(1) span(2);
+      width: 960px;
+
       .title-upper{
         margin-bottom: $margin-extra-large;
       }
@@ -350,7 +352,7 @@ import ResponsiveImage from "~/components/responsive-image";
       bottom: -72%;
       // height: span(22);
       height: auto;
-      
+
       .large-block{
          width: 100%;
          transform: translateX(0);

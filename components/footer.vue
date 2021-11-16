@@ -135,7 +135,7 @@ footer {
         margin-top: 0;
 
         .subtext {
-          margin-top: $margin-small;
+          margin-top: $margin-extra-small
         }
       }
     }
@@ -278,7 +278,7 @@ footer {
         .form-text {
           margin-top: $margin-small;
           .subtext {
-            margin-top: $margin-small;
+            margin-top: $margin-extra-small;
             padding-right: span(0.5);
           }
         }
@@ -426,7 +426,7 @@ footer {
         .form-text {
           margin-top: 0;
           .subtext {
-            margin-top: $margin-normal;
+            margin-top: $margin-small;
           }
         }
       }
