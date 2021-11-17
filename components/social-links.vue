@@ -54,17 +54,10 @@ ul.socials {
   @include can-hover {
     li {
       a {
-        &:after {
-          transition: background-image $speed-demon $ease-out;
-        }
-        &.instagram:hover:after {
-          @include icon("instagram",$dark-blue, false);
-        }
-        &.linkedin:hover:after {
-          @include icon("linkedin", $dark-blue, false);
-        }
-        &.twitter:hover:after {
-          @include icon("twitter",$dark-blue, false);
+        transition: opacity 250ms linear;
+
+        &:hover {
+          opacity: 0.6;
         }
       }
     }

@@ -25,8 +25,9 @@
                   class="carousel-image"
                   :src="require(`~/static/images/${image.src}`)"
                   :alt="image.alt"
-                  :style="{ 'object-position': image.objectPosition }"
                 />
+                <!-- :style="{ paddingBottom: (image.height / image.width) * 100 + '%' }" -->
+                <!-- :style="{ 'object-position': image.objectPosition }" -->
               </div>
             </div>
           </div>
@@ -91,58 +92,45 @@ export default {
 
 <style lang="scss">
 $iconSize: 22px;
+$aspect-ratio: calc(1620px / 2880px);
 
 .carousel {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: calc(56.25vw + 200px);
   z-index: 4;
 
   .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     z-index: 5;
-    height: 15vh;
-    left: 0;
-    right: 0;
-    top: 0;
+    height: 120px;
+    background-color: $deep-blue;
   }
 
   .arrow {
-    position: absolute;
-    // top: 50%;
-    top: calc(50% - 50px);
-    right: span(2);
     display: none;
-
-    &.left {
-      display: none;
-      position: absolute;
-      top: calc(50% - 50px);
-      // right: 93.2%;
-      right: auto;
-      left: span(2);
-      // left: 5%;
-    }
   }
 
   .arrow-trap {
     position: absolute;
-    top: calc(50% - 55px);
-    right: 0%;
-    display: block;
+    top: 0;
+    right: 0;
+    margin-top: calc(28.125vw + 105px);
 
     &.left {
-      position: absolute;
-      top: calc(50% - 55px);
-      left: 0%;
-      display: block;
+      left: 0;
     }
   }
 
   .text-wrapper {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 80px;
     opacity: 0;
     transition: opacity 700ms;
     z-index: 6;
@@ -164,6 +152,7 @@ $iconSize: 22px;
       line-height: 80px;
       color: $white;
     }
+
     &.current {
       opacity: 1;
       transition-delay: 700ms;
@@ -172,11 +161,9 @@ $iconSize: 22px;
   }
 
   .background-wrapper {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 80px;
+    position: relative;
     width: 100%;
+    height: 56.25vw;
 
     .background-inner {
       position: relative;
@@ -203,7 +190,6 @@ $iconSize: 22px;
           backface-visibility: hidden;
 
           .background-inner-1 {
-            //background: linear-gradient(#8fcde1, #c5e7f1);
             position: relative;
             width: 100%;
             height: 100%;
@@ -215,8 +201,7 @@ $iconSize: 22px;
             backface-visibility: hidden;
 
             .carousel-image-wrap {
-              background: linear-gradient(#8fcde1, #c5e7f1);
-              //height: calc(100% - 15vh);
+              background-color: $deep-blue;
               opacity: 0;
               position: absolute;
               transition: opacity 700ms;
@@ -225,29 +210,19 @@ $iconSize: 22px;
               left: 0px;
               top: 0;
               width: 100%;
+              object-position: bottom;
+
               &.current {
                 opacity: 1;
                 transition-delay: 700ms;
                 z-index: 7;
               }
               .carousel-image {
-                object-fit: cover;
                 position: absolute;
                 width: 100%;
-                // height: calc(100% - 15vh);
-                height: 100%;
-                bottom: 0;
-                left: 0;
-                // bottom: 0;
-                // left: 0px;
-                //opacity: 0;
-                //transition: opacity 800ms;
-                //z-index: 6;
-                // &.current {
-                //   opacity: 1;
-                //   transition-delay: 800ms;
-                //   z-index: 7;
-                // }
+                height: auto;
+                bottom: 0px;
+                left: 0px;
               }
             }
           }
@@ -264,48 +239,78 @@ $iconSize: 22px;
     }
   }
 }
+
 @include respond-to($tablet) {
   .carousel {
-    width: 100%;
-    height: 85vh;
-
     .arrow {
       display: block;
+      position: absolute;
       cursor: pointer;
+      top: 0;
+      right: span(2);
+      margin-top: calc(28.125vw + 106px);
 
       &.left {
-        display: block;
+        right: auto;
+        left: span(2);
       }
     }
 
     .arrow-trap {
       display: none;
-
-      &.left {
-        display: none;
-      }
     }
   }
 }
 
-@include respond-to($desktop) {
+@include respond-to('(min-width: 768px) and (orientation: landscape)') {
   .carousel {
     width: 100%;
     height: 100vh;
 
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 5;
+      height: 150px;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-color: rgba(0,0,0,0);
+    }
+
     .arrow {
       display: block;
+      position: absolute;
+      cursor: pointer;
+      top: auto;
+      bottom: 50%;
+      right: span(2);
+      margin-top: 0;
+      margin-bottom: 25px;
 
       &.left {
-        display: block;
+        left: span(2);
       }
     }
 
-    .arrow-trap {
-      display: none;
-
-      &.left {
-        display: none;
+    .background-wrapper {
+      height: calc(100vh - 80px);
+      .background-inner {
+        .background-transition {
+          .background-outer-1 {
+            .background-inner-1 {
+               .carousel-image-wrap {
+                 object-position: bottom;
+                 .carousel-image {
+                  object-fit: cover;
+                  height: 100%;
+                 }
+               }
+            }
+          }
+        }
       }
     }
   }
