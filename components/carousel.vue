@@ -92,15 +92,12 @@ export default {
 
 <style lang="scss">
 $iconSize: 22px;
-$aspect-ratio: calc(1620px / 2880px);;
+$aspect-ratio: calc(1620px / 2880px);
 
 .carousel {
   position: relative;
   width: 100%;
-  height: 100vw;
-
-  // padding-bottom: calc($aspect-ratio );
-  // height: calc((1620 / 2880) * 1vh);
+  height: 56.25vh;
   z-index: 4;
 
   .logo {
@@ -135,6 +132,7 @@ $aspect-ratio: calc(1620px / 2880px);;
   .arrow-trap {
     position: absolute;
     // top: calc(54.7% - 55px);
+    //  top: calc(50% - 50px);
     top: 48.5%;
     right: 0%;
     display: block;
@@ -142,6 +140,7 @@ $aspect-ratio: calc(1620px / 2880px);;
     &.left {
       position: absolute;
       // top: calc(54.7% - 55px);
+      //  top: calc(50% - 50px);
       top: 48.5%;
       left: 0%;
       display: block;
@@ -223,7 +222,6 @@ $aspect-ratio: calc(1620px / 2880px);;
             .carousel-image-wrap {
               // background: linear-gradient(#8fcde1, #c5e7f1);
               background-color: $deep-blue;
-              //height: calc(100% - 15vh);
               opacity: 0;
               position: absolute;
               transition: opacity 700ms;
@@ -232,6 +230,7 @@ $aspect-ratio: calc(1620px / 2880px);;
               left: 0px;
               top: 0;
               width: 100%;
+              object-position: bottom;
               // height: 56.25%;
               &.current {
                 opacity: 1;
@@ -242,22 +241,10 @@ $aspect-ratio: calc(1620px / 2880px);;
                 // object-fit: contain;
                 position: absolute;
                 width: 100%;
-                // height: calc(100% - 15vh);
-                // height: 30.25vh;
-                height: 66%;
+                height: auto;
                 // height: 100%;
                 bottom: 0px;
                 left: 0px;
-                // bottom: 0;
-                // left: 0px;
-                //opacity: 0;
-                //transition: opacity 800ms;
-                //z-index: 6;
-                // &.current {
-                //   opacity: 1;
-                //   transition-delay: 800ms;
-                //   z-index: 7;
-                // }
               }
             }
           }
@@ -274,7 +261,65 @@ $aspect-ratio: calc(1620px / 2880px);;
     }
   }
 }
+
 @include respond-to($tablet) {
+  .carousel {
+    width: 100%;
+    height: 56.25vh;
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    height: 15vh;
+    background-color: $deep-blue;
+
+    // left: 0;
+    // right: 0;
+    // top: 0;
+    // background-color: rgba(0,0,0,0);
+  }
+
+  .background-wrapper {
+    .background-inner {
+      .background-transition {
+        .background-outer-1 {
+          .background-inner-1 {
+             .carousel-image-wrap {
+               .carousel-image {
+                // height: auto;
+               }
+             }
+          }
+        }
+      }
+    }
+  }
+
+    .arrow {
+      display: block;
+      cursor: pointer;
+      top: calc(60% - 50px);
+
+      &.left {
+        display: block;
+        top: calc(60% - 50px);
+      }
+    }
+
+    .arrow-trap {
+      display: none;
+
+      &.left {
+        display: none;
+      }
+    }
+  }
+}
+
+@include respond-to('(min-width: 768px) and (orientation: landscape)') {
   .carousel {
     width: 100%;
     height: 85vh;
@@ -298,6 +343,7 @@ $aspect-ratio: calc(1620px / 2880px);;
         .background-outer-1 {
           .background-inner-1 {
              .carousel-image-wrap {
+               object-position: bottom;
                .carousel-image {
                 object-fit: cover;
                 height: 100%;
@@ -312,9 +358,11 @@ $aspect-ratio: calc(1620px / 2880px);;
     .arrow {
       display: block;
       cursor: pointer;
+      top: calc(50% - 50px);
 
       &.left {
         display: block;
+        top: calc(50% - 50px);
       }
     }
 
@@ -326,9 +374,10 @@ $aspect-ratio: calc(1620px / 2880px);;
       }
     }
   }
+
 }
 
-@include respond-to($desktop) {
+@include respond-to('(min-width: 1280px) and (orientation: landscape)') {
   .carousel {
     width: 100%;
     height: 100vh;
@@ -351,7 +400,7 @@ $aspect-ratio: calc(1620px / 2880px);;
         .background-outer-1 {
           .background-inner-1 {
              .carousel-image-wrap {
-               padding-bottom: 0 !important;
+              object-position: bottom;
                .carousel-image {
                 object-fit: cover;
                 height: 100%;
@@ -380,4 +429,115 @@ $aspect-ratio: calc(1620px / 2880px);;
     }
   }
 }
+
+
+
+
+// @include respond-to($tablet) {
+//   .carousel {
+//     width: 100%;
+//     height: 85vh;
+
+//   .logo {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: absolute;
+//     z-index: 5;
+//     height: 15vh;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     background-color: rgba(0,0,0,0);
+//   }
+
+//   .background-wrapper {
+//     .background-inner {
+//       .background-transition {
+//         .background-outer-1 {
+//           .background-inner-1 {
+//              .carousel-image-wrap {
+//                object-position: bottom;
+//                .carousel-image {
+//                 object-fit: cover;
+//                 height: 100%;
+//                }
+//              }
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//     .arrow {
+//       display: block;
+//       cursor: pointer;
+
+//       &.left {
+//         display: block;
+//       }
+//     }
+
+//     .arrow-trap {
+//       display: none;
+
+//       &.left {
+//         display: none;
+//       }
+//     }
+//   }
+// }
+
+// @include respond-to($desktop) {
+//   .carousel {
+//     width: 100%;
+//     height: 100vh;
+
+//   .logo {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: absolute;
+//     z-index: 5;
+//     height: 15vh;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     background-color: rgba(0,0,0,0);
+//   }
+//   .background-wrapper {
+//     .background-inner {
+//       .background-transition {
+//         .background-outer-1 {
+//           .background-inner-1 {
+//              .carousel-image-wrap {
+//               object-position: bottom;
+//                .carousel-image {
+//                 object-fit: cover;
+//                 height: 100%;
+//                }
+//              }
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//     .arrow {
+//       display: block;
+
+//       &.left {
+//         display: block;
+//       }
+//     }
+
+//     .arrow-trap {
+//       display: none;
+
+//       &.left {
+//         display: none;
+//       }
+//     }
+//   }
+// }
 </style>
