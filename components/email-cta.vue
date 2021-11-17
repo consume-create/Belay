@@ -45,7 +45,7 @@
           </div>
         </div>
         <div class="fieldset success" :class="{ active: succeeded }">
-          {{ success_message }}
+          <p class="subtext">{{ success_message }}</p>
         </div>
         <button
           class="button red"
@@ -85,7 +85,7 @@ export default {
       send_attempted: false,
       error: undefined,
       error_message: "Please add a valid email above",
-      success_message: "Thank you, your email has been submitted",
+      success_message: "Email added, thank you!",
     };
   },
   watch: {
@@ -282,7 +282,12 @@ export default {
         // line-height: 35px;
         // letter-spacing: 0.05em;
         // font-family: $gotham-medium;
-        text-transform: uppercase;
+        //text-transform: uppercase;
+
+        p.subtext {
+          margin: 0;
+          font-weight: bold;
+        }
 
          &.active {
             opacity: 1;

@@ -251,6 +251,7 @@ $aspect-ratio: calc(1620px / 2880px);
       margin-top: calc(28.125vw + 106px);
 
       &.left {
+        right: auto;
         left: span(2);
       }
     }
@@ -272,11 +273,11 @@ $aspect-ratio: calc(1620px / 2880px);
       align-items: center;
       position: absolute;
       z-index: 5;
-      height: 15vh;
+      //height: 15vh;
       left: 0;
       right: 0;
       top: 0;
-      background-color: rgba(0,0,0,0);
+      //background-color: rgba(0,0,0,0);
     }
 
     .arrow {
