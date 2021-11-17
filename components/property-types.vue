@@ -189,77 +189,74 @@ export default{
 </script>
 
 <style lang="scss">
-  .property-wrapper{
-    margin-top: span(15);
-    margin-bottom: span(2);
+.property-wrapper {
+  margin-top: span(15);
+  margin-bottom: span(2);
+  position: relative;
+
+  .title{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: $margin-extra-large;
+    margin-top: $margin-extra-large;
+    line-height: 3.6em;
+  }
+
+  .property-image-vertical {
+    position: relative;
+    width: 100%;
+
+    #cnv {
+      display: block;
+      @include abs-fill;
+    }
+
+    img {
+      @include abs-fill;
+    }
+  }
+}
+
+.property-image {
+  display: none;
+
+  #cnv{
+    display: none;
+  }
+}
+
+@include respond-to($tablet-landscape) {
+  .property-wrapper {
+    margin-top: span(13);
+    margin-bottom: 0;
     position: relative;
 
-    .title{
+    .title {
       text-align: center;
       margin: 0 auto;
       margin-bottom: $margin-extra-large;
       margin-top: $margin-extra-large;
-      line-height: 3.6em;
+    }
+
+    .property-image {
+      position: relative;
+      width: 100%;
+      display: block;
+
+      img {
+        @include abs-fill;
+      }
+
+      #cnv {
+        display: block;
+        @include abs-fill;
+      }
     }
 
     .property-image-vertical {
-      position: relative;
-      width: 100%;
-      #cnv{
-        display: block;
-        @include abs-fill;
-      }
-      img {
-        @include abs-fill;
-      }
-    }
-  }
-
-  .property-image{
-    display: none;
-
-    #cnv{
       display: none;
     }
   }
-
-  @include respond-to($tablet) {
-
-
-  }
-
-  @include respond-to($desktop) {
-    .property-wrapper{
-      margin-top: span(13);
-      margin-bottom: 0;
-      position: relative;
-
-      .title{
-        text-align: center;
-        margin: 0 auto;
-        margin-bottom: $margin-extra-large;
-        margin-top: $margin-extra-large;
-      }
-
-      .property-image {
-        position: relative;
-        width: 100%;
-        display: block;
-
-      img {
-        @include abs-fill;
-      }
-      #cnv{
-         display: block;
-         @include abs-fill;
-       }
-      }
-
-      .property-image-vertical {
-          display: none;
-        }
-    }
-
-  }
+}
 
 </style>

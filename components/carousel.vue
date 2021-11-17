@@ -24,7 +24,7 @@
                 <img
                   class="carousel-image"
                   :src="require(`~/static/images/${image.src}`)"
-                  :alt="image.alt"                
+                  :alt="image.alt"
                 />
                 <!-- :style="{ paddingBottom: (image.height / image.width) * 100 + '%' }" -->
                 <!-- :style="{ 'object-position': image.objectPosition }" -->
@@ -97,7 +97,7 @@ $aspect-ratio: calc(1620px / 2880px);
 .carousel {
   position: relative;
   width: 100%;
-  height: 56.25vh;
+  height: calc(56.25vw + 200px);
   z-index: 4;
 
   .logo {
@@ -106,48 +106,31 @@ $aspect-ratio: calc(1620px / 2880px);
     align-items: center;
     position: relative;
     z-index: 5;
-    height: 15vh;
+    height: 120px;
     background-color: $deep-blue;
-    // left: 0;
-    // right: 0;
-    // top: 0;
   }
 
   .arrow {
-    position: absolute;
-    // top: 50%;
-    top: calc(50% - 50px);
-    right: span(2);
     display: none;
-
-    &.left {
-      display: none;
-      position: absolute;
-      top: calc(50% - 50px);
-      right: auto;
-      left: span(2);
-    }
   }
 
   .arrow-trap {
     position: absolute;
-    // top: calc(54.7% - 55px);
-    //  top: calc(50% - 50px);
-    top: 48.5%;
-    right: 0%;
-    display: block;
+    top: 0;
+    right: 0;
+    margin-top: calc(28.125vw + 105px);
 
     &.left {
-      position: absolute;
-      // top: calc(54.7% - 55px);
-      //  top: calc(50% - 50px);
-      top: 48.5%;
-      left: 0%;
-      display: block;
+      left: 0;
     }
   }
 
   .text-wrapper {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 80px;
     opacity: 0;
     transition: opacity 700ms;
     z-index: 6;
@@ -169,6 +152,7 @@ $aspect-ratio: calc(1620px / 2880px);
       line-height: 80px;
       color: $white;
     }
+
     &.current {
       opacity: 1;
       transition-delay: 700ms;
@@ -177,11 +161,9 @@ $aspect-ratio: calc(1620px / 2880px);
   }
 
   .background-wrapper {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 80px;
+    position: relative;
     width: 100%;
+    height: 56.25vw;
 
     .background-inner {
       position: relative;
@@ -208,7 +190,6 @@ $aspect-ratio: calc(1620px / 2880px);
           backface-visibility: hidden;
 
           .background-inner-1 {
-            //background: linear-gradient(#8fcde1, #c5e7f1);
             position: relative;
             width: 100%;
             height: 100%;
@@ -220,7 +201,6 @@ $aspect-ratio: calc(1620px / 2880px);
             backface-visibility: hidden;
 
             .carousel-image-wrap {
-              // background: linear-gradient(#8fcde1, #c5e7f1);
               background-color: $deep-blue;
               opacity: 0;
               position: absolute;
@@ -231,18 +211,16 @@ $aspect-ratio: calc(1620px / 2880px);
               top: 0;
               width: 100%;
               object-position: bottom;
-              // height: 56.25%;
+
               &.current {
                 opacity: 1;
                 transition-delay: 700ms;
                 z-index: 7;
               }
               .carousel-image {
-                // object-fit: contain;
                 position: absolute;
                 width: 100%;
                 height: auto;
-                // height: 100%;
                 bottom: 0px;
                 left: 0px;
               }
@@ -264,57 +242,21 @@ $aspect-ratio: calc(1620px / 2880px);
 
 @include respond-to($tablet) {
   .carousel {
-    width: 100%;
-    height: 56.25vh;
-
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 5;
-    height: 15vh;
-    background-color: $deep-blue;
-
-    // left: 0;
-    // right: 0;
-    // top: 0;
-    // background-color: rgba(0,0,0,0);
-  }
-
-  .background-wrapper {
-    .background-inner {
-      .background-transition {
-        .background-outer-1 {
-          .background-inner-1 {
-             .carousel-image-wrap {
-               .carousel-image {
-                // height: auto;
-               }
-             }
-          }
-        }
-      }
-    }
-  }
-
     .arrow {
       display: block;
+      position: absolute;
       cursor: pointer;
-      top: calc(60% - 50px);
+      top: 0;
+      right: span(2);
+      margin-top: calc(28.125vw + 106px);
 
       &.left {
-        display: block;
-        top: calc(60% - 50px);
+        left: span(2);
       }
     }
 
     .arrow-trap {
       display: none;
-
-      &.left {
-        display: none;
-      }
     }
   }
 }
@@ -322,222 +264,54 @@ $aspect-ratio: calc(1620px / 2880px);
 @include respond-to('(min-width: 768px) and (orientation: landscape)') {
   .carousel {
     width: 100%;
-    height: 85vh;
-
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 5;
-    height: 15vh;
-    left: 0;
-    right: 0;
-    top: 0;
-    background-color: rgba(0,0,0,0);
-  }
-
-  .background-wrapper {
-    .background-inner {
-      .background-transition {
-        .background-outer-1 {
-          .background-inner-1 {
-             .carousel-image-wrap {
-               object-position: bottom;
-               .carousel-image {
-                object-fit: cover;
-                height: 100%;
-               }
-             }
-          }
-        }
-      }
-    }
-  }
-
-    .arrow {
-      display: block;
-      cursor: pointer;
-      top: calc(50% - 50px);
-
-      &.left {
-        display: block;
-        top: calc(50% - 50px);
-      }
-    }
-
-    .arrow-trap {
-      display: none;
-
-      &.left {
-        display: none;
-      }
-    }
-  }
-
-}
-
-@include respond-to('(min-width: 1280px) and (orientation: landscape)') {
-  .carousel {
-    width: 100%;
     height: 100vh;
 
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 5;
-    height: 15vh;
-    left: 0;
-    right: 0;
-    top: 0;
-    background-color: rgba(0,0,0,0);
-  }
-  .background-wrapper {
-    .background-inner {
-      .background-transition {
-        .background-outer-1 {
-          .background-inner-1 {
-             .carousel-image-wrap {
-              object-position: bottom;
-               .carousel-image {
-                object-fit: cover;
-                height: 100%;
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 5;
+      height: 15vh;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-color: rgba(0,0,0,0);
+    }
+
+    .arrow {
+      display: block;
+      position: absolute;
+      cursor: pointer;
+      top: auto;
+      bottom: 50%;
+      right: span(2);
+      margin-top: 0;
+      margin-bottom: 25px;
+
+      &.left {
+        left: span(2);
+      }
+    }
+
+    .background-wrapper {
+      height: calc(100vh - 80px);
+      .background-inner {
+        .background-transition {
+          .background-outer-1 {
+            .background-inner-1 {
+               .carousel-image-wrap {
+                 object-position: bottom;
+                 .carousel-image {
+                  object-fit: cover;
+                  height: 100%;
+                 }
                }
-             }
+            }
           }
         }
       }
     }
   }
-
-    .arrow {
-      display: block;
-
-      &.left {
-        display: block;
-      }
-    }
-
-    .arrow-trap {
-      display: none;
-
-      &.left {
-        display: none;
-      }
-    }
-  }
 }
-
-
-
-
-// @include respond-to($tablet) {
-//   .carousel {
-//     width: 100%;
-//     height: 85vh;
-
-//   .logo {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     position: absolute;
-//     z-index: 5;
-//     height: 15vh;
-//     left: 0;
-//     right: 0;
-//     top: 0;
-//     background-color: rgba(0,0,0,0);
-//   }
-
-//   .background-wrapper {
-//     .background-inner {
-//       .background-transition {
-//         .background-outer-1 {
-//           .background-inner-1 {
-//              .carousel-image-wrap {
-//                object-position: bottom;
-//                .carousel-image {
-//                 object-fit: cover;
-//                 height: 100%;
-//                }
-//              }
-//           }
-//         }
-//       }
-//     }
-//   }
-
-//     .arrow {
-//       display: block;
-//       cursor: pointer;
-
-//       &.left {
-//         display: block;
-//       }
-//     }
-
-//     .arrow-trap {
-//       display: none;
-
-//       &.left {
-//         display: none;
-//       }
-//     }
-//   }
-// }
-
-// @include respond-to($desktop) {
-//   .carousel {
-//     width: 100%;
-//     height: 100vh;
-
-//   .logo {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     position: absolute;
-//     z-index: 5;
-//     height: 15vh;
-//     left: 0;
-//     right: 0;
-//     top: 0;
-//     background-color: rgba(0,0,0,0);
-//   }
-//   .background-wrapper {
-//     .background-inner {
-//       .background-transition {
-//         .background-outer-1 {
-//           .background-inner-1 {
-//              .carousel-image-wrap {
-//               object-position: bottom;
-//                .carousel-image {
-//                 object-fit: cover;
-//                 height: 100%;
-//                }
-//              }
-//           }
-//         }
-//       }
-//     }
-//   }
-
-//     .arrow {
-//       display: block;
-
-//       &.left {
-//         display: block;
-//       }
-//     }
-
-//     .arrow-trap {
-//       display: none;
-
-//       &.left {
-//         display: none;
-//       }
-//     }
-//   }
-// }
 </style>
