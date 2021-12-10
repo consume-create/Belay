@@ -32,10 +32,10 @@
               <div class="mail-icon" />
               <p class="email-para small">INFO@BELAYDEV.COM</p>
             </a>
-            <!-- <a class="phone-wrapper" href="tel:(303) 607-6133">
+            <a class="phone-wrapper" href="tel:(720) 466-5132">
               <div class="phone-icon" />
-              <p class="phone-number small">(303) 607-6133</p>
-            </a> -->
+              <p class="phone-number small">(720) 466-5132</p>
+            </a>
           </div>
         </div>
         <div class="footer__column-socials">
