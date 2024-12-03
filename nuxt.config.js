@@ -175,6 +175,19 @@ export default {
         collapseWhitespace: true
       }
     },
+    loaders: {
+      vue: {
+        compilerOptions: {
+          preserveWhitespace: false
+        }
+      }, 
+      css: {
+        modules: {
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+        },
+        importLoaders: 1,
+      },
+    },
     /*
      ** You can extend webpack config here
      */

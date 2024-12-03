@@ -7,19 +7,25 @@
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",
-    "serve": "nuxt serve",
+    "build": "nuxt build",
     "generate": "nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "axios": "^0.22.0",
     "core-js": "^3.15.1",
+    "css-loader": "^4.2.0",
     "lazysizes": "^5.3.2",
     "lodash.debounce": "^4.0.8",
     "node-sass": "^9.0.0",
     "nuxt": "^2.15.7",
+    "postcss": "^8.4.49",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^4.3.0",
     "vue-event-horizon": "^2.0.1",
-    "vue-loader": "^15.10.0"
+    "vue-loader": "^15.11.1",
+    "webpack": "^4.47.0",
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.4.0",
@@ -27,7 +33,6 @@
     "eslint": "^7.32.0",
     "eslint-loader": "^4.0.2",
     "gsap": "^3.7.1",
-    "html-webpack-plugin": "^5.6.3",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^9.0.0",
